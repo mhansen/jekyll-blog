@@ -1,8 +1,6 @@
 ---
-<<<<<<< HEAD
 layout: default
 =======
->>>>>>> 5c6e7d863c994c867b1f3264b7f869a7a77cc9a9
 title: Peter Norvig's "Design Patterns in Dynamic Programming"
 ---
 
