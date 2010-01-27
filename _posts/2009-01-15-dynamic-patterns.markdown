@@ -1,6 +1,5 @@
 ---
 layout: default
-=======
 title: Peter Norvig's "Design Patterns in Dynamic Programming"
 ---
 
