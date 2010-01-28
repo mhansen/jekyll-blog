@@ -2,3 +2,10 @@
     width: 35em;
     margin-left: 20em;
 }
+
+code {
+    border: 1px solid #AAF;
+    background-color: #DFF;
+}
+
+
