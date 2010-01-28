@@ -62,7 +62,7 @@ function makeCar(initialOdometer) {
         }
     };
 }
-{% endhightlight %}
+{% endhighlight %}
  
 (Note: We are not using `this` to access the odometer reading any more. `this` is not needed - we have a direct reference to `privateOdometer` in the closure)
  
@@ -70,33 +70,33 @@ We can then instantiate a really old car, setting its private odometer:
 
 {% highlight js %}
 var reallyOldCar = makeCar(180000); 
-{% endhightlight %}
+{% endhighlight %}
  
 We can't get or set the odometer directly: there's no `privateOdometer` field on the object we returned:
 
 {% highlight js %}
 reallyOldCar.privateOdometer; //undefined 
-{% endhightlight %}
+{% endhighlight %}
  
 However we can use `getOdometer()`
 
 {% highlight js %}
 reallyOldCar.getOdometer(); //180000
-{% endhightlight %}
+{% endhighlight %}
  
 We can drive the car halfway around the world, and recheck the odometer.
 
 {% highlight js %}
 reallyOldCar.drive(20000); 
 reallyOldCar.getOdometer(); //200000
-{% endhightlight %}
+{% endhighlight %}
  
 Then we can complete the journey, circling the world.
 
 {% highlight js %}
 reallyOldCar.drive(20000); 
 reallyOldCar.getOdometer(); //220000
-{% endhightlight %}
+{% endhighlight %}
  
 Brilliant! Private variables in javascript. You can apply exactly the same technique for private methods.
 
