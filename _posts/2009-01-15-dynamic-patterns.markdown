@@ -1,9 +1,9 @@
 ---
-layout: default
+layout: post
 title: Peter Norvig's "Design Patterns in Dynamic Programming"
 ---
 
-Today I read something that's been sitting in my bookmarks for a few months now: Peter Norvig's 1996 slides on Design Patterns in Dynamic Programming.
+Today I read something that's been sitting in my bookmarks for a few months now: Peter Norvig's 1996 [slides](http://norvig.com/design-patterns/) on Design Patterns in Dynamic Programming.
 
 I've been toying around with dynamic languages a lot lately, and I've been excited at the flexibility and simplicity offered by features like first-class functions and types. These features are noticeably absent from traditional languages like Java and C++.
 
