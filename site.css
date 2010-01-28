@@ -4,8 +4,9 @@
 }
 
 code {
-    border: 1px solid #AAF;
-    background-color: #DFF;
+    border: 1px solid #EEF;
+    background-color: #DDF;
+    display: inline-block;
 }
 
 
