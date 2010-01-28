@@ -7,15 +7,15 @@ With some friends last night, I got some pizza. As the pizza delivery boy answer
 
 Quick! What's wrong with this picture?
 
-[![Hells Pizza asking for credit card number on unsecured page](images/hells.png)](www.hell.co.nz)
+[![Hells Pizza asking for credit card number on unsecured page](/images/hells.png)](www.hell.co.nz)
 
 Here's a clue:
 
-![Google chrome website information](images/chromeinfo.png)
+![Google chrome website information](/images/chromeinfo.png)
 
 See that link "Click here to verify merchant details"? Here's what happens when I click it:
 
-![Invalid website](images/paymark.png)
+![Invalid website](/images/paymark.png)
 
 Hells Pizza's website:
 
@@ -46,7 +46,7 @@ Sounds farfetched? There are many ways I could be redirected to a different serv
 Sniffing
 --------
 
-I popped open my favorite network sniffer [Wireshark](images/http://www.wireshark.org) to have a closer look at the network traffic leaving my computer, and whether it was encrypted when I sent my credit card number.
+I popped open my favorite network sniffer [Wireshark](/images/http://www.wireshark.org) to have a closer look at the network traffic leaving my computer, and whether it was encrypted when I sent my credit card number.
 
 The whole website is done as a Flash application, and internally, the application *does use HTTPS to transmit credit card numbers*. This means that not I, nor anybody else on the network, can listen in on the credit card numbers in transit.
 
@@ -65,4 +65,4 @@ Hell's Pizza needs to:
 
 Till then, I know who I'll be ordering from:
 
-![Dominos Pizza Certificate](images/dominos.png)
+![Dominos Pizza Certificate](/images/dominos.png)
