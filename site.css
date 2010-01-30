@@ -9,25 +9,23 @@ code {
     display: inline-block;
 }
 
-body {
-    background-color: #EEE;
-}
+body { background-color: #EEE; }
 
 #container {
     background-color: white;
     padding: 2em;
 }
 
-nav ul {
-    list-style-type: none;
-}
+nav ul { list-style-type: none; }
 
 nav li {
+    border: 1px solid black;
+    padding: 0.5em 1em;
     float: left;
 }
 
-p { margin-top: 0.5em; margin-bottom: 0.5em; }
-h1 { font-size: 3em; }
+p { margin-top: 1em; margin-bottom: 1em; }
+h1 { font-size: 3em; clear: both; }
 h2 { font-size: 2.5em; }
 h3 { font-size: 2em; }
 h4 { font-size: 1.5em; }
