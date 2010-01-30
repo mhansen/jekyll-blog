@@ -26,8 +26,8 @@ nav li {
     float: left;
 }
 
-p { margin: 1em; }
-h1 { height: 3em; }
-h2 { height: 2.5em; }
-h3 { height: 2em; }
-h4 { height: 1.5em; }
+p { margin-top: 0.5em; margin-bottom: 0.5em; }
+h1 { font-size: 3em; }
+h2 { font-size: 2.5em; }
+h3 { font-size: 2em; }
+h4 { font-size: 1.5em; }
