@@ -1,6 +1,6 @@
 #main {
-    width: 35em;
-    margin-left: 20em;
+    width: 50em;
+    margin: 0 auto;
 }
 
 code {
@@ -8,5 +8,3 @@ code {
     background-color: #EEF;
     display: inline-block;
 }
-
-
