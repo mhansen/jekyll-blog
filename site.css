@@ -8,3 +8,12 @@ code {
     background-color: #EEF;
     display: inline-block;
 }
+
+body {
+    background-color: #EEE;
+}
+
+#main {
+    background-color: white;
+    padding: 2em;
+}
