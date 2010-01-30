@@ -1,4 +1,4 @@
-#main {
+#container {
     width: 50em;
     margin: 0 auto;
 }
@@ -16,4 +16,12 @@ body {
 #main {
     background-color: white;
     padding: 2em;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    float: left;
 }
