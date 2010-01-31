@@ -1,5 +1,5 @@
 #container {
-    width: 50em;
+    width: 40em;
     margin: 0 auto;
 }
 
@@ -9,20 +9,36 @@ code {
     display: inline-block;
 }
 
-body { background-color: #EEE; }
+body { 
+    background-color: #EEE; 
+    font-family: Corbel, Arial, Sans-Serif;
+} 
 
 #container {
     background-color: white;
     padding: 2em;
 }
 
+nav { margin: auto; }
+
 nav ul { list-style-type: none; }
 
 nav li {
     border: 1px solid black;
-    padding: 0.5em 1em;
+    padding: 0;
+    margin: 0;
     float: left;
 }
+
+nav li a { 
+    padding: 1em 5em 1em 1em;
+    display: block;
+}
+
+nav li a:hover {
+    background-color: orange;
+}
+
 
 p { margin-top: 1em; margin-bottom: 1em; }
 h1 { font-size: 3em; clear: both; }
