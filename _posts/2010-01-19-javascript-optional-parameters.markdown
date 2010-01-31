@@ -23,7 +23,8 @@ public void connect(string hostname, int port, string method); { ... }
  Now, with the new C# 4.0 optional parameters, things are a lot simpler:
 
 {% highlight csharp %}
-public void connect(string hostname = "localhost", int port = 80, string method = "HTTP") { ... }
+public void connect(string hostname = "localhost", 
+                    int port = 80, string method = "HTTP") { ... }
 {% endhighlight %}
 
  At first glance, javascript has nothing like this available. However, javascript lets you call functions omitting some parameters, filling in the other parameters with the value 'undefined'.
