@@ -6,7 +6,7 @@ title: Mark Hansen
 {% for post in site.posts limit:2 %}
 <article>
 <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-<em>Posted on {{ post.date | date_to_long_string }}.</em>
 {{ post.content }}
+<em>Posted on {{ post.date | date_to_long_string }}.</em>
 </article>
 {% endfor %}
