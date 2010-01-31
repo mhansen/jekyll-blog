@@ -27,7 +27,7 @@ public void connect(string hostname = "localhost",
                     int port = 80, string method = "HTTP") { ... }
 {% endhighlight %}
 
- At first glance, javascript has nothing like this available. However, javascript lets you call functions omitting some parameters, filling in the other parameters with the value 'undefined'.
+ At first glance, javascript has nothing like this available. However, javascript lets you call functions omitting some parameters, filling in the other parameters with the value `undefined`.
 
 {% highlight javascript %}
 connect("www.google.com");
@@ -39,7 +39,7 @@ function connect(hostname, port, method) {
 }
 {% endhighlight %}
 
- It's easy to check if a value is 'undefined' and fill it in with a default parameter if it is:
+ It's easy to check if a value is `undefined` and fill it in with a default parameter if it is:
 
 {% highlight javascript %}
 
@@ -60,6 +60,6 @@ function connect(hostname, port, method) {
 }
 {% endhighlight %}
 
-The short-circuit OR operator || returns the left side if the left argument is truthy (evaluates to true in conditionals), otherwise it checks if the right argument is truthy, returning it. We can use this shortcut because 'undefined' is falsy: in conditionals, 'undefined' evaluates to false.
+The short-circuit OR operator `||` returns the left side if the left argument is truthy (evaluates to true in conditionals), otherwise it checks if the right argument is truthy, returning it. We can use this shortcut because `undefined` is falsy: in conditionals, `undefined` evaluates to false.
 
- This shortcut approach seems to be a common idiom, but it does have a disadvantage: You can't use it for optional boolean arguments with a default argument of true. 'false || true' will always evaluate to true. Instead, you must explicitly check for undefined.
+ This shortcut approach seems to be a common idiom, but it does have a disadvantage: You can't use it for optional boolean arguments with a default argument of `true`. `false || true` will always evaluate to `true`. Instead, you must explicitly check for `undefined`.
