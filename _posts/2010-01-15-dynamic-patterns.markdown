@@ -7,7 +7,7 @@ Today I read something that's been sitting in my bookmarks for a few months now:
 
 I've been toying around with dynamic languages a lot lately, and I've been excited at the flexibility and simplicity offered by features like first-class functions and types. These features are noticeably absent from traditional languages like Java and C++.
 
-It was a bit tricky to understand the slides where the examples are written in [Dylan](http://en.wikipedia.org/wiki/Dylan_(programming_language)), a language I'd never heard of before today. Dylan is a very Ruby-like language developed in the early 1990s by Apple.
+It was a bit tricky to understand the slides where the examples are written in <a href="http://en.wikipedia.org/wiki/Dylan_(programming_language)">Dylan</a>, a language I'd never heard of before today. Dylan is a very Ruby-like language developed in the early 1990s by Apple.
 
 The slides make a good case for using languages with first-class types and first class functions (i.e. you can pass functions and types as variables at runtime). Common patterns like Factory, Strategy, and Observer become simpler. Here's a few examples:
 
