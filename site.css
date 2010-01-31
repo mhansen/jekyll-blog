@@ -1,6 +1,8 @@
-#container {
+.centre {
     width: 40em;
     margin: 1em auto;
+    background-color: white;
+    padding: 2em;
 }
 
 code {
@@ -14,12 +16,8 @@ body {
     font-family: Corbel, Arial, Sans-Serif;
 } 
 
-#container {
-    background-color: white;
-    padding: 2em;
-}
 
-nav { margin: auto; float: right; clear: right; }
+nav { margin: auto; }
 
 nav ul { list-style-type: none; }
 
