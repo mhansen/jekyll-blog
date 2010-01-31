@@ -1,6 +1,8 @@
 ---
 title: Private methods and variables in Javascript
 layout: post
+categories:
+    - javascript
 ---
 
 Till yesterday, I believed there was no way to encapsulate private 

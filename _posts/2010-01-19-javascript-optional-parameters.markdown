@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Optional parameters in Javascript
+categories:
+    - javascript
 ---
 I've been reading a 
 [lot](http://github.com/creationix/node-router/blob/master/node-router.js)

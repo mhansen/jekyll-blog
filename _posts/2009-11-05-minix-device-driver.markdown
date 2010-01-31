@@ -1,6 +1,8 @@
 ---
 title: Changing the Minix3 Bootimage
 layout: post
+categories:
+    - minix
 ---
 
 (or, how to add a device driver to Minix3 without bricking your bootimage)

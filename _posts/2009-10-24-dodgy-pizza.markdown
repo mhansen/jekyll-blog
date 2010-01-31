@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Dodgy Pizza
+categories:
+    - security
 ---
 
 With some friends last night, I got some pizza. As the pizza delivery boy answered the door, he asked to see the credit card we had used to order the pizza, remarking "We have had 70 cases of credit card fraud". This, from a store that just opened two weeks ago, is crazy. There must be a reason why Hells Pizza is getting so much fraud!
