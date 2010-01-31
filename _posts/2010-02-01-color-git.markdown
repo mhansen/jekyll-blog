@@ -1,0 +1,21 @@
+---
+title: Git in Color
+categories:
+- git
+---
+By default, git doesn't use color. However, you can enable color for interactive use:
+
+    $ git config --global --add color.ui true
+
+This adds a line to your ~/.gitconfig file, enabling colors output for all
+git operations on all repositories.
+
+Awesome! Now `git-diff` will shine in radiant reds and greens, and it'll be 
+oh so much easier to see what's changed. `git-branch` will show your current 
+branch in green, `git-status` will show added files in green and deleted files
+in red.
+
+And git's smart enough to check if the output is going to the terminal
+or to a pipe, where color codes could break things. Git only sends color
+output to the terminal, where your eyes can enjoy it. I can't see any
+reason *not* to enable color in git. Enjoy!
