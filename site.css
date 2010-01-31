@@ -1,6 +1,6 @@
 #container {
     width: 40em;
-    margin: 0 auto;
+    margin: 1em auto;
 }
 
 code {
@@ -41,7 +41,6 @@ nav li a:hover {
 
 
 p { margin-top: 1em; margin-bottom: 1em; }
-h1 { font-size: 3em; clear: both; }
-h2 { font-size: 2.5em; }
-h3 { font-size: 2em; }
-h4 { font-size: 1.5em; }
+h1 { font-size: 2em; clear: both; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.2em; }
