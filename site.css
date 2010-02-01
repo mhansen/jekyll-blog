@@ -1,18 +1,24 @@
+---
+text_bgcolor: white
+code_bgcolor: "#EEF"
+code_border: "#DDF"
+bgcolor: "#EEE"
+---
 .centre {
     width: 40em;
     margin: 1em auto;
-    background-color: white;
+    background-color: {{ page.text_bgcolor }};
     padding: 2em;
 }
 
 code {
-    border: 1px solid #DDF;
-    background-color: #EEF;
+    border: 1px solid {{ page.code_border }};
+    background-color: {{ page.code_bgcolor }};
     display: inline-block;
 }
 
 body { 
-    background-color: #EEE; 
+    background-color: {{ page.bgcolor }};
     font-family: Corbel, Arial, Sans-Serif;
 } 
 
