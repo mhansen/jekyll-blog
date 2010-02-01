@@ -1,5 +1,6 @@
 ---
 title: Git in Color
+layout: post
 categories:
 - git
 ---
