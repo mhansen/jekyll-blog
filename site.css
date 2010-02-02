@@ -1,26 +1,20 @@
----
-text_bgcolor: white
-code_bgcolor: "#EEF"
-code_border: "#DDF"
-bgcolor: "#EEE"
----
-
 body { 
-    background-color: {{ page.bgcolor }};
+    background-color: #EEE;
     font-family: Corbel, Arial, Sans-Serif;
 } 
 
 .centre {
     width: 40em;
     margin: 1em auto;
-    background-color: {{ page.text_bgcolor }};
+    background-color: white;
     padding: 2em;
 }
 
 code {
-    border: 1px solid {{ page.code_border }};
-    background-color: {{ page.code_bgcolor }};
+    border: 1px solid #DDF;
+    background-color: #EEF;
     display: inline-block;
+    padding: 1px;
 }
 
 a {
@@ -36,13 +30,12 @@ nav { margin: auto; }
 nav ul { list-style-type: none; }
 
 nav li {
-    border: 1px solid black;
     padding: 0;
     margin: 0;
     float: left;
 }
 
-nav li a { 
+nav a { 
     padding: 1em 5em 1em 1em;
     display: block;
 }
