@@ -1,27 +1,33 @@
 ---
-text_bgcolor: white
-code_bgcolor: "#EEF"
-code_border: "#DDF"
-bgcolor: "#EEE"
+skyblue: "#4247EB"
+darkblue: "#2C309E"
+teal: "#A0A2EB"
+almostblack: "#141414"
+lightgray: "#EBEBEB"
+bluegray: "#6C6D9E"
 ---
+body { 
+    font-family: Corbel, Arial, Sans-Serif;
+    background-color: {{ page.teal }};
+    text-color: {{ page.almostblack }};
+} 
+
+a {
+    text-color: {{ page.darkblue }};
+}
+
 .centre {
     width: 40em;
     margin: 1em auto;
-    background-color: {{ page.text_bgcolor }};
     padding: 2em;
+    background-color: {{ page.lightgray }};
 }
 
 code {
-    border: 1px solid {{ page.code_border }};
-    background-color: {{ page.code_bgcolor }};
     display: inline-block;
+    border: 1px solid {{ page.skyblue }};
+    background-color: {{ page.teal }};
 }
-
-body { 
-    background-color: {{ page.bgcolor }};
-    font-family: Corbel, Arial, Sans-Serif;
-} 
-
 
 nav { margin: auto; }
 
@@ -40,7 +46,7 @@ nav li a {
 }
 
 nav li a:hover {
-    background-color: orange;
+    background-color: {{ page.teal }};
 }
 
 #content {
