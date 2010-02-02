@@ -16,10 +16,18 @@ Optional parameters are a nice language feature - function parameters that are g
 Compare this C# code for connecting to a server, first without optional parameters:
 
 {% highlight csharp %}
-public void connect() : connect("localhost") {}
-public void connect(string hostname) : connect(hostname, 80) {} 
-public void connect(string hostname, int port) : connect(hostname, port, "HTTP") {}
-public void connect(string hostname, int port, string method); { ... }
+public void connect() 
+    : connect("localhost") {}
+
+public void connect(string hostname) 
+    : connect(hostname, 80) {} 
+
+public void connect(string hostname, int port) 
+    : connect(hostname, port, "HTTP") {}
+
+public void connect(string hostname, int port, string method); { 
+    ... 
+}
 {% endhighlight %}
 
  Now, with the new C# 4.0 optional parameters, things are a lot simpler:
