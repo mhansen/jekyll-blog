@@ -23,7 +23,7 @@ a:hover {
     text-decoration: underline;
 }
 
-nav { padding: 2em 0; }
+nav { padding: 2em 2em 0 2em; }
 
 nav ul { list-style-type: none; }
 
@@ -34,12 +34,18 @@ nav li {
 }
 
 nav a { 
+    border-top: 1px;
+    border-left: 1px;
+    border-right: 1px;
+    border-color: transparent;
+    border-style: solid;
     padding: 0.5em;
-    width: 9em;
+    width: 7em;
     display: block;
 }
 
-nav li a:hover {
+nav a:hover {
+    border-color: black;
     background-color: white;
 }
 
