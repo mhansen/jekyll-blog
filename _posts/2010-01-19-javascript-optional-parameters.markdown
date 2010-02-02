@@ -62,6 +62,6 @@ function connect(hostname, port, method) {
 }
 {% endhighlight %}
 
-The short-circuit OR operator `||` returns the left side if the left argument is truthy (evaluates to true in conditionals), otherwise it checks if the right argument is truthy, returning it. We can use this shortcut because `undefined` is falsy: in conditionals, `undefined` evaluates to false.
+The short-circuit OR operator `||` returns the left side if the left argument is truthy (evaluates to `true` in conditionals), otherwise it checks if the right argument is truthy, returning it. We can use this shortcut because `undefined` is falsy: in conditionals, `undefined` evaluates to `false`.
 
  This shortcut approach seems to be a common idiom, but it does have a disadvantage: You can't use it for optional boolean arguments with a default argument of `true`. `false || true` will always evaluate to `true`. Instead, you must explicitly check for `undefined`.
