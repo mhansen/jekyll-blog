@@ -21,7 +21,7 @@ Keypress notifications arrive when the mouse is both inside and outisde the wind
 The mouse is shown whenever a mouse click/release/move notification arrives.
 Mouse notifications are only delivered when the mouse is inside the window area.
 
-So the mouse can be hidden by a keypress event while it is outside the window, but it won't reappear, even if you move the mouse, until it reenters the window. Or you click onto another program.
+So it seems the mouse can be hidden by a keypress event while it is outside the window, but it won't reappear, even if you move the mouse, until it reenters the window. Or you click onto another program.
 
 There's a simple solution: check if the mouse is inside the window before hiding it. I looked up a few Windows API calls, found the ones I needed were `GetWindowRect()` and `GetCursorPos()`. I made the change, recompiled, tested, and it works! 
 
@@ -29,22 +29,26 @@ I checked the edge cases (literal edge cases - the four window edges), and it ev
 
 So, here it is - my first submitted patch to an open-source project. It's not much, but it's a start. :)
 
-{% highlight c %}
-static bool mouse_inside_window() {
-    RECT w; POINT m;
-    GetWindowRect(wnd, &w);
-    GetCursorPos(&m);
-    return
-        (w.left <= m.x && m.x < w.right) &&
-        (w.top <= m.y && m.y < w.bottom);
-}
+    {% highlight c %}
+    static bool mouse_inside_window() {
+        RECT w; POINT m;
+        GetWindowRect(wnd, &w);
+        GetCursorPos(&m);
+        return
+            (w.left <= m.x && m.x < w.right) &&
+            (w.top <= m.y && m.y < w.bottom);
+    }
 
-void
-hide_mouse()
-{
-  if (mouse_showing && mouse_inside_window()) {
-    ShowCursor(false);
-    mouse_showing = false;
-  }
-}
-{% endhighlight %}
+    void
+    hide_mouse()
+    {
+      if (mouse_showing && mouse_inside_window()) {
+        ShowCursor(false);
+        mouse_showing = false;
+      }
+    }
+    {% endhighlight %}
+
+*EDIT*: The MinTTY maintainer Andy Koppe was [totally awesome helping with my problem](http://code.google.com/p/mintty/issues/detail?id=160), but he can't reproduce the problem at his end, and after I restarted my computer I can't reproduce it either.
+
+However, the problem has been troubling me for a few months, so I'm sure it will be back. And when it does, I'll be ready. ;)
