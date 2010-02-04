@@ -8,11 +8,19 @@ body {
     margin: 0 auto;
 }
 
-code {
-    border: 1px solid #DDF;
-    background-color: #EEF;
+p code {
     display: inline-block;
     padding: 1px;
+}
+
+p code, .highlight {
+    border: 1px solid #DDF;
+    background-color: #EEF;
+}
+
+.highlight {
+    padding: 0.5em;
+    overflow: auto;
 }
 
 a {
