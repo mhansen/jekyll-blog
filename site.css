@@ -8,6 +8,10 @@ body {
     margin: 0 auto;
 }
 
+h1.title {
+    float:right;
+}
+
 p code {
     display: inline-block;
     padding: 1px;
@@ -44,6 +48,8 @@ nav li {
 }
 
 nav a { 
+    -moz-border-top-right-radius: 0.5em;
+    -webkit-border-top-right-radius: 0.5em;
     border-top: 1px;
     border-left: 1px;
     border-right: 1px;
@@ -55,7 +61,7 @@ nav a {
 }
 
 nav a:hover {
-    border-color: black;
+    border-color: blue;
     background-color: white;
 }
 
