@@ -12,6 +12,10 @@ h1.title {
     float:right;
 }
 
+p img {
+    max-width: 36em;
+}
+
 p code {
     display: inline-block;
     padding: 1px;
