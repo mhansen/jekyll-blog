@@ -39,7 +39,7 @@ public void connect(string hostname, int port, string method); {
 }
 {% endhighlight %}
 
- Now, with the new C# 4.0 optional parameters, things are a lot simpler:
+Now, with the new C# 4.0 optional parameters, things are a lot simpler:
 
 {% highlight csharp %}
 public void connect(string hostname = "localhost", 
@@ -91,14 +91,8 @@ right argument is truthy, returning it. We can use this shortcut because
 `undefined` is falsy: in conditionals, `undefined` evaluates to `false`.
 
 This shortcut approach is a very common idiom, but it does have a disadvantage:
-You can't use for any argument that could accept a falsy value:
-
-* `false`
-* `0`
-* `null`
-* `undefined`
-* `empty string ""`
-* `NaN`
+You can't use for any argument that could accept a falsy value: `false`, `0`,
+`null`, `undefined`, the empty string `""`, and `NaN`.
 
 Using the `||` shortcut will override any falsy input value. If you expect a
 falsy value, you must explicitly check for `argument === undefined`.

@@ -5,8 +5,9 @@ categories:
 - git
 ---
 By default, git doesn't use color. However, you can enable color for interactive use:
-
-    $ git config --global --add color.ui true
+{% highlight sh %}
+$ git config --global --add color.ui true
+{% endhighlight %}
 
 This adds a line to your ~/.gitconfig file, enabling colors output for all
 git operations on all repositories.
