@@ -5,16 +5,21 @@ categories:
     - javascript
 ---
 
-Till yesterday, I believed there was no way to encapsulate private 
-methods and variables in javascript: 
+Till yesterday, I believed there was no way to encapsulate private methods and
+variables in javascript: 
  
-There are no 'private' or 'public' keywords, like in Java or C#. There are no classes as such, just objects inheriting directly from other objects. And all fields on any object are public. 
+There are no 'private' or 'public' keywords, like in Java or C#. There are no
+classes as such, just objects inheriting directly from other objects. And all
+fields on any object are public. 
  
-But, it turns out there is a way to make private members in javascript, using closures. 
+But, it turns out there is a way to make private members in javascript, using
+closures. 
  
 What's a closure? 
  
-If an outer function returns an inner function, the inner function still has access to the variables of the outer function, *even after the outer function has returned*. 
+If an outer function returns an inner function, the inner function still has
+access to the variables of the outer function, *even after the outer function
+has returned*. 
  
 {% highlight js %}
 function outerFunction(id) {
@@ -28,14 +33,18 @@ var a = outerFunction(5);
 a() //returns 5
 {% endhighlight %}
  
-We are calling the inner function after the outer function has returned, but the inner function still has access to the outer function's methods. Magic! 
+We are calling the inner function after the outer function has returned, but
+the inner function still has access to the outer function's methods. Magic! 
  
-How can you access the local variables of a function after it has returned, the stack frame will be popped right off and the variables will be lost, right? 
+How can you access the local variables of a function after it has returned, the
+stack frame will be popped right off and the variables will be lost, right? 
  
-Not necessarily. When you use a closure, the stack frame is not popped off. It's saved somewhere safe, and inner functions can still get at 
-it. 
+Not necessarily. When you use a closure, the stack frame is not popped off.
+It's saved somewhere safe, and inner functions can still get at it. 
  
-Morris Johns has some [excellent examples](http://blog.morrisjohns.com/javascript_closures_for_dummies.html) illustrating this.
+Morris Johns has some 
+[excellent examples](http://blog.morrisjohns.com/javascript_closures_for_dummies.html)
+illustrating this.
  
 Here's an example of a plain vanilla javascript object. 
  
@@ -48,9 +57,14 @@ var car = {
 };
 {% endhighlight %}
  
-I have a `drive` function that increases the odometer, and guards against winding it back. Except `odometer` is a public member, so anyone can change it. Uh-oh. 
+I have a `drive` function that increases the odometer, and guards against
+winding it back. Except `odometer` is a public member, so anyone can change it.
+Uh-oh. 
  
-Functions in javascript create a new scope, so we can 'hide' `odometer` inside a function. We still need to read the odometer reading, so we can return a function `getOdometer()`. Through closure, the inner function `getOdometer()` has access to the odometer member of the outer function `makeCar()`. 
+Functions in javascript create a new scope, so we can 'hide' `odometer` inside
+a function. We still need to read the odometer reading, so we can return a
+function `getOdometer()`. Through closure, the inner function `getOdometer()`
+has access to the odometer member of the outer function `makeCar()`. 
  
 {% highlight js %}
 function makeCar(initialOdometer) {
@@ -66,7 +80,8 @@ function makeCar(initialOdometer) {
 }
 {% endhighlight %}
  
-(Note: We are not using `this` to access the odometer reading any more. `this` is not needed - we have a direct reference to `privateOdometer` in the closure)
+(Note: We are not using `this` to access the odometer reading any more. `this`
+is not needed - we have a direct reference to `privateOdometer` in the closure)
  
 We can then instantiate a really old car, setting its private odometer:
 
@@ -74,7 +89,8 @@ We can then instantiate a really old car, setting its private odometer:
 var reallyOldCar = makeCar(180000); 
 {% endhighlight %}
  
-We can't get or set the odometer directly: there's no `privateOdometer` field on the object we returned:
+We can't get or set the odometer directly: there's no `privateOdometer` field
+on the object we returned:
 
 {% highlight js %}
 reallyOldCar.privateOdometer; //undefined 
@@ -100,6 +116,9 @@ reallyOldCar.drive(20000);
 reallyOldCar.getOdometer(); //220000
 {% endhighlight %}
  
-Brilliant! Private variables in javascript. You can apply exactly the same technique for private methods.
+Brilliant! Private variables in javascript. You can apply exactly the same
+technique for private methods.
 
-props to Douglas Crockford for explaining this pattern.
+props to 
+[Douglas Crockford](http://www.crockford.com/) for 
+[explaining this pattern](http://javascript.crockford.com/private.html).
