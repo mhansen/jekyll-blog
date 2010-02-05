@@ -153,10 +153,10 @@ properties from `undefined`.
 A combination of all three methods
 ----------------------------------
 
-Here's an example, from node.js's `process.watchFile(filename, [options,]
-listener)`, used to watch `filename` for changes, calling `listener` when it
-does. This function has an optional argument in the middle: an `options` object,
-which itself has optional arguments.
+Here's an example, from node.js's process.watchFile(filename, options,
+listener) function. It's used to watch `filename` for changes, calling
+`listener` when it does. In this function, the `options` argument is
+optional:
 
 {% highlight js %}
 process.watchFile = function (filename) {

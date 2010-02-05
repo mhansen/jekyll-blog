@@ -3,4 +3,4 @@ default:
 
 
 server:
-	cmd /C jekyll --server 80
+	cmd /C jekyll --server 8000 --auto > /dev/null &
