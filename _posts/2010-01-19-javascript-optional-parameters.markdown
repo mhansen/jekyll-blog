@@ -57,9 +57,9 @@ other parameters with the value `undefined`.
 connect("www.google.com");
 function connect(hostname, port, method) {
      // inside the function, 
-     // hostname == "www.google.com", 
-     // port == undefined,
-     // method == undefined 
+     // hostname === "www.google.com", 
+     // port === undefined,
+     // method === undefined 
 }
 {% endhighlight %}
 
@@ -91,13 +91,21 @@ right argument is truthy, returning it. We can use this shortcut because
 `undefined` is falsy: in conditionals, `undefined` evaluates to `false`.
 
 This shortcut approach is a very common idiom, but it does have a disadvantage:
-You can't use it for optional boolean arguments with a default argument of
-`true`. `false || true` will always evaluate to `true`. Instead, you must
-explicitly check for `undefined`.
+You can't use for any argument that could accept a falsy value:
+
+* `false`
+* `0`
+* `null`
+* `undefined`
+* `empty string ""`
+* `NaN`
+
+Using the `||` shortcut will override any falsy input value. If you expect a
+falsy value, you must explicitly check for `argument === undefined`.
 
 This method only allows the last arguments to be optional - you cannot make an
 optional first parameter, middle parameter, or combination of parameters
-optional. The next method lets you put optional arguments anywhere.
+optional. The next methods let you position optional arguments anywhere.
 
 Method 2: The arguments variable
 --------------------------------
