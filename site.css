@@ -69,5 +69,5 @@ article {
 
 p { margin-top: 1em; margin-bottom: 1em; }
 h1 { font-size: 2em; padding-bottom: 0.5em;}
-h2 { font-size: 1.5em; padding: 0 0 0.5em 0.5em;}
-h3 { font-size: 1.2em; }
+h2 { font-size: 1.5em; padding: 0.5em 0 0.5em 0; }
+h3 { font-size: 1.2em; padding: 0.3em 0 0.3em 0; }
