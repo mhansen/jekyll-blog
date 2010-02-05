@@ -39,7 +39,10 @@ a:hover {
 
 nav { padding: 2em 2em 0 2em; }
 
-nav ul { list-style-type: none; }
+nav ul { 
+    list-style-type: none; 
+    margin: 0;
+}
 
 nav li {
     padding: 0;
@@ -75,7 +78,8 @@ article {
     margin-bottom: 1em;
 }
 
-p, .highlight { margin-top: 1em; margin-bottom: 1em; }
+p, .highlight, ul { margin-top: 1em; margin-bottom: 1em; }
 h1 { font-size: 2em; }
 h2 { font-size: 1.5em; }
 h3 { font-size: 1.2em; }
+ul { list-style-type: circle; }
