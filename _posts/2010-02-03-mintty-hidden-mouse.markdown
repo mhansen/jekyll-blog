@@ -51,7 +51,8 @@ much, but it's a start. :)
 
 {% highlight c %}
 
-static bool mouse_inside_window() {
+static bool
+mouse_inside_window() {
     RECT w; POINT m;
     GetWindowRect(wnd, &w);
     GetCursorPos(&m);
