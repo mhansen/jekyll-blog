@@ -50,7 +50,7 @@ function pure_server_error(http_response) {
 
 I planned to enabled testing of all these functions by making them pure (and
 remember, in this article, a pure function is one that 'only operates on its
-arguments*); e.g. refactor code like this:
+arguments); e.g. refactor code like this:
 
 {% highlight js %}
 function streamFile(file, response) {
