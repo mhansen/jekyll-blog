@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Mouse Hiding in MinTTY
+categories:
+- mintty
+- open source
 ---
 
 I love [MinTTY](http://code.google.com/p/mintty/) - it's the best terminal

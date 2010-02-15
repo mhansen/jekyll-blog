@@ -1,7 +1,7 @@
 ---
 title: Don't debug with JSON.Stringify
 layout: post
-category:
+categories:
 - javascript
 - node.js
 ---

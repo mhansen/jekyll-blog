@@ -2,7 +2,7 @@
 title: Benchmark your DNS!
 layout: post
 categories: 
- - DNS
+- DNS
 ---
 
 Every time you browse to a website, your computer needs to translate the

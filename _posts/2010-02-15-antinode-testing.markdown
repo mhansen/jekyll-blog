@@ -3,7 +3,8 @@ layout: post
 title: Unit Testing a Javascript Project
 categories:
  - javascript
- - unit testing
+ - testing
+ - node.js
  - antinode
 ---
 
@@ -77,16 +78,18 @@ be, in the flow of code where it will execute.
 On the other hand, if your function has a good name and a clear purpose, you
 shouldn't need to follow it to find out what it does.
 
-Also, with closures you can access variables in the parent scope. This allows
-for some neat tricks and easy organisation of variables (this variable is
-declared in this function, so it can only be changed by this function and
-its inner functions). For example, in antinode, the `stream(path, resp)`
-function is passed the http response object as `resp`, and all the inner
-functions of `stream` automatically have access to the response variable,
-without needing it passed to inner function's arguments. This keeps the code
-clearer, but it does make me feel a little uneasy in the same way as modifying
-global variables. And dependencies on all these variables that are only
-available through closure make the function impossible to unit test.
+Also, with closures you can access variables in the parent function's scope.
+This allows for easy organisation of variables: this variable is declared in
+this function, so it can only be accessed by this function and its inner
+functions.
+
+For example, in antinode, the `stream(path, resp)` function is passed the http
+response object as `resp`, and all the inner functions of `stream`
+automatically have access to the response variable, without needing it passed
+to the inner function's arguments. This keeps the code clearer, but it does
+make me feel a little uneasy in the same way as modifying global variables. And
+dependencies on all these variables that are only available through closure
+make the function impossible to unit test.
 
 In conclusion, antinode will have to be refactored before unit tests can be
 added. Goals of the refactoring will include:
@@ -102,3 +105,6 @@ added. Goals of the refactoring will include:
    they are declared.
 
 OK! Now I have a plan. Time to start coding!
+
+\[EDIT 16/02/2010: I tried this plan, and it <a
+href="/antinode-testing-pt2">didn't work out so well</a>\].

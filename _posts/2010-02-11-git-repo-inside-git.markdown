@@ -1,6 +1,8 @@
 ---
 title: Keeping Git repositories inside other Git repositories
 layout: post
+categories:
+- git
 ---
 
 How do you keep another Git repository inside a folder that's already under
