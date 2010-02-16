@@ -16,12 +16,9 @@ numbers! Cool! Let's analyze it. I love a puzzle.
 
 - `[abc123]` matches any one of the symbols inside the bracket. Called a
   'character class'.
-
 - `[1-9]` is the same as `[123456789]`.
-
 - It looks like `x` is used as a stand-in for something.  In this context, it's
   probably any number: a shorter way of saying `[0-9]`.
-
 - `(pattern1|pattern2|pattern3)` is the basic OR of regular expressions: match
   `pattern1` OR `pattern2` OR `pattern3`. So in this expression, it looks like
   there are about 10 different types of general phone numbers.

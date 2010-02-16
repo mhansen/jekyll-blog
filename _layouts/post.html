@@ -1,11 +1,12 @@
 ---
 layout: default
 ---
-<div id="post">
+<article>
+  <em>{{ page.date | date_to_long_string }}</em>
   <h1>{{ page.title }}</h1>
   {{ content }}
-  <em>Posted {{ page.date | date_to_long_string }} under {{ page.categories | join: ', ' }}.</em>
-
+  <em> Filed under {{ page.categories | join: ', ' }}.</em>
+</article>
   <!-- start disqus !-->
 
   <div id="disqus_thread"> </div>
@@ -14,4 +15,3 @@ layout: default
   <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span> </a>
 
   <!-- end disqus !-->
-</div>
