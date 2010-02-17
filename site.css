@@ -16,14 +16,19 @@ p img {
     max-width: 36em;
 }
 
-code {
+code, pre {
+    background-color: #EEF;
+    border: 1px solid #DDF;
+}
+    
+
+code { /* code inside text */
     display: inline-block;
     margin: 1px;
-    border: 1px solid #DDF;
     background-color: #EEF;
 }
 
-pre code {
+pre code { /* code inside pre already has a border */
     border: none;
     background-color: inherit;
     padding: 0.5em;
@@ -31,8 +36,6 @@ pre code {
 
 pre {
     overflow: auto; /* scrollbars instead of overflowing */
-    border: 1px solid #DDF;
-    background-color: #EEF;
     width: 100%;
 }
 
