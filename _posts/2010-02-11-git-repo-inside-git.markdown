@@ -1,5 +1,5 @@
 ---
-title: Keeping Git repositories inside other Git repositories
+title: Git inside Git
 layout: post
 categories:
 - git

@@ -1,5 +1,5 @@
 ---
-title: "Unit Testing a Javascript Project: Part 2"
+title: "Antinode Testing: Pt 2"
 layout: post
 categories: 
 - javascript
