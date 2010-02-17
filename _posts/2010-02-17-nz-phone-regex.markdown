@@ -43,6 +43,8 @@ numbers! Cool! Let's analyze it. I love a puzzle.
   `0` is the national access code.
   If a number starts with `03`, `04`, `06`, or `09`, it is a national call.
   Notably absent is `07` the area code for where I live.
+- `0800xxxxxxS0`  
+  `0800` numbers are national freecall hotlines.
 - `00[1-9]x.S3`  
   `00` is the international access code. It's strange that there's only one `x`
   here, as there will probably be many more numbers after the country code.
@@ -59,7 +61,8 @@ numbers! Cool! Let's analyze it. I love a puzzle.
 - What is the purpose of this regex?
 - `S0` and `S3` suffixes at the end some regexes. What do they mean?
 - `.` dots in regex. What do they mean?
-- Where are the 'freecall' `0800xxxxxx` numbers?
+- <del>Where are the 'freecall' `0800xxxxxx` numbers?</del>
+  *EDIT:* They were in there, I just missed them.
 - Why is there nothing distinguishing the valid numbers from the invalid
   `0[12578]x.S3]` form?
 
