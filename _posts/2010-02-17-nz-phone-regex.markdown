@@ -1,8 +1,8 @@
 ---
-title: A Regex For New Zealand Phone Numbers
+title: NZ Phone Numbers
 layout: post
 categories:
-- phone numbers
+- phone
 ---
 
 Setting up a VoIP router today, I came across an interesting setting: 'Dial Plan 1'.
@@ -58,11 +58,10 @@ numbers! Cool! Let's analyze it. I love a puzzle.
   0900 numbers: They charge you by the minute to call them.
 
 ## Unsolved Mysteries
+
 - What is the purpose of this regex?
 - `S0` and `S3` suffixes at the end some regexes. What do they mean?
-- `.` dots in regex. What do they mean?
-- <del>Where are the 'freecall' `0800xxxxxx` numbers?</del>
-  *EDIT:* They were in there, I just missed them.
+- What do `.` dots mean?
 - Why is there nothing distinguishing the valid numbers from the invalid
   `0[12578]x.S3]` form?
 
