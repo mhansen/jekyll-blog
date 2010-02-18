@@ -1,0 +1,28 @@
+---
+title: "Installing JSON.vim"
+layout: post
+---
+
+1. Download json.vim to `~/.vim/syntax/json.vim`  
+2. Make a new file `~/.vim/ftdetect/json.vim` and write in it:
+
+{% highlight vim %}
+au BufRead,BufNewFile *.json set filetype=json
+{% endhighlight %}
+
+## How does this work?
+
+1. When you put a file in `~/.vim/syntax/{name}.vim`, that syntax highlighting
+   file will be loaded whenever the `filetype` variable is set to `{name}`.
+2. The second step sets `filetype=json` whenever you load a file ending with
+   `.json`, triggering the syntax highlighting.
+
+[JSON.vim](http://www.vim.org/scripts/script.php?script_id=1945) is a syntax
+highlighter for [JSON](http://json.org) code, but the install instructions are
+a little light on detail, and other 
+[blog](http://blog.graphtech.co.il/editing-json-files-in-vim/)
+[posts](http://bradmontgomery.blogspot.com/2010/01/add-json-syntax-highlighting-in-vim-on.html)
+tell you to explicitly source
+JSON.vim from some explicit path, which works for one computer, but won't if
+you like to use your vimfiles in different directories on more than one
+computer.

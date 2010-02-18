@@ -90,7 +90,7 @@ article {
     margin-bottom: 3em;
 }
 
-p, .highlight, ul { 
+p, .highlight, ul, ol { 
     margin-bottom: 1.5em; 
 }
 h1, h2, h3, h4, h5, h6 {
@@ -111,6 +111,9 @@ h3 {
 }
 ul { 
     list-style-type: square; 
+}
+ol {
+    list-style-type: decimal;
 }
 #older_post {
     float: right;
