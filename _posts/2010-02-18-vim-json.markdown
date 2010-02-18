@@ -1,6 +1,9 @@
 ---
 title: "Installing JSON.vim"
 layout: post
+categories:
+- vim
+- json
 ---
 
 1. Download json.vim to `~/.vim/syntax/json.vim`  
