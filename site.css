@@ -48,6 +48,13 @@ a:hover {
     text-decoration: underline;
 }
 
+blockquote {
+    display: block;
+    border-left: 2px solid grey;
+    margin-left: 1em;
+    padding-left: 1em;
+}
+
 nav { padding: 2em 2em 0 2em; }
 
 nav ul { 
@@ -90,7 +97,7 @@ article {
     margin-bottom: 3em;
 }
 
-p, .highlight, ul, ol { 
+p, .highlight, ul, ol, blockquote { 
     margin-bottom: 1.5em; 
 }
 h1, h2, h3, h4, h5, h6 {
@@ -118,3 +125,4 @@ ol {
 #older_post {
     float: right;
 }
+
