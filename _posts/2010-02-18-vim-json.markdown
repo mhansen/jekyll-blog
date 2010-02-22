@@ -22,10 +22,11 @@ au BufRead,BufNewFile *.json set filetype=json
 
 [JSON.vim](http://www.vim.org/scripts/script.php?script_id=1945) is a syntax
 highlighter for [JSON](http://json.org) code, but the install instructions are
-a little light on detail, and other 
+a little light on detail.
+
+Other 
 [blog](http://blog.graphtech.co.il/editing-json-files-in-vim/)
 [posts](http://bradmontgomery.blogspot.com/2010/01/add-json-syntax-highlighting-in-vim-on.html)
-tell you to explicitly source
-JSON.vim from some explicit path, which works for one computer, but won't if
-you like to use your vimfiles in different directories on more than one
-computer.
+tell you to explicitly source JSON.vim from some explicit path. This will work
+for one computer, but will fail if you like to use your vimfiles in different
+directories on more than one computer.
