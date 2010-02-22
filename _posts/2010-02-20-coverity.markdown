@@ -7,13 +7,16 @@ categories:
 
 The people behind [Coverity](http://www.coverity.com),
 a commercial static analysis bugfinding tool, have
-[shared their experiences](http://cacm.acm.org/magazines/2010/2/69354-a-few-billion-lines-of-code-later/fulltext/) in selling business software. It starts off a little slow, but it's a fascinating read, exposing many problems in the way software is developed. 
+[shared their experiences](http://cacm.acm.org/magazines/2010/2/69354-a-few-billion-lines-of-code-later/fulltext/) in selling business software. It starts off a little slow, but it's a fascinating read, exposing many problems in the way software is developed:
 
-For example, managers who refuse upgrade to the latest version of the
-bugfinding tool. That sounds like a no-brainer to me - get the latest version, 
-and you get a better analysis of your code, you'll find more bugs that slipped
-through last time, and be able to fix them before your customers find them. But
-if you're a manager and your bonus depends on the bug number going down, the
+Some managers refused to upgrade to the latest version of the
+bugfinding tool. That sounds like a no-brainer to me - if you get the latest version, 
+
+- you get a better analysis of your code
+- you find more bugs
+- you fix them before your customers find them
+
+But if you're a manager and your bonus depends on the bug number going down, the
 last thing you want is a new version of the tool to push bug numbers back up.
 
 > At company X, version 2.4 of the tool found approximately 2,400 errors, and
@@ -22,7 +25,6 @@ last thing you want is a new version of the tool to push bug numbers back up.
 > reasons: One, we "undid" all the work his people had done, and two, how could
 > we have missed them the first time?
 
-Clueless management incentives like this are part of the reason we can't have
-nice things.
+Gah!
 
 The article's a great read. [Check it out](http://cacm.acm.org/magazines/2010/2/69354-a-few-billion-lines-of-code-later/fulltext/).
