@@ -134,3 +134,8 @@ article h1 a:hover {
     color: gray;
     text-decoration: none;
 }
+
+#aboutme {
+    float: right;
+    margin-top: 1em;
+}
