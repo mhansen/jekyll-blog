@@ -11,17 +11,24 @@
   <body>
     <div id="page">
       <div id="sidebar">
-        <h2><a href="/">Mark Hansen</a></h2>
+        <h3>Mark Hansen</h3>
         <ul>
+          <li><a href="/">Home</a></li>
           <li><a href="/contact.html">Contact</a></li>
         </ul>
 
-        <h2><a href="/archive.html">Archive</a></h2>
+        <h3>Archive</h3>
+        <ul>
+          {% for post in site.posts limit:10 %}
+          <li><a href="{{post.url}}">{{post.title}}</a></li>
+          {% endfor %}
+          <li><a href="/archive.html">More...</a></li>
+        </ul>
 
-        <h2>Tag Cloud</h2>
+        <h3>Tag Cloud</h3>
         {% include tagcloud.html %}
 
-        <h2>Projects</h2>
+        <h3>Projects</h3>
         <ul>
           <li><a href="http://github.com/mhansen/antinode">Antinode</a></li>
         </ul>

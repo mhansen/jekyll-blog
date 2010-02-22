@@ -10,10 +10,10 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 2em;
-    width: 900px;
+    width: 1000px;
 }
 
-#page #content {
+#content {
     width: 600px;
     float: left;
     padding: 2.5em;
@@ -21,9 +21,12 @@ body {
     border: 3px solid #AAA;
 }
 
-#page #sidebar {
+#sidebar {
     float: right;
-    width: 100px;
+    width: 200px;
+}
+#sidebar ul {
+    list-style-type: none;
 }
 
 #page #footer {
@@ -108,6 +111,8 @@ h2 {
 }
 h3 { 
     font-size: 1.2em; 
+    padding-bottom: 5px;
+    border-bottom: 1px solid gray;
 }
 div.date {
     font-style: italic;
