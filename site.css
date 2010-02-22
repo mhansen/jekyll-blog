@@ -94,7 +94,7 @@ article {
     margin-bottom: 3em;
 }
 
-p, .highlight, ul, ol, blockquote, .date { 
+p, .highlight, ul, ol, blockquote, .date, .subtitle { 
     margin-bottom: 1.5em; 
 }
 h1, h2, h3, h4, h5, h6 {
@@ -114,7 +114,7 @@ h3 {
     padding-bottom: 5px;
     border-bottom: 1px solid gray;
 }
-div.date {
+.date, .subtitle {
     font-style: italic;
 }
 ul { 

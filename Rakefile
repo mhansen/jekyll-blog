@@ -16,7 +16,8 @@ task :site do
 layout: default
 title: Postings tagged "#{category}"
 ---
-    <h1 id="#{category}">Postings tagged "#{category}"</h1>
+    <h1 id="#{category}">#{category}</h1>
+    <div class="subtitle">Posts tagged #{category}</div>
     HTML
   
     html << '<ul class="posts">'
@@ -24,7 +25,9 @@ title: Postings tagged "#{category}"
       post_data = post.to_liquid
       html << <<-HTML
         <li>
-          <span class="date">#{post.date.strftime(site.config['date_format'])}</span>
+          <span class="date">
+            #{post.date.strftime(site.config['date_format'])}
+          </span>
           <a href="#{post.url}">#{post_data['title']}</a>
         </li>
         HTML
