@@ -5,7 +5,11 @@ layout: default
   <h1><a href="{{ post.url }}">{{ page.title }}</a></h1>
   <div class="date">Posted {{ page.date | date_to_long_string }} by Mark</div>
   {{ content }}
-  <em> Filed under {{ page.categories | join: ', ' }}.</em>
+  <span class="tags"> Tagged 
+    {% for tag in page.categories %}
+      <a href="/tags/{{tag}}">{{tag}}</a>
+      {% if forloop.last == false %},{% endif %}
+    {% endfor %}
 </article>
 
 <div id="disqus_thread"> </div>
