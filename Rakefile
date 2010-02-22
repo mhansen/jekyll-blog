@@ -24,7 +24,7 @@ title: Postings tagged "#{category}"
       post_data = post.to_liquid
       html << <<-HTML
         <li>
-          <span class="date">#{post.date}</span>
+          <span class="date">#{post.date.strftime(site.config['date_format'])}</span>
           <a href="#{post.url}">#{post_data['title']}</a>
         </li>
         HTML

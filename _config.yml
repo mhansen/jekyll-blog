@@ -12,3 +12,4 @@ maruku:
   png_url:    /images/latex
 exclude:
   - Makefile
+date_format: "%d %b %Y"
