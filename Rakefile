@@ -1,6 +1,5 @@
-desc 'Generate tags page'
-task :tags do
-  puts "Generating tags..."
+desc 'Generate bits of the site that cant be done with Liquid'
+task :site do 
   require 'rubygems'
   require 'jekyll'
   include Jekyll::Filters
@@ -8,12 +7,9 @@ task :tags do
   options = Jekyll.configuration({})
   site = Jekyll::Site.new(options)
   site.read_posts('')
-  sidebar_html = '<ul>'
+  puts "Generating tags..."
   site.categories.sort.each do |category, posts|
-    sidebar_html << <<-SIDEBAR_HTML
-    <li><a href="tags/#{category}.html">#{category} (#{posts.count})</a></li>
-    SIDEBAR_HTML
-
+  
     html = ''
     html << <<-HTML
 ---
@@ -22,7 +18,7 @@ title: Postings tagged "#{category}"
 ---
     <h1 id="#{category}">Postings tagged "#{category}"</h1>
     HTML
-
+  
     html << '<ul class="posts">'
     posts.each do |post|
       post_data = post.to_liquid
@@ -31,17 +27,29 @@ title: Postings tagged "#{category}"
           <span class="date">#{post.date}</span>
           <a href="#{post.url}">#{post_data['title']}</a>
         </li>
-      HTML
+        HTML
     end
     html << '</ul>'
-    
-    File.open("tags/#{category}.html", 'w+') do |file|
+  
+    FileUtils.mkdir "tags/#{category}/"
+    File.open("tags/#{category}/index.html", 'w+') do |file|
       file.puts html
     end
   end
-  sidebar_html << '</ul>'
-  File.open("_includes/categories.html", 'w+') do |file|
-      file.puts sidebar_html
+  puts 'Done.'
+  
+  puts 'Generating tag cloud...'
+  html = ''
+  site.categories.sort.each do |category, posts|
+      font_size = 12 + (posts.count*1.5);
+      html << <<-HTML
+      <a href="/tags/#{category}" style="font-size:#{font_size}px;">
+        #{category}
+      </a>
+      HTML
+  end
+  File.open('_includes/tagcloud.html', 'w+') do |file|
+    file.puts html
   end
   puts 'Done.'
 end
