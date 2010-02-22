@@ -5,8 +5,6 @@ categories:
 - links
 ---
 
-[Original article](http://cacm.acm.org/magazines/2010/2/69354-a-few-billion-lines-of-code-later/fulltext/)
-
 The people behind [Coverity](http://www.coverity.com),
 a commercial static analysis bugfinding tool, have
 [shared their experiences](http://cacm.acm.org/magazines/2010/2/69354-a-few-billion-lines-of-code-later/fulltext/) in selling business software. It starts off a little slow, but it's a fascinating read, exposing many problems in the way software is developed. 
