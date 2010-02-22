@@ -24,6 +24,7 @@ body {
 #sidebar {
     float: right;
     width: 200px;
+    padding-top: 3em;
 }
 #sidebar ul {
     list-style-type: none;
