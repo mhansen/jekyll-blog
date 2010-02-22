@@ -1,16 +1,37 @@
 body { 
     background-color: #EEE;
+    color: #333;
+    font-size: 17px;
+    margin-bottom: 1em;
     font-family: Cambria, Georgia, serif;
 } 
 
-.centre {
-    width: 40em;
-    margin: 0 auto;
+#page {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    width: 900px;
 }
 
-h1.title {
-    margin-bottom: 0;
+#page #content {
+    width: 600px;
+    float: left;
+    padding: 2.5em;
+    background-color: white;
+    border: 3px solid #AAA;
 }
+
+#page #sidebar {
+    float: right;
+    width: 100px;
+}
+
+#page #footer {
+    clear: both;
+    color: #999;
+    font-size: 10px;
+}
+
 
 p img {
     max-width: 36em;
@@ -50,46 +71,19 @@ a:hover {
 
 blockquote {
     display: block;
-    border-left: 2px solid grey;
+    color: gray;
+    border-left: 2px solid gray;
     margin-left: 1em;
     padding-left: 1em;
 }
-
-nav { padding: 2em 2em 0 2em; }
 
 nav ul { 
     list-style-type: none; 
     margin: 0;
 }
 
-nav li {
-    padding: 0;
-    margin: 0;
-    float: left;
-}
-
-nav a { 
-    -moz-border-top-right-radius: 0.5em;
-    -webkit-border-top-right-radius: 0.5em;
-    border-top: 1px;
-    border-left: 1px;
-    border-right: 1px;
-    border-color: transparent;
-    border-style: solid;
-    padding: 0.5em;
-    width: 7em;
-    display: block;
-}
-
 nav a:hover {
-    border-color: blue;
     background-color: white;
-}
-
-#content {
-    padding: 1em 2em 2em 2em;
-    background-color: white;
-    clear: both;
 }
 
 article {
@@ -97,7 +91,7 @@ article {
     margin-bottom: 3em;
 }
 
-p, .highlight, ul, ol, blockquote { 
+p, .highlight, ul, ol, blockquote, .date { 
     margin-bottom: 1.5em; 
 }
 h1, h2, h3, h4, h5, h6 {
@@ -106,7 +100,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 { 
     font-size: 1.7em; 
-    margin-bottom: 1em;
 }
 h2 { 
     font-size: 1.3em; 
@@ -115,6 +108,9 @@ h2 {
 }
 h3 { 
     font-size: 1.2em; 
+}
+div.date {
+    font-style: italic;
 }
 ul { 
     list-style-type: square; 
@@ -125,4 +121,10 @@ ol {
 #older_post {
     float: right;
 }
-
+article h1 a {
+    color: black;
+}
+article h1 a:hover {
+    color: gray;
+    text-decoration: none;
+}

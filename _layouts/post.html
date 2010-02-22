@@ -2,8 +2,8 @@
 layout: default
 ---
 <article>
-  <em>{{ page.date | date_to_long_string }}</em>
   <h1>{{ page.title }}</h1>
+  <div class="date">Posted {{ page.date | date_to_long_string }} by Mark Hansen</div>
   {{ content }}
   <em> Filed under {{ page.categories | join: ', ' }}.</em>
 </article>

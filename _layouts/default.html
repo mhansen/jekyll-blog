@@ -9,36 +9,35 @@
     <link rel="stylesheet" href="/site.css">
   </head>
   <body>
-    <div class="centre">
-      <h1 class="title">Mark Hansen</h1>
-      <nav><ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/archive.html">Archive</a></li>
-        <li><a href="http://github.com/mhansen">Projects</a></li>
-        <li><a href="/contact.html">Contact</a></li>
-      </ul></nav>
-    </div>
-    <div class="centre">
+    <div id="page">
+      <div id="sidebar">
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/archive.html">Archive</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="http://github.com/mhansen">Projects</a></li>
+          </ul>
+        </nav>
+      </div>
       <div id="content">
         {{ content }}
       </div>
-    </div>
+      <div id="footer">
+        <p>
+        Mark Hansen is a web developer in Hamilton, New Zealand.
+        You can <a href="/contact.html">contact him</a>.
+        </p>
+        <p>Last updated {{ site.time | date: "%d %b %Y" }}.</p>
+        <p id="techspecs">
+        Compiled from <a href="http://github.com/mhansen/jekyll-blog">source</a>
+        with <a href="http://jekyllrb.com/">Jekyll</a>,
+        served by <a href="http://github.com/mhansen/antinode">antinode</a>
+        running on <a href="http://nodejs.org">node.js</a>.
+        </p>
+      </div>
+
     <div class="centre">
-      <p>
-      Mark Hansen is a web developer in Hamilton, New Zealand.
-      You can <a href="/contact.html">contact him</a>.
-      </p>
-      <p>
-        This site was compiled from 
-        <a href="http://github.com/mhansen/jekyll-blog">source</a>
-        by 
-        <a href="http://jekyllrb.com/">Jekyll</a>,
-        and served by 
-        <a href="http://github.com/mhansen/antinode">antinode</a>
-        running on
-        <a href="http://nodejs.org">node.js</a>.
-      </p>
-      <p>Last updated {{ site.time | date: "%d %b %Y" }}.</p>
     </div>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
