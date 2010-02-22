@@ -11,14 +11,20 @@
   <body>
     <div id="page">
       <div id="sidebar">
-        <nav>
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/archive.html">Archive</a></li>
-            <li><a href="/contact.html">Contact</a></li>
-            <li><a href="http://github.com/mhansen">Projects</a></li>
-          </ul>
-        </nav>
+        <h2><a href="/">Mark Hansen</a></h2>
+        <ul>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+
+        <h2><a href="/archive.html">Archive</a></h2>
+
+        <h2>Categories</h2>
+        {% include categories.html %}
+
+        <h2>Projects</h2>
+        <ul>
+          <li><a href="http://github.com/mhansen/antinode">Antinode</a></li>
+        </ul>
       </div>
       <div id="content">
         {{ content }}
