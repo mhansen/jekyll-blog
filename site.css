@@ -45,15 +45,15 @@ code, pre {
     background-color: #EEF;
     border: 1px solid #DDF;
 }
-    
 
-code { /* code inside text */
+code { /* inline code */
     display: inline-block;
     margin: 1px;
     background-color: #EEF;
 }
 
-pre code { /* code inside pre already has a border */
+pre code { 
+    /* code inside pre already has a border, doesn't need 2 */
     border: none;
     background-color: inherit;
     padding: 0.5em;
@@ -138,4 +138,8 @@ article h1 a:hover {
 #aboutme {
     float: right;
     margin-top: 1em;
+}
+
+blockquote ul {
+    list-style-type: none;
 }
