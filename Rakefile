@@ -16,7 +16,7 @@ task :site do
 layout: default
 title: Postings tagged "#{category}"
 ---
-    <h1 id="#{category}">#{category}</h1>
+    <h1>#{category}</h1>
     <div class="subtitle">Posts tagged #{category}</div>
     HTML
   
@@ -46,7 +46,7 @@ title: Postings tagged "#{category}"
   site.categories.sort.each do |category, posts|
       font_size = 12 + (posts.count*1.5);
       html << <<-HTML
-      <a href="/tags/#{category}" style="font-size:#{font_size}px;">
+      <a href="/tags/#{CGI::escape(category)}" style="font-size:#{font_size}px;">
         #{category}
       </a>
       HTML
