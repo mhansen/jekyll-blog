@@ -57,7 +57,8 @@ title: Postings tagged "#{category}"
   puts 'Done.'
   puts 'Checking posts...'
   site.posts.each do |post|
-    puts("no description on "+post.title) unless post.respond_to? :description
+    puts YAML.dump(post)
+    puts 'no description on' + post.title unless post.respond_to? :description
   end
   puts 'Done.'
 end
