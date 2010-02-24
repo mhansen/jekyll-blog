@@ -55,4 +55,9 @@ title: Postings tagged "#{category}"
     file.puts html
   end
   puts 'Done.'
+  puts 'Checking posts...'
+  site.posts.each do |post|
+    puts("no description on "+post.title) unless post.respond_to? :description
+  end
+  puts 'Done.'
 end
