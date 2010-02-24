@@ -15,7 +15,7 @@ Google freely provides some cool SEO information about your site:
 - HTML Suggestions (uninformative title tags, bad meta tags)
 
 With this, I found that my post on the security of Hell Pizza's website ranks
-#8 for queries for hellspizza.co.nz. Take *that*, Hell Pizza!
+number 8 for queries for hellspizza.co.nz. Take *that*, Hell Pizza!
 
 For these goodies, sign up for 
 [Google Webmaster Tools](https://www.google.com/webmasters/tools/). It also
