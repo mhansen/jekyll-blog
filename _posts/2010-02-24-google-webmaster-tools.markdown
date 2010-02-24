@@ -1,5 +1,6 @@
 ---
 layout: post
+description: Using Google Webmaster Tools to manage your website
 title: Google Webmaster Tools
 categories:
 - SEO

@@ -1,5 +1,6 @@
 ---
 title: "Antinode Testing: Pt 2"
+description: Discussion of testing a node.js javascript project
 layout: post
 categories: 
 - javascript

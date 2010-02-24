@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Dodgy Pizza
+description: Hell's Pizza doesn't have good website security for credit card numbers
 categories:
     - security
 ---

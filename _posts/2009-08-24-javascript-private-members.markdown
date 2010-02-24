@@ -1,6 +1,7 @@
 ---
 title: Private methods and variables in Javascript
 layout: post
+description: Using closures to make private object members
 categories:
     - javascript
 ---

@@ -1,6 +1,7 @@
 ---
 title: Git inside Git
 layout: post
+description: How to import other git repositories into your git repo using submodules
 categories:
 - git
 ---

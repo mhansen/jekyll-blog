@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Peter Norvig's "Design Patterns in Dynamic Programming"
+description: A discussion of Norvig's slides on design patterns in dynamic languages
 categories:
     - dynamic programming
     - design patterns

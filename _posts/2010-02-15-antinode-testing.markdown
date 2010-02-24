@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Antinode Testing
+description: Discussion of testing in a node.js javascript project
 categories:
  - javascript
  - testing

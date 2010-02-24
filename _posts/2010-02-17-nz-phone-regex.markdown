@@ -1,6 +1,7 @@
 ---
 title: NZ Phone Numbers
 layout: post
+description: I found a regular expression to match New Zealand phone numbers
 categories:
 - phone
 ---

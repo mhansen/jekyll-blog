@@ -1,5 +1,6 @@
 ---
 layout: post
+description: Douglas Hofstadter's definition of intelligence
 title: Hofstadter on Intelligence
 categories:
 - books

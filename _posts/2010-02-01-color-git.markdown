@@ -1,6 +1,7 @@
 ---
 title: Git in Color
 layout: post
+description: How to get git output in color
 categories:
 - git
 ---

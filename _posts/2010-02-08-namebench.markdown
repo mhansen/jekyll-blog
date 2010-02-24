@@ -1,6 +1,7 @@
 ---
 title: Benchmark your DNS!
 layout: post
+description: How to choose faster DNS servers to speed up your internet
 categories: 
 - DNS
 ---

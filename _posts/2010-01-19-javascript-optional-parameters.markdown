@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Optional parameters in Javascript
+description: Various ways of simplifying your Javascript API with optional parameters
 categories:
     - javascript
 ---

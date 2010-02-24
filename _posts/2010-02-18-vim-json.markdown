@@ -1,5 +1,6 @@
 ---
 title: "Installing JSON.vim"
+description: How to install JSON syntax highlighting for the vim editor
 layout: post
 categories:
 - vim

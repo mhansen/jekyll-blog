@@ -1,6 +1,7 @@
 ---
 title: Don't debug with JSON.Stringify
 layout: post
+description: Better ways to debug javascript in node.js
 categories:
 - javascript
 - node.js

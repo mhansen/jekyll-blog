@@ -1,5 +1,6 @@
 ---
 layout: post
+description: "Discussion of slides '10 Things Every Java Programmer Should Know About Ruby'"
 title: Ruby from Java
 categories: 
 - links

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Mouse Hiding in MinTTY
+description: Problems with mouse hiding with the terminal emulator MinTTY, and the fix
 categories:
 - mintty
 - open source

@@ -1,6 +1,7 @@
 ---
 title: Changing the Minix3 Bootimage
 layout: post
+description: Guide to adding new device drivers to Minix 3
 categories:
     - minix
 ---
