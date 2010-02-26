@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Best way to stay cool
+description: 'Ice is better than water at cooling you down - how much better?'
 categories:
 - chemistry
 ---
@@ -10,19 +11,20 @@ I asked for some water - but what they gave me was 90% ice, topped off with
 water. It did an awesome job at cooling me down.
 
 Later on, I got thinking - **How much better is ice at cooling you down than
-water?** (Hey, I was a chemistry student). While water does an admirable job
-cooling you down at a dance party, clearly ice is better. But how much better?
+water?** (Hey, I was a chemistry student). 
 
-## What am I talking about?
+While water does an admirable job cooling you down at a dance party, clearly
+ice is better. But how much better? 
 
-I'm comparing:
+To make this fair on water, we'll skew our test a bit in water's favor,
+comparing:
 
-- solid ice (0°C)
-- liquid water (also at 0°C)
-
-For cooling down a human (normally 37°C)
+- the coldest possible liquid water (also at 0°C)
+- to the warmest possible solid ice (0°C)
+- for cooling down a hot person (slightly over 37°C)
 
 ## Water
+[![Glass of water](/images/water.jpg)](http://www.flickr.com/photos/mattandkim/3969185159/)
 
 Water cools you down in two ways:
 
@@ -47,6 +49,7 @@ The energy to heat up the water comes from your body heat, so you will lose
 **155J** per gram of water you drink.
 
 ## Ice
+[![Ice cubes](/images/ice.jpg)](http://www.flickr.com/photos/stevendepolo/3072821281/)
 
 Ice melts, forming water (obviously). It takes a lot of energy to melt the
 ice - you have to partially break hydrogen bonds - one of the strongest bonds
