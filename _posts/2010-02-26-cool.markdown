@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Best way to stay cool
+title: The best way to stay cool
 description: 'Ice is better than water at cooling you down - how much better?'
 categories:
 - chemistry
@@ -29,15 +29,15 @@ comparing:
 Water cools you down in two ways:
 
 - Water is usually less than 37°C when you drink it. (I reckon it tastes pretty
-  nasty if it isn't!) Once it is inside your body, its temperature rises. This
-  takes energy - takes energy from your body heat, cooling you down.
-
+  nasty if it isn't!) Once it is inside your body, its temperature rises. 
+  Temperature rises need energy, and the energy is taken from your body heat,
+  cooling you down.
 - You can sweat the water out, where it vaporises (turns to gas). Vaporisation
   requires energy, some of which is taken from your body heat, cooling you
   down.
 
 As anyone who's ever been to a concert can testify, sweating is useless when
-there's no wind. So we can ignore its effects here.
+there's no wind, and humidity is at 100%. So we can ignore its effects here.
 
 [It takes **4.18J** to heat one gram of water by 1°C](http://www.wolframalpha.com/input/?i=heat+capacity+of+water&a=*C.heat+capacity-_*ChemicalProperty.dflt-&a=*DPClash.ChemicalP.heat+capacity-_*SpecificHeatCapacity-). Ingesting
 water at 0°C, you will raise its temperature by 37° to body
@@ -68,4 +68,5 @@ Which, as we've established, cools you down by **155J**.
 Drinking one gram of 0°C water will cool you down by **155J**.
 Drinking one gram of ice at 0°C will cool you down by **489J**.
 
-So, ice cools you down **over three times as well** as water. Awesome!
+So, **at minimum** ice cools you down **over three times as well** as water. If
+the ice is colder, or the water is warmer, ice does even better. Awesome!
