@@ -17,16 +17,16 @@ cooling you down at a dance party, clearly ice is better. But how much better?
 
 I'm comparing:
 
-- solid ice (0°C)
-- liquid water (also at 0°C)
+- solid ice (0Â°C)
+- liquid water (also at 0Â°C)
 
-For cooling down a human (normally 37°C)
+For cooling down a human (normally 37Â°C)
 
 ## Water
 
 Water cools you down in two ways:
 
-- Water is usually less than 37°C when you drink it. Once it is inside
+- Water is usually less than 37Â°C when you drink it. Once it is inside
   your body, its temperature rises. This takes energy - takes energy
   from your body heat, cooling you down.
 
@@ -37,11 +37,11 @@ Water cools you down in two ways:
 As anyone who's ever been to a concert can testify, sweating is useless when
 there's no wind. So we can ignore its effects here.
 
-It takes *4.18J* to heat one gram of water by 1°C. Ingesting
-water at 0°C, you will raise its temperature by 37° to body
+It takes *4.18J* to heat one gram of water by 1Â°C. Ingesting
+water at 0Â°C, you will raise its temperature by 37Â° to body
 temperature. 
 
-    4.18J/g x 37° = 155J/g
+    4.18J/g x 37Â° = 155J/g
 
 The energy to heat up the water comes from your body heat, so you will lose
 *155J* per gram of water you drink.
@@ -53,16 +53,16 @@ ice - you have to partially break hydrogen bonds - one of the strongest bonds
 in chemistry. 
 
 It takes *334J* to melt one gram of ice. That's almost twice the energy you
-lose in heating that same gram of water from 0°C to 37°C!
+lose in heating that same gram of water from 0Â°C to 37Â°C!
 
-And, once that gram of ice is melted, you're left with a gram of water at 0°.
+And, once that gram of ice is melted, you're left with a gram of water at 0Â°.
 Which, as we've established, cools you down by *155J*.
 
     melting energy + heating energy = total
     334J/g         + 155J/g         = 489J/g
 
 ## Conclusion
-Drinking one gram of 0°C water will cool you down by *155J*.
-Drinking one gram of ice at 0°C will cool you down by *489J*.
+Drinking one gram of 0Â°C water will cool you down by *155J*.
+Drinking one gram of ice at 0Â°C will cool you down by *489J*.
 
 So, ice cools you down *over three times as well* as water. Awesome!
