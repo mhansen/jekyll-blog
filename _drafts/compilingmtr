@@ -1,0 +1,5 @@
+install pkg-config
+install libncurses-dev
+disable ipv6 (./configure --disable-ipv6)
+remove '-Wno-pointer-sign'
+run as admin or you are 'unable to get raw sockets'

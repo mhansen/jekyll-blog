@@ -19,8 +19,8 @@ ice is better. But how much better?
 To make this fair on water, we'll skew our test a bit in water's favor,
 comparing:
 
-- the coldest possible liquid water (also at 0°C)
-- to the warmest possible solid ice (0°C)
+- the coldest possible liquid H2O (water at 0°C)
+- to the warmest possible solid H2O (ice at 0°C)
 - for cooling down a hot person (slightly over 37°C)
 
 ## Water
