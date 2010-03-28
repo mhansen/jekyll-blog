@@ -39,15 +39,15 @@ invoked, which samples that stack every 10ms, to see which function it's in. He
 found over 90% of computation time was spent inside `Vector.toString()`...
 
 {% highlight java %}
-    boolean DEBUG = false;
-    private void log(String s) {
-        if (DEBUG) {
-            System.err.println(s);
-        }
+boolean DEBUG = false;
+private void log(String s) {
+    if (DEBUG) {
+        System.err.println(s);
     }
-    
-    /* ...SNIP... */
-    log(myVector.toString()); //on every iteration
+}
+
+/* ...SNIP... */
+log(myVector.toString()); //on every iteration
 {% endhighlight %}
 
 However, even though debugging was disabled, java was still evaluating

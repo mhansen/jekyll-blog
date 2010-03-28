@@ -7,7 +7,7 @@ categories:
 - json
 ---
 
-1. Download json.vim to `~/.vim/syntax/json.vim`  
+1. Download [Json.vim](http://www.vim.org/scripts/script.php?script_id=1945) to `~/.vim/syntax/json.vim`  
 2. Make a new file `~/.vim/ftdetect/json.vim` and write in it:
 
 {% highlight vim %}
