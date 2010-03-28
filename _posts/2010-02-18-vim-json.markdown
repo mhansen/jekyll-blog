@@ -30,4 +30,5 @@ Other
 [posts](http://bradmontgomery.blogspot.com/2010/01/add-json-syntax-highlighting-in-vim-on.html)
 tell you to explicitly source JSON.vim from some explicit path. This will work
 for one computer, but will fail if you like to use your vimfiles in different
-directories on more than one computer.
+directories on more than one computer. (e.g. my vimfiles are in ~/.vim/ on
+unix, and ~/vimfiles on windows)
