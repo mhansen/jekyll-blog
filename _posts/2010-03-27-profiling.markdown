@@ -2,7 +2,7 @@
 title: Trust the Profiler
 layout: post
 description: Profiling algorithms in Java
-tags: 
+categories: 
 - profiling
 - Java
 ---
