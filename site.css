@@ -26,6 +26,9 @@ body {
     width: 200px;
     padding-top: 3em;
 }
+#sidebar h3 {
+    border-bottom: 1px solid gray;
+}
 #sidebar ul {
     list-style-type: none;
 }
@@ -113,8 +116,8 @@ h2 {
 h3 { 
     font-size: 1.2em; 
     padding-bottom: 5px;
-    border-bottom: 1px solid gray;
 }
+
 .date, .subtitle {
     font-style: italic;
 }
