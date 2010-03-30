@@ -32,6 +32,9 @@ body {
 #sidebar ul {
     list-style-type: none;
 }
+#sidebar li {
+    margin-bottom: 10px;
+}
 
 #page #footer {
     clear: both;
