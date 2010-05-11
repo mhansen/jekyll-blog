@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Vim slow startup opening HTML
 description: Vim is taking ages to load a file. I debug the problem.
 categories:
