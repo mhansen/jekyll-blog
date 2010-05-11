@@ -2,8 +2,8 @@
 layout: post
 title: Bad Benchmarks
 description: "Benchmarking pitfalls: chrome vs firefox"
-category:
-- benchmarks
+categories:
+    - benchmarks
 ---
 
 I saw someone ask today if 
