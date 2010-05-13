@@ -14,13 +14,12 @@
   <body>
     <div id="page">
       <div id="sidebar">
-        <h3>Mark Hansen</h3>
+        <a href="/"><h3>Mark Hansen</h3></a>
         <ul>
-          <li><a href="/">Home</a></li>
           <li><a href="/contact.html">Contact</a></li>
         </ul>
 
-        <h3>Archive</h3>
+        <a href="/archive.html"><h3>Archive</h3></a>
         <ul>
           {% for post in site.posts limit:10 %}
           <li><a href="{{post.url}}">{{post.title}}</a></li>

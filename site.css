@@ -2,8 +2,10 @@ body {
     background-color: #EEE;
     color: #333;
     font-size: 15px;
+    line-height: 17px;
     margin-bottom: 1em;
     font-family: Georgia, serif;
+    line-height: 1.3;
 } 
 
 #page {
@@ -18,6 +20,7 @@ body {
     float: left;
     background-color: white;
     border: 3px solid #AAA;
+    padding: 3em;
 }
 
 #sidebar {
@@ -33,7 +36,6 @@ body {
     list-style-type: none;
 }
 li {
-    margin-bottom: 4px;
     list-style-type: square;
 }
 
@@ -99,7 +101,6 @@ nav a:hover {
 
 article {
     display: block;
-    margin: 3em;
 }
 
 p, pre, ul, ol, blockquote, .date, .subtitle, #tagcloud { 
@@ -131,9 +132,6 @@ ul {
 ol {
     list-style-type: decimal;
 }
-#older_post {
-    float: right;
-}
 article h1 a {
     color: black;
 }
@@ -149,4 +147,7 @@ article h1 a:hover {
 
 blockquote ul {
     list-style-type: none;
+}
+hr {
+    margin: 3em 0;
 }
