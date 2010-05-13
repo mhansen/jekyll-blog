@@ -34,6 +34,7 @@ title: Postings tagged "#{category}"
     end
     html << '</ul>'
   
+    FileUtils.rm_r "tags"
     FileUtils.mkdir "tags/#{category}/"
     File.open("tags/#{category}/index.html", 'w+') do |file|
       file.puts html
