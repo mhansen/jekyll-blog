@@ -30,7 +30,7 @@ These regular expressions match Markdown headings that look like
 
 I was concerned with the `.\+` part of the regular expression. `.` means 'match
 any character' and `\+` means match as many of the previous identifier as
-possible. `\+` matches grabs as many characters as possible - it is a *greedy*
+possible. `\+` grabs as many characters as possible - it is a *greedy*
 operator. 
 
 If you tell Vim to match as many of 'any character' as possible, it

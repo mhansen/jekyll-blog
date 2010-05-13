@@ -1,9 +1,9 @@
 body { 
     background-color: #EEE;
     color: #333;
-    font-size: 17px;
+    font-size: 15px;
     margin-bottom: 1em;
-    font-family: Cambria, Georgia, serif;
+    font-family: Georgia, serif;
 } 
 
 #page {
@@ -16,7 +16,6 @@ body {
 #content {
     width: 600px;
     float: left;
-    padding: 2.5em;
     background-color: white;
     border: 3px solid #AAA;
 }
@@ -33,7 +32,7 @@ body {
 #sidebar ul {
     list-style-type: none;
 }
-#sidebar li {
+li {
     margin-bottom: 4px;
     list-style-type: square;
 }
@@ -100,7 +99,7 @@ nav a:hover {
 
 article {
     display: block;
-    margin-bottom: 3em;
+    margin: 3em;
 }
 
 p, pre, ul, ol, blockquote, .date, .subtitle, #tagcloud { 
