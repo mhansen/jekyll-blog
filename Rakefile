@@ -8,6 +8,8 @@ task :site do
   site = Jekyll::Site.new(options)
   site.read_posts('')
   puts "Generating tags..."
+  FileUtils.rm_r "tags" if File.exist? "tags"
+  FileUtils.mkdir "tags"
   site.categories.sort.each do |category, posts|
   
     html = ''
@@ -34,7 +36,6 @@ title: Postings tagged "#{category}"
     end
     html << '</ul>'
   
-    FileUtils.rm_r "tags"
     FileUtils.mkdir "tags/#{category}/"
     File.open("tags/#{category}/index.html", 'w+') do |file|
       file.puts html
