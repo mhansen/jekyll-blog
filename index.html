@@ -4,7 +4,7 @@ title: Mark Hansen
 description: Mark Hansen is a web developer in Hamilton, New Zealand
 ---
 
-{% for post in site.posts limit:2 %}
+{% for post in site.posts limit:3 %}
 <article>
   <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
   <div class="date">{{ post.date | date_to_long_string }} by Mark</div>
