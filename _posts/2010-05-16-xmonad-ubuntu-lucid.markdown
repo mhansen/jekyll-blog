@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Gnome+XMonad in Ubuntu 10.04 Intrepid
-description: How to run XMonad with the gnome-panel as a drop-in replacement for Metacity on Ubuntu 10.04 Intrepid
+title: Gnome+XMonad in Ubuntu 10.04 Lucid
+description: How to run XMonad with the gnome-panel as a drop-in replacement for Metacity on Ubuntu 10.04 Lucid
 categories:
 - xmonad
 - howto
