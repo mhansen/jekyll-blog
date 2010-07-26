@@ -1,0 +1,30 @@
+---
+layout: post
+title: Fog @ Waikato University
+description: The strong Hamilton nighttime fog is beautiful at the university
+categories:
+    - photos
+---
+
+Hamilton gets heavy fog at night time. 
+
+It plays with the lights at the university, turning downward-facing lamps
+into bright cones of light, turning spherical lights into ambient glowing
+orange, and turning groups of streetlights into aurora.
+
+Click to embiggen:
+
+<div class="gallery">
+<a href="/images/fog/cones.jpg" title="Downward-facing lights make cones of illuminated fog on the College Hall walkway">
+    <img src="/images/fog/cones_thumb.jpg" width="120" height="90" />
+</a>
+<a href="/images/fog/orange.jpg" title="Orange lights by the Library">
+    <img src="/images/fog/orange_thumb.jpg" width="120" height="90" />
+</a>
+<a href="/images/fog/oranga.jpg" title="Behind Oranga">
+    <img src="/images/fog/oranga_thumb.jpg" width="120" height="90" />
+</a>
+<a href="/images/fog/reflection.jpg" title="Walkway lights reflect on the lake">
+    <img src="/images/fog/reflection_thumb.jpg" width="120" height="90" />
+</a>
+</div>
