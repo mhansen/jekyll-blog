@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/reset.css">
     <link rel="stylesheet" href="/syntax.css">
     <link rel="stylesheet" href="/site.css">
+    <link rel="stylesheet" href="/jquery.lightbox-0.5.css" media="screen">
     <meta name="google-site-verification" content="Vh7jfrrpAxNHiYuZDp8KgeXCoUT9-ZuZpk_ZDy12mdg">
   </head>
   <body>
@@ -57,7 +58,19 @@
     </div>
 
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script src="/jquery.lightbox-0.5.pack.js"></script>
+    <script>
+    $(function() { 
+      $('.gallery a').lightBox({
+        'imageBlank':'/images/lightbox/lightbox-blank.gif',
+        'imageLoading':'/images/lightbox/lightbox-ico-loading.gif',
+        'imageBtnClose':'/images/lightbox/lightbox-btn-close.gif',
+        'imageBtnNext':'/images/lightbox/lightbox-btn-next.gif',
+        'imageBtnPrev':'/images/lightbox/lightbox-btn-prev.gif',
+      });
+    });
+    </script>
     <!-- google analytics -->
     <script>
       var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");

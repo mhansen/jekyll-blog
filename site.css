@@ -151,3 +151,13 @@ blockquote ul {
 hr {
     margin: 3em 0;
 }
+.gallery a {
+    display: inline-block;
+    padding: 5px;
+    background-color: #EEE;
+    margin-bottom: 15px;
+}
+.gallery a:hover {
+    padding-bottom: 20px;
+    margin-bottom: 0px;
+}
