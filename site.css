@@ -82,12 +82,22 @@ a:hover {
     text-decoration: underline;
 }
 
-blockquote {
-    display: block;
+blockquote:before {
     color: gray;
-    border-left: 2px solid gray;
+    content: "\201C";
+    font-size: 5em;
+    height:0;
+    line-height: 0;
+    margin-left: -0.5em;
+    vertical-align: -0.3em;
+}
+blockquote {
+    color: gray;
+    display: block;
     margin-left: 1em;
-    padding-left: 1em;
+    padding-left: 1.3em;
+    padding-top: 1em;
+    width: 60%;
 }
 
 nav ul { 
