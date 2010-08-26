@@ -33,6 +33,6 @@ few hours without distractions.
 I mixed (to half strength!) 5 bottles I found lying around my room (I don't
 have a problem!) with a massive can of powerade sugar. It's going great!
 
-<img src="/images/fog/cones_thumb.jpg" />
+<img src="/images/fog/powerade.jpg" />
 
 What's your power food? Would it be too much to call it an addiction?
