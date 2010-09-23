@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>{{ page.title }}</title>
+    <title>{{ page.title }} | Mark Hansen</title>
     <meta name="description" content="{{ page.description }}">
     <link rel="alternate" type="application/atom+xml" href="/atom.xml"
           title="Mark Hansen's Blog">
@@ -13,49 +13,83 @@
     <meta name="google-site-verification" content="Vh7jfrrpAxNHiYuZDp8KgeXCoUT9-ZuZpk_ZDy12mdg">
   </head>
   <body>
+
     <div id="page">
-      <div id="sidebar">
-        <a href="/"><h3>Mark Hansen</h3></a>
-        <ul>
-          <li><a href="/contact.html">Contact</a></li>
-        </ul>
-
-        <a href="/archive.html"><h3>Archive</h3></a>
-        <ul>
-          {% for post in site.posts limit:10 %}
-          <li><a href="{{post.url}}">{{post.title}}</a></li>
-          {% endfor %}
-          <li><a href="/archive.html">More...</a></li>
-        </ul>
-
-        <h3>Tag Cloud</h3>
-        <div id="tagcloud"> {% include tagcloud.html %} </div>
-
-        <h3>Projects</h3>
-        <ul>
-          <li><a href="http://github.com/mhansen/antinode">Antinode, a Javascript Web Server</a></li>
-          <li><a href="http://bpmtapper.com">BPM Tapper</a></li>
-          <li><a href="http://markhansen.co.nz/iphone-as-numberpad">iPhone Numberpad</a></li>
-          <li><a href="http://github.com/mhansen/node-jslint">JSLint on Node.JS</a></li>
-          <li><a href="http://github.com/mhansen/node-XMLHttpRequest">XMLHttpRequest on Node.JS</a></li>
-        </ul>
+      <div id="header">
+        <a href="/">
+          <div id="site-title">
+            Mark Hansen
+          </div>
+        </a>
       </div>
-      <div id="content">
-        {{ content }}
-        <div id="aboutme">
-          Mark Hansen is a web developer in Hamilton, New Zealand.
-          <a href="/contact.html">Get in touch!</a>
+
+      <div id="sidebar">
+        <div id="about">
+          <h3>About</h3>
+          <p>
+          Hi, I'm Mark Hansen, and this is my personal blog.
+          </p>
+          <p>
+          I live in Hamilton, New Zealand, where I study Computer Science. 
+          </p>
+          <p>
+          Thanks for visiting!
+          </p>
+          <p>
+          Email: mark@[this site's domain]
+          </p>
+        </div>
+
+        <div id="projects">
+          <h3>My Projects</h3>
+          <ul>
+            <li><a href="http://github.com/mhansen/antinode">Antinode, a Javascript Web Server</a></li>
+            <li><a href="http://bpmtapper.com">BPM Tapper</a></li>
+            <li><a href="http://markhansen.co.nz/iphone-as-numberpad">iPhone Numberpad</a></li>
+            <li><a href="http://github.com/mhansen/node-jslint">JSLint on Node.JS</a></li>
+            <li><a href="http://github.com/mhansen/node-XMLHttpRequest">XMLHttpRequest on Node.JS</a></li>
+          </ul>
+        </div>
+
+        <div id="accounts">
+          <h3>Accounts</h3>
+          <ul>
+            <li><a href="http://github.com/mhansen">Github</a></li>
+            <li><a href="http://news.ycombinator.com/threads?id=mhansen">Hacker News</a></li>
+          </ul>
+        </div>
+
+        <div id="tagcloud">
+          <h3>Tag Cloud</h3>
+          <div> {% include tagcloud.html %} </div>
+        </div>
+
+        <div id="archive">
+          <a href="/archive.html"><h3>Archive</h3></a>
+          <ul>
+            {% for post in site.posts limit:50 %}
+              <li><a href="{{post.url}}">{{post.title}}</a></li>
+            {% endfor %}
+            <li><a href="/archive.html">More...</a></li>
+          </ul>
+        </div>
+
+        <div id="meta">
+          <h3>Meta</h3>
+          Site last updated {{ site.time | date: "%d %b %Y" }}<br>
+          Compiled from <a href="http://github.com/mhansen/jekyll-blog">source</a>
+          by <a href="http://jekyllrb.com/">Jekyll</a><br>
+          Hosted on a <a href="http://linode.com/">Linode</a> VPS
         </div>
       </div>
-      <div id="footer">
-        <p>
-          Site last updated {{ site.time | date: "%d %b %Y" }}.
-          Compiled from <a href="http://github.com/mhansen/jekyll-blog">source</a>
-          with <a href="http://jekyllrb.com/">Jekyll</a>,
-          served by <a href="http://github.com/mhansen/antinode">antinode</a>
-          running on <a href="http://nodejs.org">node.js</a>.
-        </p>
+
+      <div id="content">
+        {{ content }}
       </div>
+
+    </div>
+    <div id="footer">
+      <p>&copy; Mark Hansen</p>
     </div>
 
 
