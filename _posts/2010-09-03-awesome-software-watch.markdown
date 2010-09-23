@@ -143,9 +143,9 @@ watch ctags my_code_directory -R
 
 <hr>
 
-# Conclusion
+## Conclusion
 
-It's ridiculously useful to get (almost) real time status updates on almost
+It's really useful to get (almost) real time status updates on almost
 anything. I use it whenever there's a long write-compile-debug cycle where the
 recompiling could be automated.
 
