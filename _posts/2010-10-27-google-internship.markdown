@@ -29,8 +29,9 @@ I checked out as many books as I could carry (go the uni library!). Books on
 networks, algorithms, methodology, languages, parallel programming - anything I
 could get my hands on.
 
-The interviews were really challenging. We talked about designing for scale,
-languages, algorithms (lots of algorithms) - all the juicy bits of Computer
-Science. We even did some live coding via Google Docs.
+In the interviews, we talked about designing for scale, languages, algorithms
+(lots of algorithms) - all the juicy bits of Computer Science. We even did some
+live coding via Google Docs. It was really challenging, and I'm lucky to have
+got through.
 
-I'm pretty excited!
+I'm pretty excited. This is shaping up to be a great summer!
