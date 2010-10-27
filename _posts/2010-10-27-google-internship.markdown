@@ -10,8 +10,27 @@ categories:
 I'm interning at Google Sydney! 
 
 I've just accepted their internship offer for three months over the summer.
+I'll be relocating to Sydney till February next year.
 
 This is pretty much a dream come true for me - Google's got a 
 [huge](http://steve-yegge.blogspot.com/2008/03/get-that-job-at-google.html)
 [reputation](http://www.kaushik.net/avinash/2008/02/10-insights-from-11-months-of-working-at-google.html)
-as a great place for developers to work. Good times are expected!
+as a great place for developers to work. 
+
+Good times are expected!
+
+* * *
+
+My preparation for the interviews:
+
+<img src="/images/books.jpg" alt="I checked out the entire computer science dept of the Uni library">
+
+I checked out as many books as I could carry (go the uni library!). Books on
+networks, algorithms, methodology, languages, parallel programming - anything I
+could get my hands on.
+
+The interviews were really challenging. We talked about designing for scale,
+languages, algorithms (lots of algorithms) - all the juicy bits of Computer
+Science. We even did some live coding via Google Docs.
+
+I'm pretty excited! I can't wait
