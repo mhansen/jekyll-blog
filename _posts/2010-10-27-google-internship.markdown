@@ -33,4 +33,4 @@ The interviews were really challenging. We talked about designing for scale,
 languages, algorithms (lots of algorithms) - all the juicy bits of Computer
 Science. We even did some live coding via Google Docs.
 
-I'm pretty excited! I can't wait
+I'm pretty excited!
