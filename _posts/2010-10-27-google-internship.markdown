@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "I'm interning at Google!"
-description: "I'm interning at Google over the summer of 2010-2011"
+description: "I'm interning at Google Sydney over the summer of 2010-2011. Pretty damn excited!"
 categories:
 - google
 - interning
