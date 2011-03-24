@@ -54,7 +54,7 @@ numbers! Cool! Let's analyze it. I love a puzzle.
 - `0[12578]x.S3`  
   Aha! Here are the other area codes. These are invalid numbers - these area
   codes don't exist in New Zealand, except for `07` - my area code, which is 
-  and error if you use it for a local call. 
+  an error if you use it for a local call. 
 - `0900xxxxxxS0`  
   0900 numbers: They charge you by the minute to call them.
 
