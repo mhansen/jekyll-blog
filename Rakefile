@@ -48,7 +48,7 @@ title: Postings tagged "#{category}"
   site.categories.sort.each do |category, posts|
       font_size = 12 + (posts.count*1.5);
       html << <<-HTML
-      <a href="/tags/#{CGI::escape(category)}" style="font-size:#{font_size}px;">
+      <a href="/tags/#{CGI::escape(category).gsub('+', '%20')}" style="font-size:#{font_size}px;">
         #{category}
       </a>
       HTML
