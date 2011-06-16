@@ -89,7 +89,6 @@
     </div>
     <div id="footer"></div>
 
-
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
     <script src="/jquery.lightbox-0.5.pack.js"></script>
     <script>
@@ -105,8 +104,7 @@
     </script>
 
     <!-- disqus comment count -->
-    <script type="text/javascript">
-      //<![CDATA[
+    <script>
       (function() {
         var links = document.getElementsByTagName('a');
         var query = '?';
@@ -115,13 +113,12 @@
             query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
           }
         }
-        document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/markhansen/get_num_replies.js' + query + '"></' + 'script>');
+        document.write('<script charset="utf-8" src="http://disqus.com/forums/markhansen/get_num_replies.js' + query + '"><\/script>');
         })();
-    //]]>
     </script>
     <!-- end disqus !-->
-    <script src="http://static.getclicky.com/js" type="text/javascript"></script>
-    <script type="text/javascript">clicky.init(236155);</script>
+    <script src="http://static.getclicky.com/js"></script>
+    <script>clicky.init(236155);</script>
     <noscript><p><img alt="Clicky" width="1" height="1" src="http://in.getclicky.com/236155ns.gif" /></p></noscript>
   </body>
 </html>
