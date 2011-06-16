@@ -26,7 +26,7 @@ lets you
   `http://www.markhansen.co.nz`.
 - upload a sitemap listing the pages on your website - this was probably
   unnecessary for me (all my pages are accessible through 
-  [the archives page](/archives.html), but it was so simple (they accept rss
+  [the archives page](/archive.html), but it was so simple (they accept rss
   feeds as a sitemap) I did it anyway.
 
 There's lots of other goodies that customise how your site is indexed. If you

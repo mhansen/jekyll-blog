@@ -14,7 +14,7 @@ Hells Pizza is getting so much fraud!
 
 Quick! What's wrong with this picture?
 
-[![Hells Pizza asking for credit card number on unsecured page](/images/hells.png)](www.hell.co.nz)
+[![Hells Pizza asking for credit card number on unsecured page](/images/hells.png)](http://www.hell.co.nz)
 
 Here's a clue:
 
@@ -71,7 +71,7 @@ Sniffing
 --------
 
 I popped open my favorite network sniffer
-[Wireshark](/images/http://www.wireshark.org) to have a closer look at the
+[Wireshark](http://www.wireshark.org) to have a closer look at the
 network traffic leaving my computer, and whether it was encrypted when I sent
 my credit card number.
 
