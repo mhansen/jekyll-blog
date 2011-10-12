@@ -60,4 +60,7 @@ color strings like "#e0f300" in the color they represent: [css_color.vim](http:/
 Removing this plugin bought me back to the happy world of sub-second startups. It's 
 a shame, though, because `css_color.vim` seems really useful to visualise
 colors as you're writing CSS. If someone could fix it up to not murder my
-startup time, that'd be awesome!
+startup time, that'd be awesome! **UPDATE 2011-10-02:** Someone's done just that - there's a [much, much faster version available][1].
+
+
+[1]: https://github.com/ap/vim-css-color

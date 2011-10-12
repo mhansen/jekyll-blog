@@ -3,7 +3,10 @@ layout: default
 ---
 <article>
   <h1><a href="{{ post.url }}">{{ page.title }}</a></h1>
-  <div class="date">Posted {{ page.date | date_to_long_string }} by Mark</div>
+  <div class="date">
+    Posted {{ page.date | date_to_long_string }} by 
+    <a href="http://markhansen.co.nz/" rel="author">Mark Hansen</a>
+  </div>
   {{ content }}
   <span class="tags"> Tagged 
     {% for tag in page.categories %}

@@ -20,6 +20,6 @@ share:
 >- to find similarities between situations despite differences which may separate them;
 >- to draw distinctions between situations despite similarities which may link them;
 >- to synthesize new concepts by taking old concepts and putting them together in new ways;
->- to come up with idea which are novel.
+>- to come up with ideas which are novel.
 
 -- Douglas R. Hofstadter, in [Godel, Escher, Bach: An Eternal Golden Braid](http://en.wikipedia.org/wiki/G%C3%B6del,_Escher,_Bach) 

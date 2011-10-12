@@ -213,3 +213,10 @@ hr {
     padding-bottom: 20px;
     margin-bottom: 0px;
 }
+
+div.photofloatr {
+    float:right;
+    margin: 0.5em;
+    padding: 0.5em;
+    border: thin silver solid;
+}
