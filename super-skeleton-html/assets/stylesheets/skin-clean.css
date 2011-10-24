@@ -1,0 +1,47 @@
+
+
+/* MAIN BG*/
+body, 
+h2.title span, 
+ul.tabs li a.active{ 
+	background: #fdfdfd;
+	background: rgba(246,246,246,0.5) ;
+	background: white ;
+	position: relative;
+	z-index: 1;
+} 
+
+body:after, 
+/* h2.title span:after, */
+ul.tabs li a.active:after{  
+	content: "";
+	background: white;
+	position:absolute; 
+	z-index:99; 
+	left:0; 
+	bottom:0; 
+	right:0;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	}
+	
+/* FOOTER */
+#section-tophat{
+	border-bottom: 2px solid #ddd;
+	background: #333;
+}
+
+#section-tophat:after, #section-footer:after{
+	content: "";
+	background: #333;
+}
+
+/* SUBFOOTER */
+#section-sub-footer{
+	background: black;
+}
+
+#section-sub-footer:after {
+	content: "";
+	background: black;
