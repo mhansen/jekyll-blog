@@ -30,6 +30,7 @@
   <!--<link rel="stylesheet" href="/assets/stylesheets/skin-dark.css" />-->
   <link rel="stylesheet" href="/assets/stylesheets/skin-clean.css" />
   <link rel="stylesheet" href="/assets/stylesheets/syntax.css">
+  <link rel="stylesheet" media="screen" href="/assets/stylesheets/jquery.lightbox-0.5.css">
   <link rel="shortcut icon" href="/favicon.ico" />
 </head>
 <body>
@@ -79,7 +80,7 @@
       </div>
 			
 			<div class="widget">
-        <h3>My Projects</h3>
+        <h3>Projects</h3>
         <ul>
           <li><a href="http://wheresmytaxes.co.nz/">Where Are My Taxes?</a></li>
           <li><a href="http://wirelessmap.markhansen.co.nz/">NZ Wireless Map</a></li>
@@ -155,6 +156,18 @@
 <script src="/assets/javascripts/jquery.flexslider-min.js"></script>	
 <script src="/assets/javascripts/filterable.pack.js"></script>
 <script src="/assets/javascripts/skeleton-key.js"></script>
+<script src="/assets/javascripts/jquery.lightbox-0.5.pack.js"></script>
+<script>
+  $(function() { 
+    $('.gallery a').lightBox({
+      'imageBlank':'/images/lightbox/lightbox-blank.gif',
+      'imageLoading':'/images/lightbox/lightbox-ico-loading.gif',
+      'imageBtnClose':'/images/lightbox/lightbox-btn-close.gif',
+      'imageBtnNext':'/images/lightbox/lightbox-btn-next.gif',
+      'imageBtnPrev':'/images/lightbox/lightbox-btn-prev.gif',
+    });
+  });
+</script>
 <script>$(".chzn-select").chosen();</script>
 
 <script src="http://static.getclicky.com/js"></script>
