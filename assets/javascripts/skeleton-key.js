@@ -175,16 +175,6 @@ $(window).load(function () {
 
 
 /*-----------------------------------------------------------------------------------*/
-/*	PrettyPhoto - http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/
-/*-----------------------------------------------------------------------------------*/
-		$("a[data-rel^='prettyPhoto']").prettyPhoto();
-		$(".XYZ a").prettyPhoto();
-		$("a.boxLink").prettyPhoto();
-		$(".gallery-item a").prettyPhoto();
-		
-		
-  		 
-/*-----------------------------------------------------------------------------------*/
 /*	DropDown Menu - http://users.tpg.com.au/j_birch/plugins/superfish/
 /*-----------------------------------------------------------------------------------*/
 		/*  $(".menu ul li").horizontalMenu({
