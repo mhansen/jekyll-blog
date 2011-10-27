@@ -2,9 +2,9 @@
 layout: default
 ---
 <h2 class="title">
-  <a href="{{ post.url }}"><span>{{ page.title }}</span></a>
+  <a href="{{ page.url }}"><span>{{ page.title }}</span></a>
 </h2>
-<hr class="half-bottom" />
+<hr class="half-bottom">
 <div class="date"> 
   Posted on {{ page.date | date_to_long_string }}, by 
   <a href="http://markhansen.co.nz/" rel="author">Mark</a> in 
@@ -14,7 +14,6 @@ layout: default
 </div>	 
 <hr>
 
-<!-- THE POST CONTENT -->	
 <div class="post excerpt clearfix">	
   {{ content }}
   <br>
