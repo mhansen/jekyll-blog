@@ -17,16 +17,16 @@ Click to embiggen:
 
 <div class="gallery">
 <a href="/images/bridgefog/bridge-st-blue.jpg" title="Bridge St Bridge, Hamilton">
-    <img src="/images/bridgefog/bridge-st-blue-thumb.jpg" width="120" height="90" />
+    <img src="/images/bridgefog/bridge-st-blue.jpg">
 </a>
 <a href="/images/bridgefog/fairfield-bridge.jpg" title="Fairfield Bridge, Hamilton">
-    <img src="/images/bridgefog/fairfield-bridge-thumb.jpg" width="120" height="90" />
+    <img src="/images/bridgefog/fairfield-bridge.jpg">
 </a>
 <a href="/images/bridgefog/bridge-st-pink.jpg" title="Bridge St Bridge, Hamilton">
-    <img src="/images/bridgefog/bridge-st-pink-thumb.jpg" width="120" height="90" />
+    <img src="/images/bridgefog/bridge-st-pink.jpg">
 </a>
 <a href="/images/bridgefog/thebase.jpg" title="The Base Shopping Centre, Te Rapa, Hamilton">
-    <img src="/images/bridgefog/thebase-thumb.jpg" width="120" height="90" />
+    <img src="/images/bridgefog/thebase.jpg">
 </a>
 </div>
 
