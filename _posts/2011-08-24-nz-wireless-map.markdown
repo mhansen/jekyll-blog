@@ -6,11 +6,8 @@ categories:
     - visualisations
 ---
 
-<div class="photofloatr">
-<img src="/images/nzwirelessmap/mttearoha.jpg" alt="Mt Te Aroha Antenna Mast"><br>
-Mt Te Aroha Antenna Mast<br>
-    <i>Photo: <a href="http://joeloughton.com">Joel Oughton</a></i>
-</div>
+<img src="/images/nzwirelessmap/mttearoha.jpg" alt="Mt Te Aroha Antenna Mast">
+Mt Te Aroha Antenna Mast (<em>Photo Credit: <a href="http://joeloughton.com">Joel Oughton</a></em>)
 
 I've just launched a new visualisation: a [map of New Zealand's terrestrial
 Radio/Wireless network][2].

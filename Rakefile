@@ -18,9 +18,11 @@ task :site do
 layout: default
 title: Postings tagged "#{category}"
 ---
-    <h1>#{category}</h1>
+    <h2 class="title">#{category}</h2>
+    <hr class="half-bottom">
     <div class="subtitle">Posts tagged #{category}</div>
-    HTML
+    <hr>
+HTML
   
     html << '<ul class="posts">'
     posts.each do |post|

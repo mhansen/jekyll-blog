@@ -6,18 +6,19 @@ layout: default
 </h2>
 <hr class="half-bottom" />
 <div class="date"> 
-  Posted on {{ page.date | date_to_long_string }}, by <a href="http://markhansen.co.nz/" rel="author">Mark</a> in 
+  Posted on {{ page.date | date_to_long_string }}, by 
+  <a href="http://markhansen.co.nz/" rel="author">Mark</a> in 
   {% for tag in page.categories %}
     <a href="/tags/{{tag}}">{{tag}}</a>{% if forloop.last == false %},{% endif %}
   {% endfor %}
 </div>	 
-<hr />
+<hr>
 
 <!-- THE POST CONTENT -->	
-<div class="the_content post type-post hentry excerpt clearfix">	
+<div class="post excerpt clearfix">	
   {{ content }}
-  <br />
-  <hr />
+  <br>
+  <hr>
   <div class="meta-space">					
     <div class="tags clearfix Yellow">
       <img src="/assets/images/theme/tag.png" class="tag_icon" />
@@ -27,8 +28,8 @@ layout: default
     </div>				
   </div> 
 </div>
-<br />
-<hr class="remove-top"/>
+<br>
+<hr class="remove-top">
 <div id="disqus_thread"> </div>
 <script type="text/javascript" src="http://disqus.com/forums/markhansen/embed.js"></script>
 <noscript><a href="http://disqus.com/forums/markhansen/?url=ref">View the discussion thread.</a></noscript>
