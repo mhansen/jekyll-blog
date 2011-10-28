@@ -15,16 +15,16 @@ my teeth programming on the
 [Apple IIc](http://en.wikipedia.org/wiki/Apple_iic), typing in BASIC programs
 from a book. I had to have a go.
 
-So I ported it to JavaScript.
+So I ported the old code to JavaScript.
 
-It was a lot easier than I expected. Mostly because both languages have global
+It was a lot easier than I expected - mostly because both languages have global
 scope by default. 
 
 JavaScript gives you the option of global or local scope every time you declare
 a variable - if you declare it with `var` it is local to the function.
 
 {% highlight js %}
-var a = "a local variable";
+var a = "a function-scoped variable";
 b = "a global variable";
 {% endhighlight %}
 
@@ -41,21 +41,21 @@ var COS = Math.cos;
 var SQR = Math.sqrt;
 var ATN = Math.atan;
 function SGN(num) {
-        if (num < 0) return -1;
-            if (num > 0) return +1;
-                return 0;
+    if (num < 0) return -1;
+    if (num > 0) return +1;
+    return 0;
 }
 {% endhighlight %}
 
 The rest of the code was just converting 
 
-* `GOSUB`s to function calls
-* `GOTO`s to `if`/`else` statements
-* colons to semicolons
+* `GOSUB` -> function calls
+* `GOTO` -> `if`/`else` statements
+* colons -> semicolons
 * array indexing from one-based to zero-based
-* and removing line numbers.
+* removing line numbers.
 
 Easy.
 
 Of course, the code is [up on GitHub](http://github.com/mhansen/suntimes).
-I'm a bit disappointed GitHub doesn't have syntax highlighting for BASIC. ;)
+I'm a little disappointed GitHub doesn't have syntax highlighting for BASIC. ;)
