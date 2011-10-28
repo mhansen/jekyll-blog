@@ -6,8 +6,8 @@ categories:
     - visualisations
 ---
 
-<img src="/images/nzwirelessmap/mttearoha.jpg" alt="Mt Te Aroha Antenna Mast">
-Mt Te Aroha Antenna Mast (<em>Photo Credit: <a href="http://joeloughton.com">Joel Oughton</a></em>)
+<img src="/images/nzwirelessmap/mttearoha.jpg" alt="Mt Te Aroha Antenna Mast" class="aligncenter">
+<em>Mt Te Aroha Antenna Mast (Photo Credit: <a href="http://joeloughton.com">Joel Oughton</a>)</em>
 
 I've just launched a new visualisation: a [map of New Zealand's terrestrial
 Radio/Wireless network][2].
@@ -28,19 +28,21 @@ Here's just a few interesting things I found exploring the data:
 
 ### Lake Rotorua
 ![Lake Rotorua](/images/nzwirelessmap/lakerotorua.png)
+<br>
 Lakes are awesome to transmit across! They stay flat, and usually have good
 hills on either side. Lake Rotorua demonstates this really well - here you can
 see how densely it's criscrossed with links.
 
 ### Auckland Skytower
 ![Skytower](/images/nzwirelessmap/skytower.png)
+<br>
 The busiest place I could find, with the most links converging on one location,
 was the Skytower in Auckland. Here dozens, if not hundreds of wireless links
 converge from all over the Auckland region.
 
 ### Hamilton
 ![Hamilton](/images/nzwirelessmap/hamilton.png)
-
+<br>
 Hamilton's a very flat city, and there's not much in the way of mountain ranges
 nearby. I imagine this would make it difficult to transmit signals to the roofs
 of buildings in town. On the map, you can see how transmitting companies have
@@ -55,6 +57,7 @@ Signals spread all over town from these vantage points.
 
 ### Taranaki Oil/Gas fields
 ![Oil Fields](/images/nzwirelessmap/oilfields.png)
+<br>
 You don't usually notice New Zealand's offshore gasfields on maps, but they
 really stick out on a map of wireless links. You can see the Maui A and Maui B
 platforms communicating through a host of links on the Taranaki shore, and the
@@ -62,6 +65,7 @@ Kupe Gas field south of the mountain.
 
 ### White Island
 ![White Island](/images/nzwirelessmap/whiteisland.png)
+<br>
 We even have a wireless link set up *to an active volcano*. Awesome!
 
 ### Views
