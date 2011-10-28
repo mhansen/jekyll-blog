@@ -47,9 +47,9 @@ popped up, and click the close button, telling `time` to stop the clock.
 Of course, the first time you run firefox, the operating system has to go to
 the disc to get the firefox application, and all its configuration. The next 
 time you run it, the operating system has a cache of all that data in RAM.
-You can access RAM at the speed of electricity (almost the speed of light).
-You can access the hard disk at the speed it spins (about 50km/h). **Big
-difference.**
+RAM is just a straight read off a register chip, using only electricity, and
+electricity moves at almost the speed of light.  You can only access the hard
+disk at the speed it spins (about the speed of a car). **Big difference.**
 
 When benchmarking, beware of confirmation bias, and cache effects (even when
 the test is unscientific, and just for a bit of fun!).
