@@ -12,8 +12,7 @@ In my [last post](/antinode-testing), I outlined plans for adding unit tests to
 [Antinode](http://github.com/mhansen/antinode), my javascript web server. I
 tried implementing those plans today, and I ran into some problems.
 
-Closures Simplify Code
-----------------------
+### Closures Simplify Code
 
 If all functions are pure (and pure in this sense means the functions only
 access data passed into them as arguments), then it's easy to unit-test them.
@@ -108,8 +107,7 @@ It's a huge advantage to see what a function does right where it's used,
 without having to jump around the source code, wasting your time figuring out
 the flow of the program.
 
-The New Plan
-------------
+### The New Plan
 
 Antinode is a tiny webserver. The main logic of the program is less than 150
 lines of code. It's small enough, that it can be considered a 'unit' for
