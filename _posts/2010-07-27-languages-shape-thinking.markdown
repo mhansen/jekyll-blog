@@ -10,15 +10,14 @@ categories:
 There's a [great article over at the Wall Street Journal](http://online.wsj.com/article/SB10001424052748703467304575383131592767868.html) about how language
 isn't a dumb, passive medium of data transport.  Rather, language actively
 shapes our thoughts and ideas. It's a great article, 
-[go read it](http://online.wsj.com/article/SB10001424052748703467304575383131592767868.html)
-. I'll wait here.
+[go read it](http://online.wsj.com/article/SB10001424052748703467304575383131592767868.html). I'll wait here.
 
 <blockquote>
 All this new research shows us that the languages we speak not only reflect or
 express our thoughts, but also shape the very thoughts we wish to express. 
 
 The structures that exist in our languages profoundly shape how we construct
-reality
+reality.
 </blockquote>
 
 The same idea, expressed in different languages, is no longer the same idea.
@@ -61,8 +60,8 @@ more-or-less equal footing between verbs and nouns.  For example, Underscore.js
 [offers the same operations with your choice of noun-first or verb-first grammar](http://documentcloud.github.com/underscore/#styles). 
 I love this choice - it lets me choose the way I approach a problem.  Some
 problems seem predominantly noun-based (e.g. modelling and simulating), but
-some problems seem more verb-based, and I get to choose the most readable 
-approach.
+some problems seem more verb-based (e.g. dataflow, mathematics), and I get to choose the most readable 
+approach for my domain.
 
 It goes further than functional/object-oriented grammar differences. For
 example Scheme programmers focus on building large solutions out of many
@@ -77,12 +76,12 @@ language than to learn a new human language.
 
 Try something more exotic:
 
-- Prolog - to see problems in terms of logic!
-- Erlang - and gain a glimpse into their actor-based worldview. 
-- Clojure, and learn to live without changing any state. 
-- Haskell, and live without any nouns at all! (while, hopefully, still getting stuff done!)
+- *Prolog* - see problems in terms of logic!
+- *Erlang* - gain a glimpse into their actor-based worldview. 
+- *Clojure* - learn to live without changing any state. 
+- *Haskell* - live without any nouns at all! (while, hopefully, still getting stuff done)
 
-Any languages offering compellingly different worldviews that I left out? Let me know.
+Any languages offering compellingly different worldviews that I left out? Leave a comment.
 
 See Also:
 - Steve Yegge's epic ['Execution in the Kingdom of Nouns'](http://steve-yegge.blogspot.com/2006/03/execution-in-kingdom-of-nouns.html). If you're thinking 'nouns are all that we need anyway', you *need* to read this.
