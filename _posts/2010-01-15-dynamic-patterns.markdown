@@ -26,26 +26,34 @@ first class functions (i.e. you can pass functions and types as variables at
 runtime). Common patterns like Factory, Strategy, and Observer become simpler.
 Here's a few examples:
 
-## Strategy Pattern
+### Strategy Pattern
 You don't need full-blown classes just to hold a function/routine. Just pass
 the function!
 
 {% highlight javascript %}
-var bird = { "observers" : [] };
-var birdObserver = { "onBirdChange" : function() { alert("The Bird Moved!"); } };
-bird.observers.push(function() { birdObserver.onBirdChange(); }
+var bird = { 
+    observers: [] 
+};
+var birdObserver = { 
+    onBirdChange: function() { 
+        alert("The Bird Moved!"); 
+    } 
+};
+bird.observers.push(function() { 
+    birdObserver.onBirdChange();
+});
 {% endhighlight %}
 
-## Factory Pattern
+### Factory Pattern
 The Factory Pattern defers deciding the type of an object instatiation till
 runtime. This is trivial with first-class types:
 
 {% highlight javascript %}
 var carType = getTypeFromConfigFile();
-var car = carType.new();
+var car = carType.createCar();
 {% endhighlight %}
 
-## Observer Pattern
+### Observer Pattern
 The Observer pattern calls a function somewhere when an object changes. Of
 course, this gets simpler when functions are first-class. Without first-class
 functions, observers need to inherit a common base class. With first-class
