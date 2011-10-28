@@ -6,14 +6,14 @@ categories:
 - rants
 ---
 
-[Fish (the Friendly Interactive SHell)](http://www.fishshell.org) sucks.
-They had a chance to create a world-changing command-line shell, and they
+[Fish (the Friendly Interactive SHell)](http://www.fishshell.com) sucks.
+They had a chance to create a world-changing command-line shell, but they
 blew it.
 
 Fish is completely incompatible with the traditional bash/zsh script syntax,
 making it difficult to transfer skills from other shells.  Fish has thrown out
 all that old syntax. This would be understandable, because the bash/zsh style
-shell scripting languages are horribly unintuitive, obtuse, and generally crap.
+shell scripting languages are horribly unintuitive, arcane, and generally crap.
 But fish replaced their syntax with something equally obtuse and useless - just
 different. Check it out:
 
@@ -43,7 +43,7 @@ different. Check it out:
 
 ## Why use Fish if it sucks so much?
 
-Mostly because I'm *really pissed off* about the complete stagnation of and
+Mostly because I'm *pissed off* about the complete stagnation of and
 lack of innovation in all the other shells.
 
 It's 2010. 
@@ -54,10 +54,9 @@ It's 2010.
 
 *Every* shell should have parenthesis matching.
 
-
 The shell is one of the places where you'll spend most of your time as a coder,
-and it's about fucking time it had the usability we've come to expect of our
-other software.
+and it's about time it had the usability we've come to expect of our other
+software.
 
 ### Intelligent Defaults
 
@@ -75,25 +74,24 @@ YES. Intelligent defaults! These guys get it!
 
 I shouldn't have to go through a half-hour customization course when I install
 my shell (looking at you, zsh). I don't care where the command history
-file is stored. My disk has gigabytes of space - I don't give a crap
-how many log entries you store! Just make it work! Fish just makes it work (and
-it even merges command histories between different shells)!
+file is stored. My disk has gigabytes of space - I don't care how many log
+entries you store! Just make it work! Fish just makes it work (and as a bonus,
+it even merges command histories between different concurrent shells)!
 
-One nice default is using colour in the prompt. Fish gives you a green prompt,
-so it can be distinguished easily from other command-line output.  When you're
-running as root in fish, your prompt is red, to remind me that running as root
-is DANGEROUS. Nice.
+Another thing fish gets right: using colour in the prompt. Fish gives you a
+green prompt, so it can be distinguished easily from other command-line output.
+When you're running as root in fish, your prompt is red, to remind me that
+running as root is DANGEROUS. Nice.
 
 If I want this in bash or zsh, I have to put arcane VT100 escape commands
-in your `~/.bashrc` (or is it your `~/.profile`? or your `~/.bash\_profile`? I
-sure as hell don't know, and judging by the mailing lists, even the bash devs
-don't know for sure) 
+in my `~/.bashrc` (or is it my `~/.profile`? or my `~/.bash_profile`? I don't
+know, and judging by the mailing lists, even the bash devs don't know for sure) 
 
 Tab completion is on by default in fish. And not just your ordinary 'press tab
 twice and it'll maybe show you a list of files' tab completion - application
 specific tab completion. Every shell should have smart tab-completion turned on
-by default. In case I want to type a tab? Why the hell would I ever type a tab
-in my command line? It's not a useful character for anything else.
+by default. In case I want to type a tab? Why would I ever type a tab in my
+command line? It's not a useful character for anything else.
 
 Here's some examples of the fish's smart tab completion:
 
@@ -110,9 +108,8 @@ Here's some examples of the fish's smart tab completion:
   `ssh(1)`.
 
 Zsh probably has most of this tab completion, but you have to manually turn it
-on. That's *fucked*.  It's not like tab's a useful thing to type into your
-shell otherwise.  If users don't want tab completion, they can just not press
-tab. Sorted!
+on. That's *ridiculous*.  Nobody types f'real tab characters into their shell.
+If users don't want tab completion, they can just not press tab. Sorted!
 
 ### Syntax Highlighting
 
@@ -141,8 +138,8 @@ mark@mt <font color='green'>~</font>> <font color='red'>ehco</font> <font color=
 
 Metacharacters are highlighted blue, so you know they have an effect before
 they clobber your command. They're only highlighted when they're inside double
-quotes, not single quotes where they have no effect. I can never fucking
-remember which quotes do what, it's great to have this instant feedback!
+quotes, not single quotes where they have no effect. I can never remember which
+quotes do what, so it's great to have this instant feedback.
 
 <pre>
 mark@mt <font color='green'>~</font>> <font color='red'>echo</font> <font color='red'>"GET <font color='blue'>$</font>path" > request</font>
@@ -152,13 +149,13 @@ Valid file names are instantly underlined while I type, so I know the
 second I make an error, and I can backspace and fix it there, instead of
 running the command getting an error like 
 
-    long/ass/filename/thats/ten/friggin/directories/deep/ - invalid directory 
+    long/ass/filename/thats/ten/directories/deep/ - invalid directory 
 
-and having to backtrack through a long-ass filename to find where the spelling
+and having to backtrack through a long filename to find where the spelling
 mistake was. Fish lets me know the instant I press the key whether what I'm
 typing is a valid filename, or something else. 
 
-This is by far my favorite feature of fish.
+By far, this is my favorite feature of fish.
 
 ### Directory browsing
 
@@ -168,22 +165,29 @@ It's exactly like the back and forward buttons in webpages. *Brilliant.*
 No more of this  `cd ../../../../oh_crap_how_many_levels_up_am_i` crap to get
 out of deeply nested directories.
 
-To those screaming about `pushd` and `popd` commands - because let's be honest,
-you're never going to type a 6-character `pushd` over a 2-character `cd`. Hell,
-in fish you don't even need to type `cd`! Just keying the name of the
-directory, it will highlight green as a valid command, and pressing enter will
-`cd` into it.
+I can hear some of you screaming about how your shell has `pushd` and `popd`
+commands - I don't care. Let's be honest, you're never going to type a
+6-character `pushd` over a 2-character `cd`. Directorys should be added to the
+history stack automatically, like in web browsers and phones.
+
+For more timesaving, in fish you don't even need to type `cd`! Just keying the
+name of the directory, it will highlight green as a valid command, and pressing
+enter will `cd` into it.
 
 ### Decent help
 
-Fish doesn't use `man` for help, it uses a text-mode browser. You know, with
-hyperlinks. Why the hell doesn't every program's documentation have hyperlinks?
-Even Microsoft's caught onto the value of an HTML help system.
+For help pages, fish doesn't use `man`, (a help browser offering little more in
+usability than a sheet of paper), it uses a text-mode browser. 
+
+You know, a browser, with hyperlinks. Why doesn't every program's documentation
+have hyperlinks?  Even Microsoft's caught onto the value of an HTML help
+system.
 
 ## Conclusion
 
-God damn, you'd think *someone* would make a shell that wasn't *unusable as
-fuck*.  Till they do, I'll have to use fish, because all the other shells suck
-so much more.
+The lack of innovation in the shell space is very annoying. Incremental
+improvements on old technologies are the way to go. Instant feedback rocks. I
+wish *someone* would make a shell that didn't suck.  Till they do, I'll have to
+use fish, because all the other shells suck so much more.
 
-Thanks, fish, for trying. But you're not trying hard enough. 
+Thanks, fish, for trying.
