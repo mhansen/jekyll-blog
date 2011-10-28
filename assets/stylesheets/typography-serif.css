@@ -7,8 +7,8 @@ body{
 	color: #555;
 	}
 
-a, a:hover{color: #ee7727; text-decoration: none;}
-a:hover{opacity: 0.8;}
+a, a:hover{text-decoration: none;}
+a:hover{color: #ee7727; opacity: 0.8;}
 .module a:hover{opacity: 1;}
 
 			
