@@ -16,7 +16,7 @@ to reflect the extensive changes in the latest node.js API (0.1.33).
 is a port of the browser's XMLHttpRequest object to node.js, to help ease
 porting of browser-based javascript to the node.js platform.
 
-## Race Conditions
+### Race Conditions
 I thought I was going crazy when the HTTP Client silently failed to connect to
 the HTTP server. Eventually I found a race condition was set up in some test
 code between starting an HTTP server and starting the HTTP Client. It seems the
@@ -35,7 +35,7 @@ setTimeout(function() {
 }, 100)
 {% endhighlight %}
 
-## HTTP Headers are case-insensitive
+### HTTP Headers are case-insensitive
 The old tests had an assertion, which was failing:
 
 {% highlight js %}
@@ -57,7 +57,7 @@ depend on the header having a certain case. Oops.
 So why does node.js automatically lowercase these headers, instead of leaving
 them unchanged? Let's look at these options.
 
-### Pass on the headers to the user of the code, unchanged.
+#### Pass on the headers to the user of the code, unchanged.
 
 To be RFC 2616h compliant, the programmer would have to do a case-insensitive
 match on the headers. [Not trivial when the headers are given as keys to an object](http://groups.google.com/group/nodejs/msg/0c3e638f53d0a859):
@@ -74,7 +74,7 @@ for (var header in req.headers) {
 {% endhighlight %}
 
 
-### Enforce strict lowercase or uppercase on headers.
+#### Enforce strict lowercase or uppercase on headers.
 
 Clients can access the headers with:
 

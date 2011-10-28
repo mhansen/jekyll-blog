@@ -62,25 +62,10 @@ _EDIT_: I opened an
 than a day. Functions with properties are now listed too.  Thanks,
 [creationix](http://github.com/creationix)!
 
-It's common to use functions as property holders in popular javascript
-libraries.
+This is pretty important, because it's very common to use functions as property
+holders in popular javascript libraries.
 
 - [jQuery](http://jquery.com/) uses `$` both as a selector function, and a
   library object
 - [underscore.js](http://documentcloud.github.com/underscore/) uses `_` as a
   wrapper function, and a library object
-
-<del>If you try `inspect`ing these libraries, all you'll see is one Function, and
-none of the inner properties.</del>
-
-Otherwise, you can usejavascript's `for var...in` loop, which iterates over
-properties:
-
-{% highlight javascript %}
-var func = function() {}
-func.property1 = "value1";
-for (var i in func) {
-    print(i);
-} 
-//prints "value1"
-{% endhighlight %}

@@ -55,7 +55,7 @@ However, even though debugging was disabled, java was still evaluating
 iterate through every value in our data structure. All this computation was
 occurring, even though `log()` was effectively a no-op.
 
-So, now I'm completely sold on two things:
+So, now I'm sold on two things:
 
 - *Profilers.* Especially java's builtin profiler - could it be easier to profile
   your code? I don't think so. Just add the `-Xprof` flag.

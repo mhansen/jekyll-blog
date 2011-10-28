@@ -6,6 +6,8 @@ categories:
 - git
 ---
 
+**UPDATE 2011:** I don't use this technique any more, because Git submodules kinda suck. Instead, I use [felixge's technique][1].
+
 How do you keep another Git repository inside a folder that's already under
 version control with Git? Why would you do this?
 
@@ -53,3 +55,5 @@ git submodule update
 That's the basics. For more info:
 - [Submodules in the Git Book](http://book.git-scm.com/5_submodules.html)
 - [git-submodule(1) manpage](http://www.kernel.org/pub/software/scm/git/docs/git-submodule.html)
+
+[1]: http://debuggable.com/posts/git-fake-submodules:4b563ee4-f3cc-4061-967e-0e48cbdd56cb

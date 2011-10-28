@@ -14,7 +14,7 @@ This adds a line to your ~/.gitconfig file, enabling colors output for all
 git operations on all repositories.
 
 Awesome! Now `git-diff` will shine in radiant reds and greens, and it'll be 
-oh so much easier to see what's changed. `git-branch` will show your current 
+oh-so-easy to see what's changed. `git-branch` will show your current 
 branch in green, `git-status` will show added files in green and deleted files
 in red.
 

@@ -13,8 +13,7 @@ I've been reading a
 lately, and it's been a joy. I'm picking up on some common JavaScript idioms
 too, and I thought I'd share.
 
-Introduction to Optional Parameters
------------------------------------
+### Introduction to Optional Parameters
 
 Optional parameters are a nice language feature - function parameters that are
 given default values if not used when calling a function. Optional parameters
@@ -47,8 +46,7 @@ public void connect(string hostname = "localhost",
                     int port = 80, string method = "HTTP") { ... }
 {% endhighlight %}
 
-Method 1: Undefined arguments
------------------------------
+#### Method 1: Undefined arguments
 
 At first glance, javascript has nothing like this available. However,
 javascript lets you call functions omitting some parameters, filling in the
@@ -102,8 +100,7 @@ This method only allows the last arguments to be optional - you cannot make an
 optional first parameter, middle parameter, or combination of parameters
 optional. The next methods let you position optional arguments anywhere.
 
-Method 2: The arguments variable
---------------------------------
+#### Method 2: The arguments variable
 
 All javascript functions get passed an implicit `arguments` variable when
 they're called. `arguments` is an array containing the values of all the
@@ -131,8 +128,7 @@ connect("www.example.com");
 
 {% endhighlight %}
 
-Method 3: The object literal
-----------------------------
+#### Method 3: The object literal
 
 Javascript has a cheap and easy object literal syntax, so why not use this to
 make flexible and readable optional arguments?
@@ -151,8 +147,7 @@ Note that you need to ensure that an object is passed into `options`,
 replace it with an empty object `{}`, or you will get errors trying to read
 properties from `undefined`.
 
-A combination of all three methods
-----------------------------------
+#### A combination of all three methods
 
 Here's an example, from node.js's process.watchFile(filename, options,
 listener) function. It's used to watch `filename` for changes, calling
@@ -164,7 +159,7 @@ process.watchFile = function (filename) {
   var options;
   var listener;
 
-  if ("object" == typeof arguments[1]) {
+  if (typeof arguments[1] == "object") {
     options = arguments[1];
     listener = arguments[2];
   } else {

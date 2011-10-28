@@ -8,8 +8,8 @@ categories:
 ---
 
 I love [MinTTY](http://code.google.com/p/mintty/) - it's the best terminal
-emulator I know of for Windows.  It's so very much better than the default
-cmd.exe window that Cygwin uses by default, which you can't resize, and has
+emulator I know of for Windows.  It's so much better than the default
+cmd.exe window that Cygwin uses by default. You can't resize `cmd.exe`, and has
 almost no scrollback.
 
 But I've been having an intermittent problem with it - my mouse cursor keeps
@@ -76,7 +76,7 @@ hide_mouse()
 
 {% endhighlight %}
 
-*EDIT*: The MinTTY maintainer Andy Koppe was [totally awesome helping with my
+**UPDATE**: The MinTTY maintainer Andy Koppe was [totally awesome helping with my
 problem](http://code.google.com/p/mintty/issues/detail?id=160), but he can't
 reproduce the problem at his end, and after I restarted my computer I can't
 reproduce it either.
