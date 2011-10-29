@@ -18,7 +18,6 @@
  	<!-- Load the basic skeleton and plugin CSS, then the main theme stylesheet -->   
   <link rel="stylesheet" media="all" href="/assets/stylesheets/base.css" />
 	<link rel="stylesheet" media="all" href="/assets/stylesheets/skeleton.css" />
-	<link rel="stylesheet" media="all" href="/assets/stylesheets/comments.css" />
 	<link rel="stylesheet" media="all" href="/assets/stylesheets/buttons.css" />
 	<link rel="stylesheet" media="all" href="/assets/stylesheets/superfish.css" />
 	<link rel="stylesheet" media="all" href="/assets/stylesheets/flexslider.css" />
@@ -26,7 +25,6 @@
 	<link rel="stylesheet" media="all" href="/assets/stylesheets/styles.css" />
   <link rel="stylesheet" href="/assets/stylesheets/typography-serif.css" />
   <!--<link rel="stylesheet" href="/assets/stylesheets/typography-sans.css" />-->
-  <!--<link rel="stylesheet" href="/assets/stylesheets/skin-dark.css" />-->
   <link rel="stylesheet" href="/assets/stylesheets/skin-clean.css" />
   <link rel="stylesheet" href="/assets/stylesheets/syntax.css">
   <link rel="stylesheet" media="screen" href="/assets/stylesheets/jquery.lightbox-0.5.css">
@@ -55,13 +53,6 @@
       {{ content }}
     </div>
 		<div class="five columns sidebar">
-			<div class="widget">
-				<form action="#">
-				<input class="sidebar-search" type="text" id="regularInput" value="Search this site..." />
-				</form>
-			<hr class="half-bottom" />
-			</div>
-
       <div class="widget">
         <h3>About</h3>
         <p>
@@ -79,29 +70,6 @@
         <hr class="half-bottom" />
       </div>
 			
-			<div class="widget">
-        <h3>Projects</h3>
-        <ul>
-          <li><a href="http://wheresmytaxes.co.nz/">Where Are My Taxes?</a></li>
-          <li><a href="http://wirelessmap.markhansen.co.nz/">NZ Wireless Map</a></li>
-          <li><a href="http://github.com/mhansen/antinode">Antinode, a Javascript Web Server</a></li>
-          <li><a href="http://markhansen.co.nz/iphone-as-numberpad/">iPhone Numberpad</a></li>
-          <li><a href="http://github.com/mhansen/node-jslint">JSLint on Node.JS</a></li>
-          <li><a href="http://github.com/mhansen/node-XMLHttpRequest">XMLHttpRequest on Node.JS</a></li>
-        </ul>
-        <hr class="half-bottom" />
-			</div>
-			
-			<div class="widget">
-        <h3>Accounts</h3>
-        <ul>
-          <li><a href="https://plus.google.com/111867687848636271315" rel="me">Google+</a></li>
-          <li><a href="http://github.com/mhansen">Github</a></li>
-          <li><a href="http://news.ycombinator.com/threads?id=mhansen">Hacker News</a></li>
-        </ul>
-        <hr class="half-bottom" />
-			</div>
-
       <div class="widget">
         <h3>Tag Cloud</h3>
         <div> {% include tagcloud.html %} </div>
@@ -118,6 +86,30 @@
         </ul>
         <hr class="half-bottom" />
       </div>
+
+			<div class="widget">
+        <h3>Projects</h3>
+        <ul>
+          <li><a href="http://wheresmytaxes.co.nz/">Where Are My Taxes?</a></li>
+          <li><a href="http://wirelessmap.markhansen.co.nz/">NZ Wireless Map</a></li>
+          <li><a href="http://github.com/mhansen/antinode">Antinode, a Javascript Web Server</a></li>
+          <li><a href="http://markhansen.co.nz/iphone-as-numberpad/">iPhone Numberpad</a></li>
+          <li><a href="http://github.com/mhansen/node-jslint">JSLint on Node.JS</a></li>
+          <li><a href="http://github.com/mhansen/node-XMLHttpRequest">XMLHttpRequest on Node.JS</a></li>
+        </ul>
+        <hr class="half-bottom" />
+			</div>
+			
+			<div class="widget">
+        <h3>Accounts</h3>
+        <ul>
+          <li><a href="https://plus.google.com/117278436091789666160" rel="me">Google+</a></li>
+          <li><a href="http://github.com/mhansen">Github</a></li>
+          <li><a href="http://news.ycombinator.com/threads?id=mhansen">Hacker News</a></li>
+        </ul>
+        <hr class="half-bottom" />
+			</div>
+
 
       <div class="widget">
         <h3>Meta</h3>
@@ -136,10 +128,11 @@
 		<div class="sixteen columns">	
 				<span class="copyright">&copy; Mark Hansen</span>
 				<ul class="social">
-					<li><a href="https://plus.google.com/111867687848636271315"><img src="/assets/images/theme/social-icons/google_plus_32.png" alt="google" title="Google+" /></a></li>
+					<li><a href="https://plus.google.com/117278436091789666160"><img src="/assets/images/theme/social-icons/google_plus_32.png" alt="Google+" title="Google+" /></a></li>
 					<li><a href="http://feeds.feedburner.com/mhansen"><img src="/assets/images/theme/social-icons/rss_32.png" alt="rss" title="RSS" /></a></li>
+					<li><a href="mailto:mark@markhansen.co.nz"><img src="/assets/images/theme/social-icons/email_32.png" alt="Email Mark" title="Email" /></a></li>
 				</ul>
-				<span class="colophon">Powered by Jekyll.</span>
+				<span class="colophon">Static HTML, for web scale.</span>
 		</div>
 	</div>
 </div>
