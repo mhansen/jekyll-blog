@@ -23,30 +23,13 @@
 /* ======================================================= */
 
 /* Set BG */
-body, 
+body,
 h2.title span, 
 ul.tabs li a.active{ 
-	background: #fdfdfd;
-	background: rgba(246,246,246,0.5) ;
-	background: url("../images/theme/backgrounds/noise-white.jpg") repeat ;
+	background: white;
 	position: relative;
 	z-index: 1;
-} 
-
-body:after, 
-/* h2.title span:after, */
-ul.tabs li a.active:after{  
-	content: "";
-	background: transparent url("../images/theme/backgrounds/pattern_diagonal_white.png") repeat;
-	position:absolute; 
-	z-index:99; 
-	left:0; 
-	bottom:0; 
-	right:0;
-	height: 100%;
-	width: 100%;
-	z-index: -1;
-	}
+}
 
 .hidden{display: none;}
 
@@ -227,7 +210,7 @@ p img{margin-bottom: 0;}
 /* Section declarations for BG stripes */
 #section-tophat, #section-footer, #section-sub-footer {	position: relative;  z-index: 1;  } /* Setup for :after double bgs below */
 
-#section-tophat{  background: #222;	 background: rgba(0,0,0,0.8);  }
+#section-tophat{ background: #333; border-bottom: 2px solid #ddd; }
 #section-header{}
 #section-slider{}
 #section-portfolio{}
@@ -259,7 +242,7 @@ p img{margin-bottom: 0;}
 
 #section-tophat:after, #section-footer:after{
 	content: "";
-	background: transparent url("../images/theme/backgrounds/pattern_diagonal_medium.png") repeat;
+	background: #333 url("../images/theme/backgrounds/pattern_diagonal_medium.png") repeat;
 	position:absolute; 
 	z-index:99; 
 	left:0; 
@@ -409,12 +392,12 @@ ul.social li:hover{
 
 /* #SUBFOOTER */
 #section-sub-footer{
-	background: url("../images/theme/backgrounds/noise-black.jpg") repeat transparent;
+	background: black url("../images/theme/backgrounds/noise-black.jpg") repeat;
 }
 
 #section-sub-footer:after {
 	content: "";
-	background: transparent url("../images/theme/backgrounds/pattern_diagonal_dark.png") repeat;
+	background: black url("../images/theme/backgrounds/pattern_diagonal_dark.png") repeat;
 	position:absolute; 
 	z-index:99; 
 	left:0; 
