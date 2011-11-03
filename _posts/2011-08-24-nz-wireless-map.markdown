@@ -1,5 +1,5 @@
 ---
-title: Mapping New Zealand's Wireless Networks
+title: A New Map of New Zealand's Wireless Networks
 layout: post
 description: A visualisation of over 26,000 registered wireless, radio and microwave links connecting New Zealand. Find out how you're connected!
 categories:
@@ -27,21 +27,27 @@ Here's the visualisation: [NZ Wireless Map][2]. Check it out!
 Here's just a few interesting things I found exploring the data:
 
 ### Lake Rotorua
-![Lake Rotorua](/images/nzwirelessmap/lakerotorua.png)
+<a href="http://wirelessmap.markhansen.co.nz/">
+<img src="/images/nzwirelessmap/lakerotorua.png" alt="Lake Rotorua">
+</a>
 <br>
 Lakes are awesome to transmit across! They stay flat, and usually have good
 hills on either side. Lake Rotorua demonstates this really well - here you can
 see how densely it's criscrossed with links.
 
 ### Auckland Skytower
-![Skytower](/images/nzwirelessmap/skytower.png)
+<a href="http://wirelessmap.markhansen.co.nz/">
+<img src="/images/nzwirelessmap/skytower.png" alt="Skytower">
+</a>
 <br>
 The busiest place I could find, with the most links converging on one location,
 was the Skytower in Auckland. Here dozens, if not hundreds of wireless links
 converge from all over the Auckland region.
 
 ### Hamilton
-![Hamilton](/images/nzwirelessmap/hamilton.png)
+<a href="http://wirelessmap.markhansen.co.nz/">
+<img src="/images/nzwirelessmap/hamilton.png" alt="Hamilton">
+</a>
 <br>
 Hamilton's a very flat city, and there's not much in the way of mountain ranges
 nearby. I imagine this would make it difficult to transmit signals to the roofs
@@ -56,7 +62,9 @@ extensively:
 Signals spread all over town from these vantage points.
 
 ### Taranaki Oil/Gas fields
-![Oil Fields](/images/nzwirelessmap/oilfields.png)
+<a href="http://wirelessmap.markhansen.co.nz/">
+<img src="/images/nzwirelessmap/oilfields.png" alt="Oil Fields">
+</a>
 <br>
 You don't usually notice New Zealand's offshore gasfields on maps, but they
 really stick out on a map of wireless links. You can see the Maui A and Maui B
@@ -64,7 +72,9 @@ platforms communicating through a host of links on the Taranaki shore, and the
 Kupe Gas field south of the mountain.
 
 ### White Island
-![White Island](/images/nzwirelessmap/whiteisland.png)
+<a href="http://wirelessmap.markhansen.co.nz/">
+<img src="/images/nzwirelessmap/whiteisland.png" alt="White Island">
+</a>
 <br>
 We even have a wireless link set up *to an active volcano*. Awesome!
 

@@ -77,4 +77,4 @@ This was developed as a project for the Information Visualisation class at the
 University of Waikato. Cheers to our lecturer, Mark Apperley, for giving us the
 freedom to pursue whatever visualisation we like.
 
-Check out the visualisation: [Where's My Taxes?](http://wheresmytaxes.co.nz)
+\[[Where's My Taxes?](http://wheresmytaxes.co.nz)\]
