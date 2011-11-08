@@ -148,10 +148,10 @@
 		<div class="sixteen columns">	
 				<span class="copyright">&copy; Mark Hansen</span>
 				<ul class="social">
-					<li><a href="https://plus.google.com/117278436091789666160"><img src="/assets/images/theme/social-icons/google_plus_32.png" alt="Google+" title="Google+" /></a></li>
-					<li><a href="https://github.com/mhansen"><img src="/assets/images/theme/social-icons/github_32.png" alt="Github" title="Github" /></a></li>
-					<li><a href="http://feeds.feedburner.com/mhansen"><img src="/assets/images/theme/social-icons/rss_32.png" alt="rss" title="RSS" /></a></li>
-					<li><a href="mailto:mark@markhansen.co.nz"><img src="/assets/images/theme/social-icons/email_32.png" alt="Email Mark" title="Email" /></a></li>
+					<li><a href="https://plus.google.com/117278436091789666160" id="gplus"><img src="/assets/images/theme/social-icons/google_plus_32.png" alt="Google+" title="Google+" /></a></li>
+					<li><a href="https://github.com/mhansen" id="github"><img src="/assets/images/theme/social-icons/github_32.png" alt="Github" title="Github" /></a></li>
+					<li><a href="http://feeds.feedburner.com/mhansen" id="rss"><img src="/assets/images/theme/social-icons/rss_32.png" alt="rss" title="RSS" /></a></li>
+					<li><a href="mailto:mark@markhansen.co.nz" id="email"><img src="/assets/images/theme/social-icons/email_32.png" alt="Email Mark" title="Email" /></a></li>
 				</ul>
 				<span class="colophon">Static HTML, for web scale.</span>
 		</div>
@@ -198,6 +198,10 @@
  </script>
 
  <script>var mpq=[];mpq.push(["init","79371f20a387d56e986dc7d68cbe18bf"]);(function(){var b,a,e,d,c;b=document.createElement("script");b.type="text/javascript";b.async=true;b.src=(document.location.protocol==="https:"?"https:":"http:")+"//api.mixpanel.com/site_media/js/api/mixpanel.js";a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a);e=function(f){return function(){mpq.push([f].concat(Array.prototype.slice.call(arguments,0)))}};d=["init","track","track_links","track_forms","register","register_once","identify","name_tag","set_config"];for(c=0;c<d.length;c++){mpq[d[c]]=e(d[c])}})();
+   $("a#rss").click(function() { mpq.track("Footer RSS Clicked"); });
+   $("a#github").click(function() { mpq.track("Footer Github Clicked"); });
+   $("a#gplus").click(function() { mpq.track("Footer G+ Clicked"); });
+   $("a#email").click(function() { mpq.track("Footer Email Clicked"); });
  </script>
 
 </body>
