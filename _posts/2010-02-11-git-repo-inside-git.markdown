@@ -32,8 +32,7 @@ updates, the parent repository will need to update both the working directory
 files and the subrepository history files, complicating the diffs. And it's
 just not necessary: git has a great way of keeping git repositories inside git.
 
-Submodules
-----------
+### Submodules
 
 Submodules are a way of importing code from other git repositories into your source tree, and keeping them up to date after they are imported.
 

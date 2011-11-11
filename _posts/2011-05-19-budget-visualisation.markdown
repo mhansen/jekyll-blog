@@ -27,8 +27,7 @@ spreadsheets - which is great if you want to do hardcore analysis of the data,
 but not for interactive exploring.
 
 
-Presenting: A Visualisation
----------------------------
+### Presenting: A Visualisation
 
 Today, with the announcement of the 2011 Budget, we're launching
 [Where's My Taxes?](http://wheresmytaxes.co.nz)
@@ -55,14 +54,12 @@ the Police cost less than the Defence force, and the Department of Conservation
 is a tiny fraction of the cost of Health and Education.
 
 
-Conclusion
-----------
+### Conclusion
 
 I hope that this website helps people understand where their taxes are going.
 Better informed voters can only lead to better governent.
 
-Thanks
-------
+### Thanks
 
 Thanks to Luke Bjerring, my partner in this assignment, and Ryan Delaney, for
 whipping up an excellent design on very short notice.

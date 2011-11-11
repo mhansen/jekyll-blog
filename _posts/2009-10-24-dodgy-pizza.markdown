@@ -34,16 +34,14 @@ Hells Pizza's website:
 These are *serious problems* for a company taking their customer's credit card
 number over the internet.
 
-Unsecured HTTP
---------------
+### Unsecured HTTP
 
 This means everything is transmitted in plain text. Anyone on the connection
 between my computer and hell.co.nz can watch it, inspect it, or even change it.
 If they're transmitting my credit card number like this, it's also against
 VISA's terms and conditions.
 
-No certificate
---------------
+### No certificate
 
 Certificates say "A trusted authority has vouched that this is indeed the real
 website of hell.co.nz, and not some imposter". Since there is no certificate, I
@@ -67,8 +65,7 @@ Sounds farfetched? There are many ways I could be redirected to a different serv
   address.
 * Hell's Pizza forgets to renew their domain name, and someone else snaps it up.
 
-Sniffing
---------
+### Sniffing
 
 I popped open my favorite network sniffer
 [Wireshark](http://www.wireshark.org) to have a closer look at the
@@ -80,8 +77,7 @@ application *does use HTTPS to transmit credit card numbers*. This means that
 not I, nor anybody else on the network, can listen in on the credit card
 numbers in transit.
 
-Conclusion
-----------
+### Conclusion
 
 For now, there's no way for me to know if I'm dealing with the real Hell's
 Pizza website when I'm entering my credit card details.
