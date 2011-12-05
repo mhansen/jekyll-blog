@@ -5,23 +5,23 @@
 <!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"><!--<![endif]-->
 <head>
   <title>{{ page.title }} | Mark Hansen</title>
-	<meta charset="utf-8">	
+  <meta charset="utf-8">  
   <meta name="description" content="{{ page.description }}">
-	<meta name="author" content="Mark Hansen">
+  <meta name="author" content="Mark Hansen">
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
-	<link rel="profile" href="http://gmpg.org/xfn/11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+  <link rel="profile" href="http://gmpg.org/xfn/11" />
   <link rel="alternate" type="application/atom+xml" href="http://feeds.feedburner.com/mhansen"
         title="Mark Hansen's Blog">
- 	<!-- Load the basic skeleton and plugin CSS, then the main theme stylesheet -->   
+   <!-- Load the basic skeleton and plugin CSS, then the main theme stylesheet -->   
   <link rel="stylesheet" media="all" href="/assets/stylesheets/base.css" />
-	<link rel="stylesheet" media="all" href="/assets/stylesheets/skeleton.css" />
-	<link rel="stylesheet" media="all" href="/assets/stylesheets/buttons.css" />
-	<link rel="stylesheet" media="all" href="/assets/stylesheets/superfish.css" />
-	<link rel="stylesheet" media="all" href="/assets/stylesheets/flexslider.css" />
-	<link rel="stylesheet" media="all" href="/assets/stylesheets/styles.css" />
+  <link rel="stylesheet" media="all" href="/assets/stylesheets/skeleton.css" />
+  <link rel="stylesheet" media="all" href="/assets/stylesheets/buttons.css" />
+  <link rel="stylesheet" media="all" href="/assets/stylesheets/superfish.css" />
+  <link rel="stylesheet" media="all" href="/assets/stylesheets/flexslider.css" />
+  <link rel="stylesheet" media="all" href="/assets/stylesheets/styles.css" />
   <link rel="stylesheet" href="/assets/stylesheets/typography-serif.css" />
   <!--<link rel="stylesheet" href="/assets/stylesheets/typography-sans.css" />-->
   <link rel="stylesheet" href="/assets/stylesheets/syntax.css">
@@ -32,25 +32,25 @@
 <body>
 
 <div class="super-container full-width" id="section-header">
-	<div class="container">			
-		<header>
-		<div class="sixteen columns">
+  <div class="container">      
+    <header>
+    <div class="sixteen columns">
       <a href="/" title="Mark Hansen">
         <h1 id="logo" style="margin-top: 40px; margin-bottom: 30px;">
           Mark Hansen's Blog
         </h1>
       </a>
-		</div>
-		</header>
-	</div>
+    </div>
+    </header>
+  </div>
 </div>
 
 <div class="super-container full-width main-content-area" id="section-content">
-	<div class="container">		
-		<div class="eleven columns content">
+  <div class="container">
+    <div class="eleven columns content">
       {{ content }}
     </div>
-		<div class="five columns sidebar">
+    <div class="five columns sidebar">
       <div class="widget">
         <h3>About</h3>
         <p>
@@ -67,7 +67,7 @@
         </p>
         <hr class="half-bottom" />
       </div>
-			
+
       <div class="widget">
         <h3>Tag Cloud</h3>
         <div> {% include tagcloud.html %} </div>
@@ -78,92 +78,96 @@
         <a href="/archive.html"><h3>Archive</h3></a>
         <ul>
           {% for post in site.posts limit:20 %}
-            <li><a href="{{post.url}}">{{post.title}}</a></li>
+            <li><a href="{{post.url}}">{{post.title}}</a>
           {% endfor %}
-          <li><a href="/archive.html">More...</a></li>
+          <li><a href="/archive.html">More...</a>
         </ul>
         <hr class="half-bottom" />
       </div>
 
-			<div class="widget">
+      <div class="widget">
         <h3>Projects</h3>
         <ul>
-          <li><a href="http://wheresmytaxes.co.nz/">Where Are My Taxes?</a></li>
-          <li><a href="http://wirelessmap.markhansen.co.nz/">NZ Wireless Map</a></li>
-          <li><a href="http://github.com/mhansen/antinode">Antinode, a Javascript Web Server</a></li>
-          <li><a href="http://markhansen.co.nz/iphone-as-numberpad/">iPhone Numberpad</a></li>
-          <li><a href="http://github.com/mhansen/node-jslint">JSLint on Node.JS</a></li>
-          <li><a href="http://github.com/mhansen/node-XMLHttpRequest">XMLHttpRequest on Node.JS</a></li>
+          <li><a href="http://wheresmytaxes.co.nz/">Where Are My Taxes?</a>
+          <li><a href="http://wirelessmap.markhansen.co.nz/">NZ Wireless Map</a>
+          <li><a href="http://github.com/mhansen/antinode">Antinode, a Javascript Web Server</a>
+          <li><a href="http://markhansen.co.nz/iphone-as-numberpad/">iPhone Numberpad</a>
         </ul>
         <hr class="half-bottom" />
-			</div>
-			
-			<div class="widget">
+      </div>
+      
+      <div class="widget">
         <h3>Accounts</h3>
         <ul>
-          <li><a href="https://plus.google.com/117278436091789666160" rel="me">Google+</a></li>
-          <li><a href="http://github.com/mhansen">Github</a></li>
-          <li><a href="http://news.ycombinator.com/threads?id=mhansen">Hacker News</a></li>
+          <li><a href="https://plus.google.com/117278436091789666160" rel="me">Google+</a>
+          <li><a href="http://github.com/mhansen">Github</a>
+          <li><a href="http://news.ycombinator.com/threads?id=mhansen">Hacker News</a>
         </ul>
         <hr class="half-bottom" />
-			</div>
-		</div>
-	</div>
+      </div>
+    </div>
+  </div>
 </div>
-<div class="super-container full-width" id="section-footer">		
-	<div class="container">
-		<footer>
-		<div class="sixteen columns" id="header">
-			
-			<br />
-			<div class="eleven columns alpha">
-				<h5>Projects</h5>
+<div class="super-container full-width" id="section-footer">    
+  <div class="container">
+    <footer>
+    <div class="sixteen columns" id="header">
+      
+      <br />
+      <div class="six columns alpha">
+        <h5>Projects</h5>
         <ul>
-          <li><a href="http://markhansen.co.nz/budget-visualisation/">Visualising the New Zealand Government Budget</a></li>
-          <li><a href="http://markhansen.co.nz/nz-wireless-map/">A New Map of New Zealand's Wireless Networks</a></li>
-          <li><a href="http://github.com/mhansen/antinode">Antinode, a Javascript Web Server</a></li>
-          <li><a href="http://markhansen.co.nz/iphone-as-numberpad/">iPhone Numberpad</a></li>
-          <li><a href="http://github.com/mhansen/node-jslint">JSLint on Node.JS</a></li>
-          <li><a href="http://github.com/mhansen/node-XMLHttpRequest">XMLHttpRequest on Node.JS</a></li>
+          <li><a href="http://markhansen.co.nz/budget-visualisation/">Visualising the New Zealand Government Budget</a>
+          <li><a href="http://markhansen.co.nz/nz-wireless-map/">A New Map of New Zealand's Wireless Networks</a>
+          <li><a href="http://github.com/mhansen/antinode">Antinode, a Javascript Web Server</a>
+          <li><a href="http://markhansen.co.nz/iphone-as-numberpad/">iPhone Numberpad</a>
+          <li><a href="http://github.com/mhansen/node-jslint">JSLint on Node.JS</a>
+          <li><a href="http://github.com/mhansen/node-XMLHttpRequest">XMLHttpRequest on Node.JS</a>
         </ul>
       </div>
-			<div class="five columns alpha">
-				<h5>Meta</h5>
+      <div class="five columns">
+        <h5>Meta</h5>
         <ul>
-          <li>Static HTML: for web scale.</li>
-          <li>Compiled by <a href="http://jekyllrb.com">Jekyll</a>.</li>
-          <li>Hosted by a <a href="http://linode.com">Linode VPS</a>.</li>
-          <li>Last updated {{ site.time | date: site.date_format }}.</li>
+          <li>Compiled by <a href="http://jekyllrb.com">Jekyll</a>.
+          <li>Hosted by a <a href="http://linode.com">Linode VPS</a>.
+          <li>Last updated {{ site.time | date: site.date_format }}.
         </ul>
       </div>
-		</div>
+      <div class="five columns omega">
+        <h5>Friends</h5>
+        <ul>
+          <li><a href="http://joeloughton.com/">Joel Oughton</a>
+          <li><a href="http://stephennancekivell.blogspot.com/">Stephen Nancekivell</a>
+        </ul>
+      </div>
+    </div>
     </footer>
   </div>
 </div>
 
-<div class="super-container full-width" id="section-sub-footer">		
-	<div class="container">
-		<div class="sixteen columns">	
-				<span class="copyright">&copy; Mark Hansen</span>
-				<ul class="social">
-					<li><a href="https://plus.google.com/117278436091789666160" id="gplus"><img src="/assets/images/theme/social-icons/google_plus_32.png" alt="Google+" title="Google+" /></a></li>
-					<li><a href="https://github.com/mhansen" id="github"><img src="/assets/images/theme/social-icons/github_32.png" alt="Github" title="Github" /></a></li>
-					<li><a href="http://feeds.feedburner.com/mhansen" id="rss"><img src="/assets/images/theme/social-icons/rss_32.png" alt="rss" title="RSS" /></a></li>
-					<li><a href="mailto:mark@markhansen.co.nz" id="email"><img src="/assets/images/theme/social-icons/email_32.png" alt="Email Mark" title="Email" /></a></li>
-				</ul>
-				<span class="colophon">Static HTML, for web scale.</span>
-		</div>
-	</div>
+<div class="super-container full-width" id="section-sub-footer">    
+  <div class="container">
+    <div class="sixteen columns">  
+        <span class="copyright">&copy; Mark Hansen</span>
+        <ul class="social">
+          <li><a href="https://plus.google.com/117278436091789666160" id="gplus"><img src="/assets/images/theme/social-icons/google_plus_32.png" alt="Google+" title="Google+" /></a>
+          <li><a href="https://github.com/mhansen" id="github"><img src="/assets/images/theme/social-icons/github_32.png" alt="Github" title="Github" /></a>
+          <li><a href="http://feeds.feedburner.com/mhansen" id="rss"><img src="/assets/images/theme/social-icons/rss_32.png" alt="rss" title="RSS" /></a>
+          <li><a href="mailto:mark@markhansen.co.nz" id="email"><img src="/assets/images/theme/social-icons/email_32.png" alt="Email Mark" title="Email" /></a>
+        </ul>
+        <span class="colophon">Static HTML, for web scale.</span>
+    </div>
+  </div>
 </div>
 
 <script src="/assets/javascripts/jquery-1.7.min.js"></script>
-<script src="/assets/javascripts/tabs.js"></script>	
+<script src="/assets/javascripts/tabs.js"></script>  
 <script src="/assets/javascripts/modernizr.custom.34113.js"></script>
 <script src="/assets/javascripts/jquery.tipsy.js"></script>
-<script src="/assets/javascripts/jquery.hoverIntent.js"></script>		
+<script src="/assets/javascripts/jquery.hoverIntent.js"></script>    
 <script src="/assets/javascripts/superfish.js"></script>
 <script src="/assets/javascripts/supersubs.js"></script>
-<script src="/assets/javascripts/jquery.flexslider-min.js"></script>	
+<script src="/assets/javascripts/jquery.flexslider-min.js"></script>  
 <script src="/assets/javascripts/filterable.pack.js"></script>
 <script src="/assets/javascripts/skeleton-key.js"></script>
 <script src="/assets/javascripts/jquery.lightbox-0.5.pack.js"></script>
@@ -183,17 +187,19 @@
 <script>clicky.init(236155);</script>
 <noscript><p><img alt="Clicky" width="1" height="1" src="http://in.getclicky.com/236155ns.gif" /></p></noscript>
 
-<script>
+<script type="text/javascript">
+
   var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-26633662-1']);
+  _gaq.push(['_setAccount', 'UA-XXXXX-Y']);
   _gaq.push(['_trackPageview']);
 
   (function() {
-   var ga = document.createElement('script'); ga.async = true;
-   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-   })();
- </script>
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 
  <script>var mpq=[];mpq.push(["init","79371f20a387d56e986dc7d68cbe18bf"]);(function(){var b,a,e,d,c;b=document.createElement("script");b.type="text/javascript";b.async=true;b.src=(document.location.protocol==="https:"?"https:":"http:")+"//api.mixpanel.com/site_media/js/api/mixpanel.js";a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a);e=function(f){return function(){mpq.push([f].concat(Array.prototype.slice.call(arguments,0)))}};d=["init","track","track_links","track_forms","register","register_once","identify","name_tag","set_config"];for(c=0;c<d.length;c++){mpq[d[c]]=e(d[c])}})();
  </script>
