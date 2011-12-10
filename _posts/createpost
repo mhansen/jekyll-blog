@@ -1,0 +1,12 @@
+#!/bin/bash
+cat >> $(date +%Y-%m-%d)-$1.markdown << EOF
+---
+layout: post
+title: $1
+description:
+categories:
+    - 
+---
+
+EOF
+vim $(date +%Y-%m-%d)-$1.markdown
