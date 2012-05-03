@@ -8,6 +8,11 @@ categories:
 <div id="mostCommonStolenMakes" style="height:600px; overflow-y:scroll;">
 <h4>Stolen Vehicles, by Make</h4>
 </div>
+
+Mouseover the bars for a visualisation of the colors of the stolen cars.
+
+### The Database
+
 A few days ago, the NZ Police [launched][2] a [public database of stolen cars][1]. It's a
 snapshot taken from the Police Vehicle of Interest database, updated 3x daily.
 
@@ -36,8 +41,10 @@ here's the first four vehicles:
     1079Y,Silver,Trailer,ABEL K8SSA,2001,Trailer,2011-07-14,Waitemata
     ...
 
-So I decided to have a crack at visualising the data. Below is the first
+So I decided to have a crack at visualising the data. Above is the first
 interactive graphic I've published - the most popular makes of stolen vehicles.
+
+### Visualisation Tech
 
 This visualisation was a great excuse to play around with some new tech.
 Rendering is done with SVG, controlled by the excellent [d3 visualisation
@@ -52,8 +59,6 @@ I was very impressed with d3's flexibility and conciseness, and I'm looking
 forward to using it on more projects. I may blog about how awesome the d3
 experience was later. If you're into making visualisations, I heartily
 recommend checking d3 out.
-
-Mouseover for a visualisation of the colors of the stolen cars.
 
 <style>
 .highlight {
