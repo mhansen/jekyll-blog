@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+@import url(stack.css);
+
+blockquote {
+  font-style: italic;
+}
+.fn, fn {
+  font-weight: bold;
+  color: lightgreen;
+}
+red, .red { 
+  color: #F03;
+}
+.green {
+  color: #5F5;
+}
+
+type {
+  color: #666;
+}
+
+.blue, sym, .sym {
+  color: #7AF;
+}
+comment, .comment {
+  color: grey;
+}
+
+.amber {
+  color: orange;
+}
+
+.big {
+  font-size: 128px;
+}
+big {
+  font-weight: bold;
+  color: #7AF;
+}
+
+str {
+  color: pink;
+}
+[lang=java], [lang=cpp] {
+  font-size: 32px;
+}
+
+.caption {
+  font-size: 96px;
+  text-align: center;
+  text-shadow: 0px 2px 6px rgba(0,0,0,.5);
+}
+
+subtitle {
+  font-style: italic;
+  font-weight: bold;
+  color: #5F8;
+}
+
+plan {
+  display: none;
+}
+
+section aside a {
+  color: black;
+}
+
+section aside {
+  background: #FFF8B8;
+  background-image: -webkit-linear-gradient(top, #FFF8B8, #FEED77);
+  box-shadow: 0 8px 16px rgba(0,0,0,.5);
+  color: #000;
+  display: block;
+  font-size: 16px;
+  padding: 16px;
+  position: absolute;
+  right: 40px;
+  bottom: 120px;
+  width: 328px;
+}
+section aside.top {
+  top: 20px;
+  bottom: auto;
+}
+</style>
+<body class="overview">
+
+<section>
+  <h1>Clojure Atoms</h1>
+  <p>or, <subtitle>spelunking in the JVM</subtitle>.</p>
+  <p><a href="http://markhansen.co.nz/">Mark Hansen</a><br>
+    markhansen.co.nz</p>
+  <aside>
+  <p>These are slides from a talk I gave at a <a
+  href='http://www.meetup.com/clj-syd/'>Sydney Clojure meetup, (clj-syd)</a>,
+  on 26/7/12.
+  <p>Scroll down to see the slides.
+  </aside>
+</section>
+
+<section>
+  <ul>
+    <li><i>What</i> are atoms?
+    <li><i>When</i> to use atoms
+    <li><b class='red'>Deep dive</b>: <i>How</i> atoms work
+  </ul>
+  <h1 class='caption green'>Plan</h1>
+  <aside>
+    <p>This is about Clojure's 'atom' data type. We're going to go over what they
+    do at a high-level, then go spelunking in the JVM looking at their
+    implementation.
+    <p>We're going high-level to low-level, so regardless of whether you're new
+    to atoms or you've used them thousands of times, there should be something
+    for you in this talk.
+    <p>Let's go!
+  </aside>
+</section>
+
+<section>
+  <p>This talk may contains traces of low-level code</p>
+  <h1 class='red caption'>Warning</h1>
+  <aside>
+    <p>First, a warning - I know that a lot of Clojure people love the language
+    for its beautiful high level code. Sorry, there won't be much of that
+    today.
+    <p>We're going low-level.
+  </aside>
+</section>
+
+<section>
+  <i>Identities that implement:</i><br>
+  atomic,<br>
+  compare-and-set,<br>
+  synchronous,<br>
+  uncoordinated<br>
+  modification.
+  <h1 class='caption'>What's an Atom?</h1>
+  <aside>
+    <p>Alright, what's an atom? Here's the super high-level description, with
+    lots of big nebulous words.
+    <p>Let's go through these.
+  </aside>
+</section>
+
+<section>
+  <i>Identities that implement:</i><br>
+  atomic,<br>
+  compare-and-set,<br>
+  synchronous,<br>
+  uncoordinated<br>
+  <big>modification</big>.
+  <h1 class='caption'>What's an Atom?</h1>
+  <aside>
+    <p>At their heart, Atoms are about <b>Modification</b>. An atom is a
+    reference to some object, a reference that you can modify, to point at some
+    other object.</p>
+    <p>Clojure is all about managing state. Almost all of the language is
+    immutable and pure functional by default, with no state. However, Clojure
+    gives you a few mutable primitives that you can use to mutate state safely.
+    Atoms are one of these primitives.</p>
+  </aside>
+</section>
+
+
+<section>
+  <i>Identities that implement:</i><br>
+  <big>atomic</big>,<br>
+  compare-and-set,<br>
+  synchronous,<br>
+  uncoordinated<br>
+  modification.
+  <h1 class='caption'>What's an Atom?</h1>
+  <aside>
+    <p>Atoms are <b>Atomic!</b></p>
+    <p>Undividable - Uncuttable! Every update to an atom occurs in one fell
+    swoop - there's no way to observe an atom half-updated, or in the process
+    of being updated.</p>
+    <p>You'll never see an atom in an inconsistent state. Even from different
+    cores.</p>
+  </aside>
+</section>
+
+<section>
+  <i>Identities that implement:</i><br>
+  atomic,<br>
+  <big>compare-and-set</big>,<br>
+  synchronous,<br>
+  uncoordinated<br>
+  modification.
+  <h1 class='caption'>What's an Atom?</h1>
+  <aside>
+  <p>Atoms provide compare-and-set functions! This is a low-level operation: in
+  one fell swoop, update an atom, but <b>only if</b> it has the value that you expect.</p>
+  <p>With this, you can check that the value hasn't been changed since you last
+  observed it. You can be sure that nobody has updated it from under you.</p>
+  <p>This is a somewhat primitive low-level operation, but we'll soon see
+  that <code>compare-and-set</code> is what all the other atomic functions are
+  built on.</p>
+  </aside>
+</section>
+
+<section>
+  <i>Identities that implement:</i><br>
+  atomic,<br>
+  compare-and-set,<br>
+  <big>synchronous</big>,<br>
+  uncoordinated<br>
+  modification.
+  <h1 class='caption'>What's an Atom?</h1>
+  <aside>
+  <p>Atoms have <b>synchronous updates</b>!</p>
+  <p>Atoms aren't asynchronous - they block when you try to modify them, and
+  when your thread continues, you can be sure that the value has been updated.</p>
+  <p>This point is mostly a contrast to Agents, another Clojure state
+  management option, where state changes can happen asynchronously - you queue
+  a change to an Agent, and the Agent will get around to updating at its
+  leisure.</p>
+  </aside>
+</section>
+
+<section>
+  <i>Identities that implement:</i><br>
+  atomic,<br>
+  compare-and-set,<br>
+  synchronous,<br>
+  <big>uncoordinated</big><br>
+  modification.
+  <h1 class='caption'>What's an Atom?</h1>
+  <aside>
+  <p>Atoms are <b>Uncoordinated</b>: This means, you can't easily synchronize
+  updates to more than one Atom to occur in the same instant. You can only
+  update Atoms one at a time.
+  <p>You wouldn't use Atoms to ensure that a transaction between two bank
+  accounts updates both accounts in the same instant. You'd need some
+  coordination of the mutations there.
+  <p>This is mostly a contrast to Refs, another Clojure mutation primitive,
+  which offers coordination of updates.
+  </aside>
+</section>
+
+<section>
+  <pre>(<fn>atom</fn>
+  [<span class='amber'>val</span>] [<span class='amber'>val & options</span>])</pre>
+  <h1 class="caption">Creating</h1>
+  <aside>
+  <p>Alright, enough of those big, nebulous words. Show me the code!
+  <p>Here's the constructor signature. Pass in some value, clojure will make an
+  atom containing it. There's also optional options, like metadata and
+  validators, that we'll get into later.
+  </aside>
+</section>
+
+<section>
+  <pre>(<fn>def</fn> mark 
+  (<fn>atom</fn>
+    {<span class='sym'>:fname</span> <str>"Mark"</str>
+     <span class='sym'>:writes</span> <str>"code"</str>}))</pre>
+  <h1 class="caption">Creating</h1>
+  <aside>
+  <p>Example!
+  <p>Here we're making an atom representing me, and defining it to be named
+  'mark'.
+  <p>The atom  a reference to an immutable hashtable with a few properties
+  about me.
+</section>
+
+<section>
+  <pre>(<fn>deref</fn> mark)
+<span class='comment'>;=&gt; {<sym>:fname</sym> <str>"Mark"</str> 
+     <sym>:writes</sym> <str>"code"</str>}</span></pre>
+  <h1 class="caption">Retrieving</h1>
+  <aside>
+  <p>You can get the value back out of the atom with the <code>deref</code>
+  function.
+  <p>This is what it'd look like if you typed <code>(deref mark)</code>.
+  </aside>
+</section>
+
+<section>
+  <pre>(<fn>swap!</fn>
+  [<span class='amber'>atom f</span>]
+  [<span class='amber'>atom f &amp; args</span>])</pre>
+  <h1 class="caption">Swapping</h1>
+  <aside>
+  The <code>swap!</code> applies the function <code>f</code> to the data inside
+  the atom, then updates the atom to point at the result, atomically.
+  <p>If <code>swap!</code> can't commit the change (if the atom's been updated
+  from another thread), <code>swap!</code> will retry with the new data in the
+  atom, until the change can be committed.
+  <p>It's safe to apply any pure function.
+  <p>Again, no other thread will see the atom's contents in an inconsistent or
+  partially updated state.
+  </aside>
+</section>
+
+<section>
+  <pre>(<fn>deref</fn> mark)
+<span class='comment'>;=&gt; {<sym>:fname</sym> <str>"Mark"</str> 
+     <sym>:writes</sym> <str>"code"</str>}</span>
+
+(<fn>swap!</fn> mark 
+  <fn>assoc</fn> <sym>:lname</sym> <str>"Hansen"</str>)
+<comment>;=&gt;{<sym>:fname</sym> <str>"Mark"</str>
+    <sym>:writes</sym> <str>"code"</str>
+    <sym>:lname</sym> <str>"Hansen"</str>}</comment></pre>
+  <aside>
+  Example!
+  <p>This atomically updates the atom's map to a new map with the
+  <code>:lname</code> key associated with <code>"Hansen"</code>.
+  <p>We apply the <code>assoc</code> function to the <code>:mark</code> atom we
+  defined before, with the arguments <code>[:writes "music"]</code>.
+  <p><code>assoc</code> then returns a new map constructed from the previous map,
+  with another key-value pair 'associated' into it.
+  <p>This is a really useful pattern for implementing e.g. atomic counters -
+  just apply the increment function!
+  </aside>
+</section>
+
+<section>
+  <pre>(<fn>compare-and-set!</fn>
+  [<span class='amber'>atom oldval newval</span>])</pre>
+  <h1 class="caption">Compare/Set</h1>
+  <aside>
+  <p><code>compare-and-set!</code> checks if the <code>atom</code> contains
+  <code>oldval</code>, and if so, updates <code>atom</code> with
+  <code>newval</code>, returning a boolean: whether the function updated the atom.
+  <p>This all happens in one indivisible atomic action, so there's no chance
+  that another thread can modify the reference between the check and the
+  update.
+  </aside>
+</section>
+
+<section>
+  <pre>(<fn>def</fn> suspect-carrying 
+  (<fn>atom</fn> <str>"Gun"</str>))
+(<fn>compare-and-set!</fn>
+  suspect-carrying "Gun" "Umbrella")
+<comment>;=&gt; true</comment>
+(<fn>compare-and-set!</fn>
+  suspect-carrying "Gun" "Sword")
+<comment>;=&gt; false</comment> </pre>
+<aside class='top'>
+Example!
+<p>A few days ago, my old university had a report of a man carrying a gun.
+After dozens of police descended on campus, they found the man was carrying an
+umbrella.
+<p>Let's say there's an atom carrying the current understanding of what the man
+is carrying. Atomically updating it to <code>"Umbrella"</code> succeeds,
+because the <code>oldval</code> was correct.
+<p>Later, trying to update to <code>"Sword"</code> (maybe from another thread)
+fails, because the <code>oldval</code> is wrong - the atom's been updated in
+the meantime.
+</aside>
+</section>
+
+<section>
+  <pre>(<fn>reset!</fn>
+  [<span class='amber'>atom newval</span>])</pre>
+  <h1 class="caption">Reset</h1>
+  <aside>There's also the nuclear option - just hard-reset the value of the
+  atom. Use this when you don't care if someone else has changed it, you just
+  want to force it changed.</aside>
+</section>
+
+<section>
+  <pre>(<fn>def</fn> age 
+  (<fn>atom</fn> 1 <span class='sym'>:validator</span> <fn>pos?</fn>))
+
+(<fn>reset!</fn> age -1)
+<comment>;=&gt; <red>IllegalStateException</red></comment>
+
+(<fn>deref</fn> age)
+<comment>;=&gt; 1</comment></pre>
+<aside>
+I <i>love</i> this.
+<p>You can attach <i>validation functions</i> to atoms, which ensure the atom
+is always in some consistent state.
+<p>I've had to write validation in every single application I've written, so
+it's great to have a common, standard way defined in the language for such a
+common pattern.
+<p>It's just one less thing to have to worry about - your data is guaranteed to
+always in a valid state when you access it.
+<p>Here we define an 'age' atom that validates with the <code>pos?</code>
+function (that checks if a number is positive).
+<p>Positive updates are allowed, and non-positive updates are rejected with
+IllegalStateException.
+</aside>
+</section>
+
+<section> 
+<pre>(<fn>add-watch</fn> mark <span class='sym'>:log-changes</span>
+  (<fn>fn</fn>
+    [key the-atom old new]
+    (<fn>println</fn> old <str>"=&gt;"</str> new))</pre>
+  <h1 class="caption">Watch<br>Functions</h1>
+<aside>
+You can also register <i>watch functions</i> on atoms, which are called
+whenever the atom updates.
+<p>Watch functions are <i>sweet</i>. They let you automatically update GUIs
+from models, automatically log updates, reliably keep disparate bits of
+your application in sync, and much more.
+<p>They're blowing up in the Javascript world, with the rise of frameworks like
+Backbone, Knockout, and Angular, which are <i>built on</i> watch functions.
+<p>It's great to have these built into clojure, in a standard way.
+<p>Here we attach a logging watch function to the <code>mark</code> atom.  The
+watch function is passed a lot of arguments: the watch function key
+(<code>:log-changes</code>), the atom itself, the old atom value, and the new
+atom value.
+</aside>
+</section>
+
+<section>
+  <h1 class="caption"><red>How</red> do Atoms work?</h1>
+<aside>
+OK, so now we now all about the API that atoms offer. But how do they work?
+</aside>
+</section>
+
+<section>
+  <h1 class="caption">And can I <b class='red'>trust them..?</b></h1>
+<aside>
+More importantly, can I trust these abstractions? What's the performance
+characteristics? Will it ever deadlock?
+<p>Clojure's making all sorts of promises about thread safety around atoms. Can
+it deliver?
+<p>Let's dive into the implemenation, and try to answer these questions.
+</aside>
+</section>
+
+<section>
+  <a href='https://github.com/clojure/clojure/blob/master/src/clj/clojure/core.clj'>
+    <h1 class="caption">clojure/core.clj</h1>
+  </a>
+<aside>Let's start in the clojure source code: clojure/core.clj, available at
+github.com/clojure, where the atom functions we've just been through are all
+defined.</aside>
+</section>
+
+<section>
+<pre>(<fn>defn</fn> atom<!--
+   -  "Creates and returns an Atom with an initial value of x and zero or
+   -  more options (in any order):
+   -
+   -  :meta metadata-map
+   -
+   -  :validator validate-fn
+   -
+   -  If metadata-map is supplied, it will be come the metadata on the
+   -  atom. validate-fn must be nil or a side-effect-free fn of one
+   -  argument, which will be passed the intended new state on any state
+   -  change. If the new state is unacceptable, the validate-fn should
+   -  return false or throw an exception."
+   -->
+  ([x]
+    (<fn>new</fn> <type>clojure.lang.Atom</type> x))
+  ([x &amp; options]
+    (<fn>setup-reference</fn> (<fn>atom</fn> x) options)))</pre>
+<aside>
+Here's the <code>atom</code> function, which constructs atoms. It delegates
+straight down to the <code>clojure.lang.Atom</code> constructor, with some
+extra bits for setting up watch functions and validators, which we won't get
+into.
+</aside>
+</section>
+
+<section>
+<pre>(<fn>defn</fn> swap!<!--
+     -<str>"Atomically swaps the value of atom to be:
+     -(apply f current-value-of-atom args). Note that f may be called
+     -multiple times, and thus should be free of side effects.  Returns
+     -the value that was swapped in."</str>
+     -->
+  ([<type>^clojure.lang.Atom</type> atom f]
+    (<fn>.swap</fn> atom f))
+  ([<type>^clojure.lang.Atom</type> atom f x]
+    (<fn>.swap</fn> atom f x))
+  ([<type>^clojure.lang.Atom</type> atom f x y]
+    (<fn>.swap</fn> atom f x y))
+  ([<type>^clojure.lang.Atom</type> atom f x y &amp; args]
+    (<fn>.swap</fn> atom f x y args)))</pre>
+<aside class='top'>
+Likewise, the <code>swap!</code> just delegates straight down to
+<code>clojure.lang.Atom.swap</code>, with a few extra type signatures and
+argument list permutations, which just make things a bit faster.
+</aside>
+</section>
+
+<section>
+<pre>(<fn>defn</fn> compare-and-set!<!--
+     -<str>"Atomically sets the value of atom
+     -to newval if and only if the current
+     -value of the atom is identical to
+     -oldval. Returns true if set happened,
+     -else false"</str>
+     -->
+  [<type>^clojure.lang.Atom</type> atom oldval newval]
+  (<fn>.compareAndSet</fn> atom oldval newval))</pre>
+<aside>
+Again, the <code>compare-and-set!</code> function delegates straight down to
+<code>clojure.lang.Atom.compareAndSet</code>.
+</aside>
+</section>
+
+<section>
+<pre>(<fn>defn</fn> reset!<!--
+     -<str>"Sets the value of atom to newval
+     -without regard for the current value.
+     -Returns newval."</str>
+     -->
+  [<type>^clojure.lang.Atom</type> atom newval]
+  (<fn>.reset</fn> atom newval))</pre>
+<aside>
+<p><code>reset!</code> delegates straight down to
+<code>clojure.lang.Atom</code>, too.
+</aside>
+</section>
+
+<section>
+<a href='https://github.com/clojure/clojure/blob/master/src/jvm/clojure/lang/Atom.java'>
+  <h1 class="caption">clojure/lang/Atom.java</h1>
+</a>
+<aside>
+Looks like all of the real code is in <code>clojure.lang.Atom</code>.
+<p>So let's descend into Java-Land. I warned you!
+<p>This is from the clojure source code, on github.com/clojure, in the java tree.
+</aside>
+</section>
+
+<section>
+  <pre lang='java'>import java.util.concurrent.atomic.AtomicReference;
+
+final public class <type>Atom</type> extends <type>ARef</type>{
+final <type>AtomicReference</type> state;
+
+public <type>Atom</type>(<type>Object</type> state){
+  this.state = <b>new AtomicReference(state)</b>;
+}
+
+<type>Object</type> deref(){
+  return <b>state.get</b>();
+}
+
+...</pre>
+<aside>
+Here's the definition of <code>clojure.lang.Atom</code>.
+<p>
+The code wraps an <code>AtomicReference</code>.
+<p>The atomic reference isn't generic - all the methods take and return
+Objects, so clojure atoms can store anything.
+</aside>
+</section>
+
+<section>
+  <pre lang='java'><type>Object</type> swap(<type>IFn</type> f) {
+  <b>for(; ;)</b> {
+    <type>Object</type> v = <b>deref</b>();
+    <type>Object</type> newv = <b>f.invoke</b>(v);
+    <b>validate(newv)</b>;
+    if (<b>state.compareAndSet</b>(v, newv)) {
+      <b>notifyWatches</b>(v, newv);
+      return newv;
+    }
+  }
+}</pre>
+<aside>
+Here we get to the meat of the <code>swap!</code> function.
+<p>It's very clean code's, reading almost like a spec.
+<p>Scarily, there's an infinite loop in here - this code will retry your
+function over and over until it succeeds. This is why it's so important the
+function you apply is pure. If the function had any side effects, they could
+occur an unbounded number of times.
+<p>First, <code>swap!</code> derefs the internal <code>AtomicReference</code>, getting the data.
+<p><code>swap!</code> then applies the function to that data, validates the new data (throwing if it's invalid).
+<p>Then an atomic update is attempted with <code>compareAndSet</code>, retrying
+if that fails, and notifying watch functions if the update succeeds. 
+<p>Simple!
+</aside>
+</section>
+
+<section>
+  <pre lang='java'><type>boolean</type> compareAndSet(<type>Object</type> oldv, <type>Object</type> newv) {
+  validate(newv);
+  <type>boolean</type> ret = <b>state.compareAndSet(oldv, newv)</b>;
+  if (ret)
+    notifyWatches(oldv, newv);
+  return ret;
+}</pre>
+<aside>
+<code>Atom.compareAndSet</code> is just a thin wrapper around <code>AtomicReference.compareAndSet</code>.
+<p>Let's go deeper.
+</section>
+
+<section>
+<a href='http://hg.openjdk.java.net/jdk7/jdk7/jdk/file/9b8c96f96a0f/src/share/classes/java/util/concurrent/atomic/AtomicReference.java'>
+  <h1 class="caption">util/concurrent/atomic/<br>
+AtomicReference.java</h1>
+</a>
+<aside>
+All the functions acting on atoms delegate down to AtomicReference.
+<p>Let's look at that code to see how they work.
+<p>This code is from OpenJDK, available at openjdk.java.net.
+</aside>
+</section>
+
+<section>
+  <pre lang="java">public class <type>AtomicReference</type>&lt;<type>V</type>&gt; {
+private static final <type>Unsafe</type> unsafe = <b><type>Unsafe</type>.getUnsafe()</b>;
+private static final <type>long</type> valueOffset;
+private volatile <type>V</type> value;
+
+static {
+  try {
+    valueOffset = <b>unsafe.objectFieldOffset(
+        <type>AtomicReference</type>.class.getDeclaredField(<str>"value"</str>))</b>;
+  } catch (<type>Exception</type> ex) { throw new <type>Error</type>(ex); }
+}
+
+public final <type>boolean</type> compareAndSet(<type>V</type> expect, <type>V</type> update) {
+  return <b>unsafe.compareAndSwapObject(
+      this, valueOffset, expect, update)</b>;
+}</pre>
+</section>
+
+<section>
+<a href='http://hg.openjdk.java.net/jdk7/jdk7/jdk/file/9b8c96f96a0f/src/share/classes/sun/misc/Unsafe.java'>
+  <h1 class="caption">sun/misc/Unsafe.java</h1>
+</a>
+</section>
+
+<section>
+<p>"<i>Provides the caller with the capability of <b class='red'>performing unsafe
+operations</b></i>."</p>
+<p>"<i>The returned <code>Unsafe</code> object should be <b class='green'>carefully guarded</b>
+by the caller, since it can be used to read and write data at <b class='red'>arbitrary
+memory addresses</b>.</i>"</p>
+<p>"<i>It must <big><b class='red'>never</b></big> be passed to untrusted code.</i>"<p>
+</section>
+
+<section><pre lang='java'>public final class <type>Unsafe</type> {
+
+...
+private <type>Unsafe</type>() {}
+
+private static final <type>Unsafe</type> theUnsafe = new <type>Unsafe</type>();
+
+public final <b>native</b> boolean <b>compareAndSwapObject</b>(
+    <type>Object</type> o, <type>long</type> offset, <type>Object</type> expected, <type>Object</type> x);</pre>
+<plan>Here's the unsafe. To get your hands on it, your class has to pass all
+sorts of security checks. Walk through the metal detector, bomb dust checking,
+the whole shebang.
+The trail goes cold. We have an empty function, labelled 'native'. We're going underground, now.
+</plan>
+</section>
+
+<section>
+  <a href='http://hg.openjdk.java.net/jdk8/jdk8/hotspot/file/e3619706a725/src/share/vm/prims/unsafe.cpp'>
+    <h1 class="caption">jdk/hotspot/<br>src/share/vm/<br>prims/unsafe.cpp</h1>
+  </a>
+  <plan>We're now in the hotspot JVM code, which hooks into our native code seem above.</plan>
+</section>
+
+<section>
+  <pre lang='cpp'><b>UnsafeWrapper(<str>"Unsafe_CompareAndSwapObject"</str>)</b>;
+<type>oop</type> x = <type>JNIHandles</type>::resolve(x_h);
+<type>oop</type> e = <type>JNIHandles</type>::resolve(e_h);
+<type>oop</type> p = <type>JNIHandles</type>::resolve(obj);
+<type>HeapWord*</type> addr = 
+    <type>(HeapWord *)</type><b>index_oop_from_field_offset_long(p, offset)</b>;
+if (UseCompressedOops) {
+  update_barrier_set_pre(<type>(narrowOop*)</type>addr, e);
+} else {
+  update_barrier_set_pre(<type>(oop*)</type>addr, e);
+}
+<type>oop</type> res = <b>oopDesc::atomic_compare_exchange_oop(x, addr, e);</b>
+<type>jboolean</type> success  = (res == e);
+if (success)
+  update_barrier_set(<type>(void*)</type>addr, x);
+return success;</pre>
+<aside>oop = ordinary object pointer</aside>
+<plan>The code starts getting ugly, in my opinion, but still quite easy to
+follow. We've got a macro up the top, and lots of casting to pointers and
+whatnot. See we use the field value we stored earlier to find the address of
+the bit of memory we want to compare and set. Things are getting really low
+level now. These 'oops' aren't some kind of mistake, they're 'ordinary object
+pointers'. And you can see that there's two variants, compressed and not.
+</section>
+
+<section>
+<a href='http://hg.openjdk.java.net/jdk8/jdk8/hotspot/file/e3619706a725/src/share/vm/oops/oop.inline.hpp'>
+  <h1 class="caption">jdk/hotspot/<br>src/share/vm/<br>oops/oop.inline.hpp</h1>
+</a>
+</section>
+
+<section>
+<pre lang='cpp'>inline <type>oop</type> <type>oopDesc</type>::atomic_compare_exchange_oop(
+    <type>oop</type> exchange_value,
+    volatile <type>HeapWord</type> *dest,
+    <type>oop</type> compare_value) {
+  if (UseCompressedOops) {
+    <comment>// encode exchange and compare value from oop to T</comment>
+    <type>narrowOop</type> val = encode_heap_oop(exchange_value);
+    <type>narrowOop</type> cmp = encode_heap_oop(compare_value);
+    <type>narrowOop</type> old = <type>(narrowOop)</type>
+        <b>Atomic::cmpxchg(val, <type>(narrowOop*)</type>dest, cmp);</b>
+    <comment>// decode old from T to oop</comment>
+    return decode_heap_oop(old);
+  } else ...
+}</pre>
+</section>
+
+<section>
+  <a href='http://hg.openjdk.java.net/jdk8/jdk8/hotspot/file/e3619706a725/src/share/vm/runtime/atomic.cpp'>
+    <h1 class="caption">jdk/hotspot/<br>src/share/vm/<br>runtime/atomic.cpp</h1>
+  </a>
+</section>
+
+<section>
+<pre>#ifdef TARGET_OS_FAMILY_windows
+# include "os_windows.inline.hpp"
+#endif
+#ifdef TARGET_OS_FAMILY_bsd
+# include "os_bsd.inline.hpp"
+#endif
+#ifdef TARGET_OS_ARCH_linux_x86
+<b># include "atomic_linux_x86.inline.hpp"</b>
+#endif</comment></pre>
+<aside class='top'>
+This is where it starts getting platform specific. Different operating systems
+and instruction sets offer different synchronization primitives.
+<p>Smartly, java keeps its platform specific code away from the main logic, and
+switches it out at compilation time with an <code>#ifdef</code>.
+<p>We'll dive into linux on x86, because that's the architecture I use the most.
+</section>
+
+<section>
+  <a href='http://hg.openjdk.java.net/jdk8/jdk8/hotspot/file/e3619706a725/src/os_cpu/linux_x86/vm/atomic_linux_x86.inline.hpp'>
+    <h1 class="caption">jdk/hotspot/src/<br>os_cpu/linux_x86/vm/<br>atomic_linux_x86.inline.hpp</h1>
+  </a>
+  <aside>
+  This is the linux x86 specific compare-and-exchange code, smartly segregated
+  off from the JVM's main code in os_cpu/linux_x86.
+  </aside>
+</section>
+
+<section>
+<pre lang='cpp'>#define <b>LOCK_IF_MP</b>(mp) <str>"cmp $0, " #mp "; je 1f; <b>lock</b>; 1: "</str>
+
+inline <type>jint</type> <type>Atomic</type>::cmpxchg (<type>jint</type> exchange_value,
+                             volatile <type>jint*</type> dest,
+                             <type>jint</type> compare_value) {
+  <type>int</type> mp = <b>os::is_MP</b>();
+  __asm__ volatile (<b>LOCK_IF_MP(%4)</b>
+                    <str>"<b>cmpxchgl %1,(%3)</b>"</str>
+                    : <str>"=a"</str> (exchange_value)
+                    : <str>"r"</str> (exchange_value),
+                      <str>"a"</str> (compare_value),
+                      <str>"r"</str> (dest),
+                      <str>"r"</str> (mp)
+                    : <str>"cc"</str>, <str>"memory"</str>);
+  return exchange_value;
+}</pre>
+<aside>
+  It all comes down to this.
+</aside>
+</section>
+
+<section>
+  <ul>
+    <li>Clojure: atom
+    <li>Java: AtomicReference
+    <li>Java: Unsafe
+    <li>C++: Unsafe
+    <li>C++: Platform-specific code
+    <li>Assembler
+  </ul>
+  <h1 class="caption">How do Atoms work?</h1>
+<aside>
+</aside>
+</section>
+
+<script src="d3.v2.js?2.7.3"></script>
+<script src="stack.v0.js"></script>
