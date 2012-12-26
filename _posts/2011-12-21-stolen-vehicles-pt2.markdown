@@ -10,8 +10,9 @@ I had a lot of fun making this visualization. [d3.js][d3] +
 [Backbone.js][backbone] + [CoffeeScript][coffee] is an amazing combination.
 
 It's all totally standards-compliant HTML5. Boxes are drawn with inline SVG,
-and transitions are run in CSS for hardware acceleration. Popovers are 
-[Twitter Bootstrap][bootstrap].
+<del>and transitions are run in CSS for hardware acceleration</del> (edit: they
+aren't by default, you have to do a little extra work for that, see comments).
+Popovers are [Twitter Bootstrap][bootstrap].
 
 <div id='stolenvehiclespt2'>
   <h3>Choose a Region</h3>
