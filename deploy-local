@@ -1,0 +1,2 @@
+#!/bin/sh
+jekyll --server --auto . _site

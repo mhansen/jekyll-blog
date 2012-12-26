@@ -1,0 +1,6 @@
+#!/bin/sh
+rake site
+jekyll
+BLOGDIR=$(dirname $0)
+echo $BLOGDIR
+rsync -r --delete --progress $BLOGDIR/_site/ vps:www/markhansen.co.nz
