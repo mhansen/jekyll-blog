@@ -1,4 +1,4 @@
-This is the source code for http://markhansen.co.nz/stolen-vehicles-pt2/
+This is the source code for http://www.markhansen.co.nz/stolen-vehicles-pt2/
 
 How do you get this up and running?
 

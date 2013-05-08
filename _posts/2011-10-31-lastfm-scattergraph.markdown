@@ -67,5 +67,5 @@ of a lot of good times. Hopefully it can do the same for other people.
 
 [\[Scatter.FM\]][1]
 
-[1]: http://markhansen.co.nz/scatter.fm/
+[1]: http://www.markhansen.co.nz/scatter.fm/
 [2]: http://last.fm/
