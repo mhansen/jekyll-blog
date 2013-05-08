@@ -1,5 +1,16 @@
-desc 'Generate bits of the site that cant be done with Liquid'
-task :site do 
+desc 'Deploy to app engine'
+task :deploy => [:site] do
+  sh '~/Downloads/google_appengine/appcfg.py update . --oauth2'
+end
+
+
+desc 'Generate the rest of the site'
+task :site => [:tagcloud] do
+  sh 'jekyll build'
+end
+
+desc 'Generate tag clouds'
+task :tagcloud do 
   require 'rubygems'
   require 'jekyll'
   include Jekyll::Filters

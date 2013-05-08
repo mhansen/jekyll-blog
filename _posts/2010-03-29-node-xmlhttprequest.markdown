@@ -31,7 +31,7 @@ of the client for 100 milliseconds.
 http.createServer(/*SNIP*/).listen(8000);
 
 setTimeout(function() {
-    /* set up a client to connect to the above server */
+    // set up a client to connect to the above server
 }, 100)
 {% endhighlight %}
 
@@ -65,11 +65,11 @@ match on the headers. [Not trivial when the headers are given as keys to an obje
 {% highlight js %}
 var contentType; 
 for (var header in req.headers) { 
-    //case insensitive match
-    if (header.match(/Content-Type/i) { 
-            contentType = req.headers[header]; 
-            break; 
-    } 
+  //case insensitive match
+  if (header.match(/Content-Type/i) { 
+    contentType = req.headers[header];
+    break; 
+  }
 }
 {% endhighlight %}
 

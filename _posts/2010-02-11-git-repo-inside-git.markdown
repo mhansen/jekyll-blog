@@ -38,7 +38,7 @@ Submodules are a way of importing code from other git repositories into your sou
 
 {% highlight sh %}
 cd my_git_repo_root
-git submodule add <remote repository> <local path>
+git submodule add *remote repository* *local path*
 {% endhighlight %}
 
 This will checkout the remote repository into the local path, and records the
