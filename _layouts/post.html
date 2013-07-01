@@ -7,25 +7,12 @@ layout: default
 <hr class="half-bottom">
 <div class="date"> 
   Posted on {{ page.date | date_to_long_string }} by 
-  <a href="http://www.markhansen.co.nz/" rel="author">Mark</a>, in 
-  {% for tag in page.categories %}
-    <a href="/tags/{{tag}}">{{tag}}</a>{% if forloop.last == false %},{% endif %}
-  {% endfor %}
-</div>	 
+  <a href="http://www.markhansen.co.nz/" rel="author">Mark</a>.
+</div>
 <hr>
 
 <div class="post excerpt clearfix">	
   {{ content }}
-  <br>
-  <hr>
-  <div class="meta-space">					
-    <div class="tags clearfix Yellow">
-      <img src="/assets/images/theme/tag.png" class="tag_icon" />
-      {% for tag in page.categories %}
-        <a href="/tags/{{tag}}" rel="tag">{{tag}}</a>
-      {% endfor %}
-    </div>				
-  </div> 
 </div>
 <br>
 <hr class="remove-top">
