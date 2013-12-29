@@ -29,7 +29,7 @@ b = "a global variable";
 {% endhighlight %}
 
 I never thought I'd see global scope as a feature, but it really helps porting
-from BASIC :)
+from BASIC.
 
 The code tells you sunrise and sunset times anywhere in the world, so it uses a 
 bit of trigonometry. BASIC defines the `SIN`, `COS`, `SQR`, `ATN`, and `SGN`
@@ -49,13 +49,13 @@ function SGN(num) {
 
 The rest of the code was just converting 
 
-* `GOSUB` -> function calls
-* `GOTO` -> `if`/`else` statements
-* colons -> semicolons
+* `GOSUB` becomes function calls
+* `GOTO` becomes `if`/`else` statements
+* `:` becomes ';'
 * array indexing from one-based to zero-based
 * removing line numbers.
 
 Easy.
 
 Of course, the code is [up on GitHub](http://github.com/mhansen/suntimes).
-I'm a little disappointed GitHub doesn't have syntax highlighting for BASIC. ;)
+I'm a little disappointed GitHub doesn't have syntax highlighting for BASIC.

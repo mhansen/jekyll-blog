@@ -82,6 +82,3 @@ Try something more exotic:
 - *Haskell* - live without any nouns at all! (while, hopefully, still getting stuff done)
 
 Any languages offering compellingly different worldviews that I left out? Leave a comment.
-
-See Also:
-- Steve Yegge's epic ['Execution in the Kingdom of Nouns'](http://steve-yegge.blogspot.com/2006/03/execution-in-kingdom-of-nouns.html). If you're thinking 'nouns are all that we need anyway', you *need* to read this.

@@ -53,7 +53,7 @@ post '/press/:key' do
     # get the keycode for the numberpad key
     keysym = keysyms[params[:key]]
     # invoke xdotool to send the keypress to the active window
-    system("xdotool key #{keysym}")
+    system("xdotool key #{keysym}") if keysym
 end
 
 # keycode reference is at /usr/include/X11/keysymdef.h
@@ -85,6 +85,7 @@ keysyms = {
   the calculator aligned properly, but Haml made it easy to move bits of layout
   around, and change CSS classes:
 
+      !!! 5
       %html
         %head
           %meta(charset='utf-8')
@@ -119,9 +120,9 @@ keysyms = {
           %script(src='site.js')
 
   Adding a class was a simple matter of adding a '.classname' to the element.
-  Removing an element, I didn't have to find and remove it's closing element, I
-  just delete a line. The same for adding an element. It *feels* a lot nicer
-  than HTML. I might redo this site in Haml sometime.
+  Removing an element, I didn't have to find and remove its closing element - I
+  just delete a line. The same goes for adding an element. It *feels* a lot
+  nicer than HTML. I might redo this site in Haml sometime.
 
 ## Try It
 If you're on an X11 system, and have a phone with a browser, head over to the [github page](http://github.com/mhansen/ipod-numeric-keypad) for installation instructions.
