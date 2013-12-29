@@ -20,5 +20,4 @@ in red.
 
 And git's smart enough to check if the output is going to the terminal
 or to a pipe, where color codes could break things. Git only sends color
-output to the terminal, where your eyes can enjoy it. I can't see any
-reason *not* to enable color in git. Enjoy!
+output to the terminal, where your eyes can enjoy it.

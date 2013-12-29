@@ -1,12 +1,10 @@
 ---
-title: Changing the Minix3 Bootimage
+title: Adding a device driver to Minix3 (without bricking it)
 layout: post
 description: Guide to adding new device drivers to Minix 3
 categories:
     - minix
 ---
-
-(or: how to add a device driver to Minix3 without bricking your bootimage)
 
 In this tutorial, we will duplicate the Minix memory device driver. The memory
 driver is a very small driver, and can serve as a simple working implementation

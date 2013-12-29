@@ -56,6 +56,6 @@ var car = carType.createCar();
 ### Observer Pattern
 The Observer pattern calls a function somewhere when an object changes. Of
 course, this gets simpler when functions are first-class. Without first-class
-functions, observers need to inherit a common base class. With first-class
+functions, observers need to implement a common interface. With first-class
 functions, you can maintain a list of observers as a list of functions, and one
 object can observe many others easily.

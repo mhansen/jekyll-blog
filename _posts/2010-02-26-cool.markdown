@@ -6,41 +6,41 @@ categories:
 - chemistry
 ---
 
-We were partying at a dance club, it was busy, and I was overheating. So
-I asked for some water - but what they gave me was 90% ice, topped off with
-water. It did an awesome job at cooling me down.
+We were dancing at a club, it was busy, and I was overheating. So I asked for
+some water - but what they gave me was 90% ice, topped off with water. It did
+an awesome job at cooling me down.
 
 Later on, I got thinking - **How much better is ice at cooling you down than
-water?** (Hey, I was a chemistry student in a past life). 
+liquid water?** (I was a chemistry student in a past life). 
 
-While water does an admirable job cooling you down at a dance party, clearly
-ice is better. But how much better? 
+While liquid water does an admirable job cooling you down at a dance party,
+clearly ice is better. But how much better? 
 
-To make this fair on water, we'll skew our test a bit in water's favor,
+To make this fair on liquid water, we'll skew our test a bit in water's favor,
 comparing:
 
-- the coldest possible liquid H<sub>2</sub>O (water at 0°C)
+- the coldest possible liquid H<sub>2</sub>O (liquid water at 0°C)
 - to the warmest possible solid H<sub>2</sub>O (ice at 0°C)
 - for cooling down a hot person (slightly over 37°C)
 
-## Water
+## Liquid Water
 [![Glass of water](/images/water.jpg)](http://www.flickr.com/photos/mattandkim/3969185159/)
 
-Water cools you down in two ways:
+Liquid water cools you down in two ways:
 
-- Water is usually less than 37°C when you drink it.  Once it is inside your
-  body, its temperature rises. 
+- Liquid water is usually less than 37°C when you drink it. Once it is inside
+  your body, the liquid water's temperature rises. 
 
-  Temperature rises need energy, and the energy is taken from your body heat,
+  Temperature rises need energy, and that energy is taken from your body heat,
   cooling you down.
 
 - You can sweat the water out, where it vaporises (turns to gas). Vaporisation
-  requires energy, some of which is taken from your body heat, cooling you
+  requires energy, some of which is taken from your body heat, thus cooling you
   down.
 
 As anyone who's ever been to a concert can testify, sweating is useless when
-there's no wind, and humidity is at 100% (e.g. in a dance club). So we can
-ignore its effects here.
+there's no wind, and humidity is at 100% (e.g. in a dance club). So we ignore
+its effects here.
 
 [It takes **4.18J** to heat one gram of water by 1°C](http://www.wolframalpha.com/input/?i=heat+capacity+of+water&a=*C.heat+capacity-_*ChemicalProperty.dflt-&a=*DPClash.ChemicalP.heat+capacity-_*SpecificHeatCapacity-). Ingesting
 water at 0°C, you will raise its temperature by 37° to body
@@ -49,27 +49,27 @@ temperature.
     4.18J/g x 37° = 155J/g
 
 The energy to heat up the water comes from your body heat, so you will lose
-**155J** per gram of water you drink.
+**155J per gram** of water you drink.
 
 ## Ice
 [![Ice cubes](/images/ice.jpg)](http://www.flickr.com/photos/stevendepolo/3072821281/)
 
-Ice melts, forming water (obviously). It takes a lot of energy to melt the
-ice - you have to partially break hydrogen bonds - one of the strongest bonds
-in chemistry. 
+Ice melts, forming liquid water. It takes a lot of energy to melt the ice - you
+have to partially break hydrogen bonds - one of the strongest types of bonds in
+chemistry.
 
-[It takes **334J** to melt one gram of ice](http://www.wolframalpha.com/input/?i=enthalpy+of+fusion+of+water&a=*DPClash.ChemicalP.enthalpy+of+fusion-_*SpecificFusionHeat-). That's almost twice the energy you
-lose in heating that same gram of water from 0°C to 37°C!
+[It takes **334J** to melt one gram of ice](http://www.wolframalpha.com/input/?i=enthalpy+of+fusion+of+water&a=*DPClash.ChemicalP.enthalpy+of+fusion-_*SpecificFusionHeat-).
 
 And, once that gram of ice is melted, you're left with a gram of water at 0°.
-Which, as we've established, cools you down by **155J**.
+Which, as we've established above, cools you down by a further **155J**.
 
     melting energy + heating energy = total
     334J/g         + 155J/g         = 489J/g
 
 ## Conclusion
 Drinking one gram of 0°C water will cool you down by **155J**.
+
 Drinking one gram of ice at 0°C will cool you down by **489J**.
 
 So, **at minimum** ice cools you down **over three times as well** as water. If
-the ice is colder, or the water is warmer, ice does even better. Awesome!
+the ice is colder, or the water is warmer, ice does even better. Prefer ice!
