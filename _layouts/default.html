@@ -164,29 +164,27 @@
 <script src="/assets/javascripts/skeleton-key.js"></script>
 <script src="/assets/javascripts/jquery.lightbox-0.5.pack.js"></script>
 <script>
-  $(function() { 
-    $('.gallery a').lightBox({
-      'imageBlank':'/images/lightbox/lightbox-blank.gif',
-      'imageLoading':'/images/lightbox/lightbox-ico-loading.gif',
-      'imageBtnClose':'/images/lightbox/lightbox-btn-close.gif',
-      'imageBtnNext':'/images/lightbox/lightbox-btn-next.gif',
-      'imageBtnPrev':'/images/lightbox/lightbox-btn-prev.gif',
-    });
+$(function() {
+  $('.gallery a').lightBox({
+    'imageBlank':'/images/lightbox/lightbox-blank.gif',
+    'imageLoading':'/images/lightbox/lightbox-ico-loading.gif',
+    'imageBtnClose':'/images/lightbox/lightbox-btn-close.gif',
+    'imageBtnNext':'/images/lightbox/lightbox-btn-next.gif',
+    'imageBtnPrev':'/images/lightbox/lightbox-btn-prev.gif',
   });
+});
 </script>
 
-<script type="text/javascript">
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-XXXXX-Y']);
+_gaq.push(['_trackPageview']);
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-XXXXX-Y']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
 </script>
 </body>
 </html>
