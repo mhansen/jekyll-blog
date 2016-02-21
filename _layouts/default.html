@@ -52,102 +52,35 @@
     </div>
     <div class="five columns sidebar">
       <div class="widget">
-        <h3>About</h3>
         <p>
-        Hi, this is my personal blog.
+          I'm a software engineer. I work for Google in beautiful Sydney, Australia.
         </p>
         <p>
-        I'm based in Sydney, Australia, where I'm a software engineer at
-        Google. All opinions here are mine only.
+          <a href="mailto:mark@markhansen.co.nz">Email me</a>
         </p>
-        <p>
-          <a href="mailto:mark@markhansen.co.nz">Email</a>
-        </p>
-        <hr class="half-bottom" />
+        <hr class="half-bottom">
       </div>
 
       <div class="widget">
-        <a href="/archive.html"><h3>Archive</h3></a>
+        <a href="/archive/"><h3>Archive</h3></a>
         <ul>
-          {% for post in site.posts limit:20 %}
+          {% for post in site.posts %}
             <li><a href="{{post.url}}">{{post.title}}</a>
           {% endfor %}
-          <li><a href="/archive.html">More...</a>
         </ul>
-        <hr class="half-bottom" />
-      </div>
-
-      <div class="widget">
-        <h3>Projects</h3>
-        <ul>
-          <li><a href="http://wheresmytaxes.co.nz/">Where Are My Taxes?</a>
-          <li><a href="http://wirelessmap.markhansen.co.nz/">NZ Wireless Map</a>
-          <li><a href="http://github.com/mhansen/antinode">Antinode, a Javascript Web Server</a>
-          <li><a href="http://www.markhansen.co.nz/iphone-as-numberpad/">iPhone Numberpad</a>
-        </ul>
-        <hr class="half-bottom" />
-      </div>
-      
-      <div class="widget">
-        <h3>Accounts</h3>
-        <ul>
-          <li><a href="https://plus.google.com/117278436091789666160" rel="me">Google+</a>
-          <li><a href="http://github.com/mhansen">Github</a>
-          <li><a href="http://news.ycombinator.com/threads?id=mhansen">Hacker News</a>
-        </ul>
-        <hr class="half-bottom" />
       </div>
     </div>
   </div>
 </div>
-<div class="super-container full-width" id="section-footer">    
-  <div class="container">
-    <footer>
-    <div class="sixteen columns" id="header">
-      
-      <br />
-      <div class="six columns alpha">
-        <h5>Projects</h5>
-        <ul>
-          <li><a href="http://www.markhansen.co.nz/budget-visualisation/">Visualising the New Zealand Government Budget</a>
-          <li><a href="http://www.markhansen.co.nz/nz-wireless-map/">A New Map of New Zealand's Wireless Networks</a>
-          <li><a href="http://github.com/mhansen/antinode">Antinode, a Javascript Web Server</a>
-          <li><a href="http://www.markhansen.co.nz/iphone-as-numberpad/">iPhone Numberpad</a>
-          <li><a href="http://github.com/mhansen/node-jslint">JSLint on Node.JS</a>
-          <li><a href="http://github.com/mhansen/node-XMLHttpRequest">XMLHttpRequest on Node.JS</a>
-        </ul>
-      </div>
-      <div class="five columns">
-        <h5>Meta</h5>
-        <ul>
-          <li>Compiled by <a href="http://jekyllrb.com">Jekyll</a>.
-          <li>Hosted by a <a href="http://linode.com">Linode VPS</a>.
-          <li>Last updated {{ site.time | date: site.date_format }}.
-        </ul>
-      </div>
-      <div class="five columns omega">
-        <h5>Friends</h5>
-        <ul>
-          <li><a href="http://joeloughton.com/">Joel Oughton</a>
-          <li><a href="http://stephennancekivell.blogspot.com/">Stephen Nancekivell</a>
-        </ul>
-      </div>
-    </div>
-    </footer>
-  </div>
-</div>
-
 <div class="super-container full-width" id="section-sub-footer">    
   <div class="container">
     <div class="sixteen columns">  
-        <span class="copyright">&copy; Mark Hansen</span>
         <ul class="social">
           <li><a href="https://plus.google.com/117278436091789666160" id="gplus"><img src="/assets/images/theme/social-icons/google_plus_32.png" alt="Google+" title="Google+" /></a>
           <li><a href="https://github.com/mhansen" id="github"><img src="/assets/images/theme/social-icons/github_32.png" alt="Github" title="Github" /></a>
           <li><a href="http://feeds.feedburner.com/mhansen" id="rss"><img src="/assets/images/theme/social-icons/rss_32.png" alt="rss" title="RSS" /></a>
           <li><a href="mailto:mark@markhansen.co.nz" id="email"><img src="/assets/images/theme/social-icons/email_32.png" alt="Email Mark" title="Email" /></a>
         </ul>
-        <span class="colophon">Static HTML, for web scale.</span>
     </div>
   </div>
 </div>
@@ -173,18 +106,14 @@ $(function() {
     'imageBtnPrev':'/images/lightbox/lightbox-btn-prev.gif',
   });
 });
-</script>
 
-<script>
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-XXXXX-Y']);
-_gaq.push(['_trackPageview']);
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-(function() {
-  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
+ga('create', 'UA-26633662-1', 'auto');
+ga('send', 'pageview');
 </script>
 </body>
 </html>

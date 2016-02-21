@@ -17,7 +17,9 @@ shown at the right. You might have seen these towers on top of hills while
 driving. I always wondered what they were used for, and where they connected
 to. Now you can see where the links go, and who they're for!
 
-It's not just huge antenna mast towers like the one shown on the right. Hospitals, big businesses, cell towers, weather stations, and offshore oil rigs are connected with these radio links.
+It's not just huge antenna mast towers like the one shown on the right.
+Hospitals, big businesses, cell towers, weather stations, and offshore oil rigs
+are connected with these radio links.
 
 I'm really excited about being able to visualise this data - the map shows over
 17,000 locations, and 26,000 point-to-point links over the whole country!
