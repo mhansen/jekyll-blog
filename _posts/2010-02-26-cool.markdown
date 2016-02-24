@@ -39,8 +39,7 @@ Liquid water cools you down in two ways:
   down.
 
 As anyone who's ever been to a concert can testify, sweating is useless when
-there's no wind, and humidity is at 100% (e.g. in a dance club). So we ignore
-its effects here.
+there's no wind, and humidity is at 100%. So we ignore that effect here.
 
 [It takes **4.18J** to heat one gram of water by 1°C](http://www.wolframalpha.com/input/?i=heat+capacity+of+water&a=*C.heat+capacity-_*ChemicalProperty.dflt-&a=*DPClash.ChemicalP.heat+capacity-_*SpecificHeatCapacity-). Ingesting
 water at 0°C, you will raise its temperature by 37° to body
@@ -61,7 +60,7 @@ chemistry.
 [It takes **334J** to melt one gram of ice](http://www.wolframalpha.com/input/?i=enthalpy+of+fusion+of+water&a=*DPClash.ChemicalP.enthalpy+of+fusion-_*SpecificFusionHeat-).
 
 And, once that gram of ice is melted, you're left with a gram of water at 0°.
-Which, as we've established above, cools you down by a further **155J**.
+Which, as shown above, cools you down by a further **155J**.
 
     melting energy + heating energy = total
     334J/g         + 155J/g         = 489J/g

@@ -85,39 +85,41 @@ keysyms = {
   the calculator aligned properly, but Haml made it easy to move bits of layout
   around, and change CSS classes:
 
-      !!! 5
-      %html
-        %head
-          %meta(charset='utf-8')
-          %meta(name='viewport' content='width=320; height=480; user-scalable=0;')
-          %title Numpad
-          %link(rel='stylesheet' href='/site.css' type='text/css' media='screen' title='default style sheet')
-        %body
-          #content
-            .row
-              .nothing &nbsp;
-              #divide /
-              #multiply *
-              #subtract -
-            .row
-              #seven 7
-              #eight 8
-              #nine 9
-              #add.tall +
-            .row
-              #four 4
-              #five 5
-              #six 6
-            .row
-              #one 1
-              #two 2
-              #three 3
-              #enter.tall ↵
-            .row
-              #zero.wide 0
-              #decimal .
-          %script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js')
-          %script(src='site.js')
+```
+!!! 5
+%html
+  %head
+    %meta(charset='utf-8')
+    %meta(name='viewport' content='width=320; height=480; user-scalable=0;')
+    %title Numpad
+    %link(rel='stylesheet' href='/site.css' type='text/css' media='screen' title='default style sheet')
+  %body
+    #content
+      .row
+        .nothing &nbsp;
+        #divide /
+        #multiply *
+        #subtract -
+      .row
+        #seven 7
+        #eight 8
+        #nine 9
+        #add.tall +
+      .row
+        #four 4
+        #five 5
+        #six 6
+      .row
+        #one 1
+        #two 2
+        #three 3
+        #enter.tall ↵
+      .row
+        #zero.wide 0
+        #decimal .
+    %script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js')
+    %script(src='site.js')
+```
 
   Adding a class was a simple matter of adding a '.classname' to the element.
   Removing an element, I didn't have to find and remove its closing element - I

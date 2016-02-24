@@ -34,7 +34,7 @@ public void connect(string hostname)
 public void connect(string hostname, int port) 
     : connect(hostname, port, "HTTP") {}
 
-public void connect(string hostname, int port, string method); { 
+public void connect(string hostname, int port, string method) { 
     ... 
 }
 {% endhighlight %}
